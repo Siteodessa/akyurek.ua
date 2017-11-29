@@ -1,0 +1,233 @@
+.entry-header .entry-title-right .button {
+  border: 3px solid #ffffff;
+}
+.entry-header .entry-title-right .button:hover,
+.entry-header .entry-title-right .button:active,
+.entry-header .entry-title-right .button:focus {
+  background: #ffffff;
+}
+.entry-header .entry-title-right .button {
+  color: #333333;
+}
+.entry-header .entry-title-right .button:hover,
+.entry-header .entry-title-right .button:active,
+.entry-header .entry-title-right .button:focus,
+.entry-header .entry-title-right .button:hover .fa,
+.entry-header .entry-title-right .button:active .fa,
+.entry-header .entry-title-right .button:focus .fa {
+  color: #333333;
+}
+.entry-header .entry-title-right .button .fa {
+  color: #ffffff;
+}
+.prev_next_post a {
+  border-color: #ffffff !important;
+  color: #ffffff;
+}
+.prev_next_post a:hover {
+  background-color: #ffffff;
+}
+.prev_next_post a:hover {
+  color: #ad2a27;
+}
+.project_description {
+  margin: 20px 0 50px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-bottom: 1px solid #dedede;
+  padding: 0px 0 20px;
+}
+.prote .left_column {
+  border-right: 1px solid #dedede;
+  max-height: 1120px;
+}
+.ri .icon_button a {
+  margin: 40px 0;
+}
+.ri aside.widget {
+  margin: 20px 0 0px 0;
+  border-top: 1px solid #dedede;
+  padding: 20px 0;
+}
+.lama-container.projectile.lama-container-horizontal.visible {
+  width: 100%;
+  margin: 0;
+  height: 500px;
+}
+.lama-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lama-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+}
+.gallery-top {
+  height: 80%;
+  width: 100%;
+}
+.gallery-thumbs {
+  height: 100px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  margin: 0px 0;
+}
+.gallery-thumbs .lama-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+.gallery-thumbs .lama-slide-active {
+  opacity: 1;
+}
+.prote .lama-button-next {
+  display: block;
+}
+.relatd .lama-slide {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  max-height: 220px;
+}
+.relatd,
+.relatd .lama-wrapper {
+  width: 100%;
+  height: auto !important;
+}
+.swiper-pagination {}
+.relatd .lama-pagination {
+  top: 0px;
+}
+.project_info.style_2 {
+  opacity: 0;
+  top: 20px;
+}
+.project_info.style_2,
+.ri .icon_button.pres a,
+.ri .icon_button.quos a,
+aside ul li,
+ul.type_2 li {
+  opacity: 0;
+  top: 20px;
+}
+.project_info_wr tr {
+  transition-delay: 2s
+}
+@media only screen and (min-width:100px) and (max-width:576px) {
+  .prote .left_column {
+    border: none
+  }
+  .integra {
+    margin: 0 0 60px;
+  }
+}
+.rltd {
+  overflow: hidden;
+  max-height: 380px;
+}
+.swpgroup {
+  max-height: 600px;
+  overflow: hidden;
+}
+.swp {
+  max-height: 600px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+.project_row {
+  overflow: hidden;
+  max-height: 1140px;
+}
+.project_row #lightgallery li {
+  width: auto
+}
+.ligal a {
+  width: 20%;
+}
+.ligal a img {
+  width: auto;
+  max-height: 100px;
+}
+.ligal {
+  display: none;
+}
+.swp img#coga {
+  position: absolute;
+  top: 10%;
+  z-index: 2;
+}
+span.spn {
+  width: 100%;
+  height: 100%;
+  background: #0f0f0fba;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transform: translate(0%, 100%) scale(0.01);
+  will-change:transform;
+  transition: all .4s ease;
+  transition-delay: .1s;
+  flex-direction: column;
+}
+span.over {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rltd a.item {
+  position: relative
+}
+.hvr span.spn {
+  transform: none;
+  padding: 20px;
+}
+.hvr .spn p,
+.hvr .spn button, {
+  transform: none;
+  opacity: 1
+}
+
+
+span.spn * {
+  color: #fff;
+  text-align: left;
+}
+.spn .btn {
+  background: #ae100e;
+  border-radius: 0;
+  transition-delay:.3s;
+margin:8px 0;
+}
+
+p.defs{
+transition-delay:.2s;
+}
+p.conts {
+transition-delay:.25s;
+}
+
+
+p.defs, p.conts, .spn button {
+    transform: translate(0%,100%);
+    will-change:transform;
+}
+
+
+.hvr p.defs, .hvr p.conts, .hvr .spn button {
+    transform: none;
+}
+
+.project_row hr {margin: 3px;opacity: 0;}
+

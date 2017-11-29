@@ -1,0 +1,27 @@
+div#acf-страна, div#acf-рабочая_площадь, .field_key-field_5a0e9ccdadcb6, div#acf-скачать_презентацию {
+    width: 20%;
+    float: left;
+    margin: 0 50px 0 0;
+}
+
+.update-nag {
+    display: none;
+}
+
+div#wpfooter {
+    display: none;
+}
+
+#adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
+    background: #6a1c1b;
+}
+
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu .wp-menu-arrow, #adminmenu .wp-menu-arrow div, #adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, .folded #adminmenu li.current.menu-top, .folded #adminmenu li.wp-has-current-submenu {
+    background: #ae100e;
+}
+
+div#wpadminbar {
+    background: #6a1c1b;
+    border-bottom: 2px dashed #ae100e;
+    border-image: url('http://v-kosmose.com/wp-content/uploads/2013/11/6975f540d86c9e34e1a457f4cf726735.jpg');
+}

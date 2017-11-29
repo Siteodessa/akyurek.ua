@@ -1,0 +1,321 @@
+/* $Id: js_rssFeed_MediaReleases.cclass 18018 2015-07-10 12:47:57Z edicos\mkalmes $ */
+var bDebug = true;
+function getInitRssFeed(rssUrl, numEntries)
+{
+    console.log("getInitRssFeed(>>)");
+    if(bDebug==true){ console.log("rssUrl=["+rssUrl+"], numEntries=["+numEntries+"]"); };
+    
+    var feed = new google.feeds.Feed(rssUrl); // 871_169_pfvek0.xml
+  
+    feed.setNumEntries(numEntries);
+    feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+    //feed.includeHistoricalEntries(); NICHT BENUTZEN!!! doppelte Atome werden mit angezeit, offenbar werden entfernte/gelöschte nicht wirklich gelöscht
+    
+    console.log("getInitRssFeed(<<)");
+    return feed;
+}
+function readRSSFeedListOverview(rssUrl, htmlContainerId, htmlContainerIdArchive, urlReadMore, strReadMore, numEntries, classAjaxLoading, showHtmlContainerIdArchive)
+{
+    readRSSFeedList(rssUrl,htmlContainerId,urlReadMore, strReadMore, false, numEntries ,classAjaxLoading,htmlContainerIdArchive,showHtmlContainerIdArchive);
+}
+function readRSSFeedListHome(rssUrl, htmlContainerId, urlReadMore, strReadMore, numEntries, classAjaxLoading )
+{
+    readRSSFeedList(rssUrl, htmlContainerId, urlReadMore, strReadMore, true, numEntries, classAjaxLoading,"",false);
+}
+function readRSSFeedList(rssUrl, htmlContainerId, urlReadMore, strReadMore, bIsHome, numEntries, classAjaxLoading, htmlContainerIdArchive, showHtmlContainerIdArchive )
+{
+    console.log("readRSSFeedList(>>)");
+    if(bDebug==true){ console.log("rssUrl=["+rssUrl+"], htmlContainerId=["+htmlContainerId+"]; htmlContainerIdArchive=["+htmlContainerIdArchive+"]; bIsHome=["+bIsHome+"]; numEntries=["+numEntries+"]; showHtmlContainerIdArchive=["+showHtmlContainerIdArchive+"]"); };
+    
+    var doAjaxLoading = false;
+    if(classAjaxLoading != null && typeof classAjaxLoading != "undefined" && classAjaxLoading != "")
+    {
+        doAjaxLoading = true;
+    }
+    
+    if(doAjaxLoading == true)
+    {
+        $("." + classAjaxLoading).show();    
+    }
+        
+    if( numEntries < 0 )
+    {
+      numEntries = 999;
+    }
+    console.log("numEntries=["+numEntries+"]");
+    
+    var rssFeed = getInitRssFeed(rssUrl,numEntries);
+    var newHtml = "";
+      
+    rssFeed.load(function (data) 
+    {
+        console.log("readRSSFeedList(...): rssFeed.load(>>)");
+        
+        // Parse data depending on the specified response format, default is JSON.
+        console.log(data);
+        
+        var feed = data.feed;
+        var title = feed.title;
+        var entries = feed.entries;
+        
+        $.each(entries, function (i, entry) 
+        {
+            // http://xml.newsbox.ch/corporate_web/che/buhler/press_release/871_169_pfvek0.xml
+            var entryID = entry.link.split("/").pop();
+            console.log("entry.link : entryID " + entry.link + " : " + entryID);
+            
+            var detailUrl = urlReadMore + "?rss=" + encodeURIComponent(entryID);
+            
+            if(bIsHome == true)
+            {
+                // <link rel="alternate" href="http://xml.newsbox.ch/corporate_web/che/buhler/press_release/871_135_1ulz50.xml"/>
+                //'<span class="date">Uzwil, 19.05.2015</span>'            
+                newHtml +=  '<div class="item">' + '\n\r';
+                newHtml +=  ' <a class="hdllink" href="' + detailUrl + '"><span class="headline">' + entry.title + '</span></a>' + '\n\r';
+                newHtml +=  ' <span class="leadin">' + entry.contentSnippet + '</span>' + '\n\r';
+                newHtml +=  ' <a class="morelink" href="' + detailUrl + '">'+ strReadMore +'</a>' + '\n\r';        
+                newHtml +=  '</div>' + '\n\r';
+            }
+            else
+            {
+                var content = entry.xmlNode.getElementsByTagName('content');       
+                
+                var divLEAD = content[0].querySelectorAll("." + "lead")[0].innerHTML;
+                
+                // NO P TAG even SPAN like live format
+                divLEAD = divLEAD.replace(/<p/g,"<span").replace(/p>/g,"span>");
+                
+                newHtml +=  '<div class="listitem">' + '\n\r';
+                newHtml +=  '    <h2>' + entry.title + '</h2>' + '\n\r';
+                //'<span class="date">Uzwil, 19.05.2015</span>'            
+                newHtml +=  divLEAD + '\n\r';
+                newHtml +=  '    <a class="morelink" href="' + detailUrl + '">'+ strReadMore +'</a>' + '\n\r';
+                newHtml +=  '</div>';
+            }
+        });
+        
+        if(doAjaxLoading == true)
+        {
+            $("." + classAjaxLoading).hide();    
+        }
+        
+        $("#" + htmlContainerId).html(newHtml);
+        
+        if(typeof htmlContainerIdArchive != "undefined" && htmlContainerIdArchive != "")
+        {
+            if(showHtmlContainerIdArchive == true || showHtmlContainerIdArchive == "true")
+            {
+                console.log("Show archive ["+htmlContainerIdArchive+"]");
+                $("#" + htmlContainerIdArchive ).show();
+            }
+                
+        }
+        
+        console.log("readRSSFeedList(...): rssFeed.load(<<)");
+    });
+    
+    console.log("readRSSFeedList(<<)");
+}
+function readRSSFeedSingle(    rssId, htmlContainerId, lang, 
+                            strLabel_Download, strLabel_PDF, strLabel_IMG, classAjaxLoading)
+{
+    console.log("readRSSFeedSingle(>>)");
+    if(bDebug==true){ console.log("rssId=["+rssId+"], htmlContainerId=["+htmlContainerId+"]; lang=["+lang+"]"); };
+    
+    var doAjaxLoading = false;
+    if(classAjaxLoading != null && typeof classAjaxLoading != "undefined" && classAjaxLoading != "")
+    {
+        doAjaxLoading = true;
+    }
+    
+    if(doAjaxLoading == true)
+    {
+        $("." + classAjaxLoading).show();    
+    }
+    
+    var defaultUrl = "http://xml.newsbox.ch/corporate_web/che/buhler/press_release/";
+    
+    var rssUrl = defaultUrl + rssId;
+    if(rssId.indexOf("http") > -1)
+    {
+        rssUrl = rssId;
+    }
+    
+    var rssFeed = getInitRssFeed(rssUrl,1);
+    var newHtml = "";
+      
+    rssFeed.load(function (data) 
+    {
+        console.log("readRSSFeedSingle(...): rssFeed.load(>>)");
+        
+        // Parse data depending on the specified response format, default is JSON.
+        console.log(data);
+        
+        var feed = data.feed;
+        var title = feed.title;
+        var entries = feed.entries;
+        if(entries.length == 1)
+        {
+            var entry = entries[0];
+            
+            // <link rel="enclosure"
+            // FIND additional XML Values from RSS Feed
+            var divENCLOSURES = "";
+            var tempEnc_PDF = "";
+            var tempEnc_IMG = "";
+            
+            // var links = entry.xmlNode.getElementsByTagName('link');
+            // elegante Methode querySelectorAll geht nicht in IE < 9
+            var links = entry.xmlNode.querySelectorAll('link[rel="enclosure"]');
+            
+            console.log("links:" + links.length);
+            var downloadsTitle = "Downloads";
+            var pdfTitle = "Media Release (PDF)";
+            var imgTitle = "Picture <numimg> to download";
+            var countImg = 0;
+            if( lang.indexOf("de") > -1 )
+            {
+                downloadsTitle = "Downloads";
+                pdfTitle = "Medienmitteilung (PDF)";
+                imgTitle = "Bild <numimg> zum Herunterladen";
+            }
+            if( typeof strLabel_Download != "undefined" && strLabel_Download != "" ) { downloadsTitle = strLabel_Download; }
+            if( typeof strLabel_PDF != "undefined" && strLabel_PDF != "" ) { pdfTitle = strLabel_PDF; }
+            if( typeof strLabel_IMG != "undefined" && strLabel_IMG != "" ) { imgTitle = strLabel_IMG; }
+                
+            for (var i=0; i < links.length; i++) 
+            {
+                var link = links[i];                
+                // if(link.getAttribute("rel") == "enclosure") 
+                var url = link.getAttribute("href");
+                var title = link.getAttribute("title");
+                var length = link.getAttribute("length");
+                
+                var strLength = "";
+                if(length != "" && length != null)
+                {
+                    var numLength = parseInt(length)/1000;
+                    if(numLength > 999)
+                    {
+                        // MB
+                        strLength = "<span> ("+ parseFloat(numLength/1000).toFixed(1) + " MB)</span>"+ '\n\r';                        
+                    }
+                    else
+                    {
+                        // KB
+                        strLength = "<span> ("+ Math.floor(numLength) +" KB)</span>"+ '\n\r';
+                    }
+                }
+        
+                if(typeof title == "undefined" || title == null )
+                {
+                    title = pdfTitle;
+                    if(url.toLocaleLowerCase().indexOf("pdf") < 0)
+                    {
+                        // image
+                        countImg = countImg + 1;
+                        title = imgTitle;
+                        
+                        if(title.indexOf("<numimg>") < 0)
+                        {
+                            title = title + "&nbsp;(" + countImg + ")" + '\n\r';
+                        }
+                        else
+                        {
+                            title = title.replace("<numimg>", countImg) + '\n\r';    
+                        }
+                        
+                        tempEnc_IMG += '<a class="link imgicon" href="'+ url +'">' + title + strLength + '</a>' + '\n\r';
+                    }
+                    else
+                    {
+                        tempEnc_PDF += '<a class="link pdficon" href="'+ url +'">' + title + strLength + '</a>' + '\n\r';                            
+                    }
+                }
+                //console.log("found:" + url);
+            }
+            
+            divENCLOSURES += tempEnc_PDF;
+            divENCLOSURES += tempEnc_IMG;
+            // content als entry.content kann nicht einfach verwendet werden da dies transformiert wird.
+            
+            // Zugriff auf einzelen Bereiche des Atoms via class name 
+            var content = entry.xmlNode.getElementsByTagName('content');       
+            
+            /* elegante Methode querySelectorAll geht nicht in IE < 9 */            
+            var divINTRO = content[0].querySelectorAll("." + "intro")[0].innerHTML;  
+            var divHEADING = content[0].querySelectorAll("." + "heading")[0].innerHTML; /* h1 */
+            var divHEADINGBLOCK = content[0].querySelectorAll("." + "headingblock")[0].innerHTML;
+            var divLEAD = content[0].querySelectorAll("." + "lead")[0].innerHTML;
+            var divBODY = content[0].querySelectorAll("." + "body")[0].innerHTML;
+            var divFOOTER = content[0].querySelectorAll("." + "footer")[0].innerHTML;
+            // NO P TAG even SPAN like live format
+            divHEADING = divHEADING.replace(/<p/g,"<span").replace(/p>/g,"span>");
+            // console.log("divBODY=" + divBODY);
+            
+            // Replace all unused emty <p tags coming from tensi editor
+            //<p xmlns="http://www.w3.org/1999/xhtml">&nbsp;</p>
+            divBODY = divBODY.replace(/<p xmlns="http:\/\/www.w3.org\/1999\/xhtml">*.<\/p>/g,"");
+            divBODY = divBODY.replace(/xmlns="http:\/\/www.w3.org\/1999\/xhtml"/g,"");
+            
+            // medienkontakt wird ausgeblendet 
+            divBODY = divBODY.replace(/class="tensid-contact"/g,"class=\"tensid-contact\" style=\"display:none;\" ");
+            // <a href="#" title="Call: +41 71 955 33 99"/>
+            // divBODY = divBODY.replace(/<a href="#" title="Call:.*?"\/>/gi,"");
+            // medienkontakt wird ausgeblendet
+            
+            var classVdots = "";
+            if(divENCLOSURES != "")
+            {
+                classVdots = " verticaldots ";
+            }
+            
+            // <link rel="alternate" href="http://xml.newsbox.ch/corporate_web/che/buhler/press_release/871_135_1ulz50.xml"/>
+            newHtml +=  '<div class="colspan2 spanpaddingright setheight '+ classVdots +' ">' + '\n\r';
+            newHtml +=  '    <!-- HEADING -->' + '\n\r';
+            newHtml +=  '    <h1>' +  divHEADING + '</h1>' + '\n\r';
+            newHtml +=    '    <!-- /HEADING -->' + '\n\r';
+            newHtml +=  '    <h3></h3>' + '\n\r';
+            newHtml +=  '    <!-- LEAD -->' + '\n\r';
+            newHtml +=  '    <span class="leadin">' + divLEAD + '<\span>' + '\n\r'; 
+            newHtml +=  '    <!-- /LEAD -->' + '\n\r';
+            newHtml +=  '    <!-- BODY -->' + '\n\r';  
+            // newHtml +=  '    <span class="text">' + divBODY + '<br/>' + divFOOTER + '<\span>' + '\n\r';
+            newHtml +=  '    <span class="text">' + divBODY + '<\span>' + '\n\r';
+            newHtml +=  '    <!-- /BODY -->' + '\n\r';        
+            newHtml +=  '</div>' + '\n\r';
+            
+            if(divENCLOSURES != "")
+            {
+                newHtml +=  '<div class="colspan1">' + '\n\r';
+                newHtml +=  '    <div class="downloadbox">' + '\n\r';
+                newHtml +=  '        <h2>' + downloadsTitle + '</h2>' + '\n\r';
+                newHtml +=  '        <div class="enclosureLinks">' + divENCLOSURES + '</div>' + '\n\r';
+                newHtml +=  '    </div>' + '\n\r';
+                newHtml +=  '</div>' + '\n\r';
+            }
+        }
+        else
+        {
+            newHtml += "<h2>ERROR: RSS feed id not found: ["+rssId+"]!</h2>";
+        }
+        
+        if(doAjaxLoading == true)
+        {
+            $("." + classAjaxLoading).hide();    
+        }
+        
+        $("#" + htmlContainerId).html(newHtml);
+        
+        console.log("readRSSFeedSingle(...): rssFeed.load(<<)");
+    });
+    
+    console.log("readRSSFeedSingle(<<)");    
+}
+function getRequestParam(name)
+{
+       if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+          return decodeURIComponent(name[1]);
+}
+/* END OF FILE $Id: js_rssFeed_MediaReleases.cclass 18018 2015-07-10 12:47:57Z edicos\mkalmes $ */
+ 

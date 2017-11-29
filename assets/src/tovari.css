@@ -1,0 +1,39 @@
+img.obey {
+    width: 100%;
+}
+
+.col-md-3.catcard {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px 40px 230px;
+    border: 6px solid #ae100e;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    opacity: 0;
+}
+
+.catcard .image {
+    background: #fff;
+    margin: 11px 0;
+    width: 100%;
+    max-height: 200px;
+}
+
+.col-md-3.catcard.visible {
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+
+
+
+@media only screen and (min-width:100px) and (max-width:576px){ 
+.col-md-3.catcard{
+    grid-template-rows: 284px 40px 230px;
+}
+}
+

@@ -1,0 +1,135 @@
+ul.nester.yach:before {
+  transition: 1s;
+  content: '';
+  background: url(http://akyurek.ua/wp-content/uploads/2017/05/ya-pole.jpg);
+  position: absolute;
+  bottom: 7px;
+  left: -105px;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+}
+
+ul.nester.yach:after {
+  transition: 1s;
+  content: '';
+  background: url(http://akyurek.ua/wp-content/uploads/2017/05/ya-semya.jpg);
+  position: absolute;
+  bottom: 7px;
+  width: 60px;
+  height: 60px;
+  right: 15px;
+  z-index: -1;
+}
+
+ul.nester.yach.rdy:before {
+  transition: 1s ease;
+  content: '';
+  background: url(http://akyurek.ua/wp-content/uploads/2017/05/ya-pole.jpg);
+  position: absolute;
+  bottom: 7px;
+  left: -45px;
+  width: 60px;
+  height: 60px;
+}
+
+ul.nester.yach.rdy:after {
+  transition: 1s ease;
+  transition-delay: 0.62s;
+  content: '';
+  background: url(http://akyurek.ua/wp-content/uploads/2017/05/ya-semya.jpg);
+  position: absolute;
+  bottom: 8;
+  width: 60px;
+  height: 60px;
+  right: -45px;
+}
+
+ul.nester li.modax:before {
+  background: red;
+  content: '';
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 140px;
+}
+
+li.modax.separ:before {
+  content: '';
+  background: red;
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 140px;
+}
+
+
+
+ul.nester.yach:before {
+  transition: 1s;
+  content: '';
+  background: url(http://akyurek.ua/wp-content/uploads/2017/05/ya-pole.jpg);
+  position: absolute;
+  bottom: 7px;
+  left: -105px;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+}
+
+ul.nester.yach:after {
+  transition: 1s;
+  content: '';
+  background: url(http://akyurek.ua/wp-content/uploads/2017/05/ya-semya.jpg);
+  position: absolute;
+  bottom: 7px;
+  width: 60px;
+  height: 60px;
+  right: 15px;
+  z-index: -1;
+}
+
+ul.nester.yach.rdy:before {
+  transition: 1s ease;
+  content: '';
+  background: url(http://akyurek.ua/wp-content/uploads/2017/05/ya-pole.jpg);
+  position: absolute;
+  bottom: 7px;
+  left: -45px;
+  width: 60px;
+  height: 60px;
+
+}
+ul.nester.yach.rdy:after {
+  transition: 1s ease;
+  transition-delay: 0.62s;
+  content: '';
+  background: url(http://akyurek.ua/wp-content/uploads/2017/05/ya-semya.jpg);
+  position: absolute;
+  bottom: 8;
+  width: 60px;
+  height: 60px;
+  right: -45px;
+}
+
+ul.nester li.modax:before {
+  background: red;
+  content: '';
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 140px;
+}
+
+li.modax.separ:before {
+  content: '';
+  background: red;
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 140px;
+}

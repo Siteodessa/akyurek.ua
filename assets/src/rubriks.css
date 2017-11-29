@@ -1,0 +1,84 @@
+/*Common*/
+.rel.rub {
+    width: 150px;
+    height: 150px;
+    left: calc(50% - 75px);
+    bottom: 0px;
+    position: absolute;
+    background: #fff;
+    border-radius: 100%;
+    bottom: -150px;
+    transform: scale(0);
+    transition: .7s cubic-bezier(0.1, -0.6, 0.2, 0);
+    overflow: hidden
+}
+.rub-img {
+    position: absolute;
+    top: auto;
+    left: calc(50% - 75px);
+    height: 150px;
+    bottom: -150px;
+    width: 150px;
+    transition: .712s cubic-bezier(0.2, -0.8, 0.5, 0);
+}
+/*Common*/
+/*Individual protrav*/
+.protrav .r4.rub-img {
+    position: absolute;
+    top: auto;
+    left: calc(50% - 225px);
+    height: 150px;
+    bottom: 0;
+    width: 150px;
+}
+.step1.protrav .r4.rub-img {
+    left: calc(50% - 75px);
+}
+/*Individual protrav*/
+/*Individual shella*/
+.shella  .r3.rub-img, .shella  .r2.rub-img, .shella  .r1.rub-img  {
+    bottom: 0; 
+}
+.step1.shella  .r3.rub-img, .step1.shella  .r2.rub-img{
+    bottom: -150px;
+}
+/*Individual shella*/
+.step1.rel.rub {
+    transform: scale(1);
+    bottom: 0;
+}
+.step1 .rub-img {
+    bottom: 0;
+}
+.r4.rub-img {
+    transition-delay: .712s;
+}
+.r3.rub-img {
+    transition-delay: .912s;
+}
+.r2.rub-img {
+    transition-delay: 1.112s;
+}
+.r1.rub-img {
+    transition-delay: 1.312s;
+}
+.r3.rub-img, .r2.rub-img, .r1.rub-img  {
+    bottom: 150px;
+}
+.step1 .r3.rub-img, .step1 .r2.rub-img, .step1 .r1.rub-img
+{
+      bottom: 0;
+}
+.sepintroparagraph.content-area {
+    background: #Fff;
+    position: relative;
+    z-index: 9;
+    padding: 12px 15px;
+}
+
+
+
+@media only screen and (min-width:100px) and (max-width:576px){ .step1.rel.rub {
+    transform: scale(0.6);
+    bottom: -26px;
+}}

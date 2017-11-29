@@ -1,0 +1,46 @@
+.top_slider, .lama-container{
+    margin: -90px -130px 0 -60px;
+    /* width: 100%; */
+}
+.ls-scene {
+    /* background: #33333326; */
+    width: 610px;
+    margin: 150px auto;
+    padding: 40px;
+    border-radius: 8px;
+    text-transform: unset;
+    font-size: 25px;
+}
+.ls-centered img {
+    position: absolute;
+    width: 190px;
+    top: calc(100% + 20px);
+    margin: 0 auto;
+    left: calc(50% - 95px);
+}
+.ls-centered {
+    position: relative;
+}
+.fa-quote-left {
+    left: 0;
+}
+.ls-centered i {
+    position: absolute;
+    font-size: 18px;
+}
+.fa-quote-right {
+    right: 0px;
+    top: auto;
+    bottom: -3px;
+}
+
+.lama-slide.sway1 {
+    background: url(http://akyurek.ua/wp-content/uploads/2017/11/1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.ls-lineone, .ls-linetwo, .ls-centered i {
+    color: #2c2c2c;
+    font-weight: bold;
+}

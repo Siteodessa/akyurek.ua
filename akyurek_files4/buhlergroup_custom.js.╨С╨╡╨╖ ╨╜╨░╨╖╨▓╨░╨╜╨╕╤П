@@ -1,0 +1,534 @@
+/* Set height of different elementsfunction */
+function setHeight(sObject, sObject_small, iMinus) {
+/*
+    var aElement = $(sObject);
+    sNewHeight = 0;
+    for (i=0; i<aElement.length; i++) {
+        if(sNewHeight < aElement[i].offsetHeight)
+        sNewHeight = aElement[i].offsetHeight;
+    }
+    $(sObject).css("height",sNewHeight+"px");
+    if(sObject_small != "") {
+        $(sObject_small).css("height", sNewHeight - iMinus+"px");
+    }
+ */
+}
+/* SET / GET Cookies */
+jQuery.fn.setCookie = function(name, size, domain, expires, path, secure){
+  var cook = name + "=" + unescape(size);
+  cook += (domain) ? "; domain=" + domain : "";
+  cook += (expires) ? "; expires=" + expires : "";
+  cook += (path) ? "; path=" + path : "";
+  cook += (secure) ? "; secure" : "";
+  document.cookie = cook;
+}
+jQuery.fn.getCookie = function(name){ 
+  var i=0;  //search in Cookie
+  var search = name + "=";
+  while (i<document.cookie.length){
+    if (document.cookie.substring(i, i + search.length) == search) {
+      var end = document.cookie.indexOf("; ", i + search.length);
+      end = (end > 0) ? end : document.cookie.length;
+      var cook = document.cookie.substring(i + search.length, end);
+      return unescape(cook);
+    }
+    i++;
+  }
+  return "";
+}
+/* Function for the Branch-Finder Stage */
+// Variablen
+var branchRegionActive = false;
+var currentBranchID;
+// Diese Funktion wird aufgerufen wenn der Nutzer auf das gewünschte Kontinent klickt, dabei wird der entsprechende Layer angezeigt
+// Wird durch den folgenden Event-Handler aufgerufen: onClick
+function showLinkbox(id) {
+  /* $('.linklayer').fadeOut('fast'); edicos: causes layer bug */
+  // Tooltip Handling
+  $('div#tooltip').removeClass('tooltip_branchfinder_'+currentBranchID).hide();
+  $('div#tooltip').unbind('click');
+  $('div#blocklayer').fadeTo('fast',0.1);
+    
+  // Hier wird die Positionierung des Layers bestimmt
+  // In diesem Block die Breite
+  sWidth = parseInt($('div#'+id).width());
+  sLeft = (960-sWidth)/2;
+  $('div#'+id).css('left',sLeft);
+    
+  // In diesem Block die Höhe    
+  sHeight = parseInt($('div#'+id).height());
+  sTop = (600-sHeight)/2;
+  $('div#'+id).css('top',sTop);
+  $('div#'+id).fadeTo("fast",0.8);
+  var branchRegionActive = false;
+}
+// Zeigt eine Region, incl. Tooltip an; wird bei mouseenter einer region aufgerufen
+function showRegion(id, e) {
+  // Falls eine andere region noch aktiv ist
+  if(branchRegionActive == true) {
+    // Verstecke diese zunächst
+    hideRegion(currentBranchID);
+  }
+  // Zeige Region
+  $('img#'+id).show();
+  boxid = id.replace("Img","Box");
+  // Binde und Zeige Tooltip
+  $('div#tooltip td.content').html($('div#'+boxid+' h2').html());
+  $('div#tooltip').addClass('tooltip_branchfinder_'+id).show();
+  $('div#tooltip').click(function(){
+    showLinkbox(boxid);
+  });
+  // Setze noch Variablen
+  currentBranchID = id;
+  branchRegionActive = true;
+}
+// Blendet eine Region mitsamt Tooltip wieder auf; wird bei mouseleave einer region aufgerufen
+function hideRegion(id, e){
+  // MovedFrom
+  if(isset(e)) {
+    var movedFrom = (window.event) ? e.srcElement : e.target;
+    var movedTo = (window.event) ? e.toElement : e.relatedTarget;
+    /*
+      Nur in bestimmten Fällen ausblenden
+      1. Wenn Ziel nicht Tooltip ist
+      2. Wenn Ziel nicht mapimage ist(for IE)
+      3. Wenn Ziel nicht ein anderes Img ist
+      4. Wenn Ziel nicht leer ist
+    */
+    if( (movedTo.id != 'tooltip') && (movedTo.id != 'mapimage') && (movedTo.id != 'Img#'+id) && (movedTo.id != '') ) {
+      // Verstecke
+      $('Img#'+id).hide();
+      $('div#tooltip').removeClass('tooltip_branchfinder_'+id).hide();
+      $('div#tooltip').removeAttr("onClick");
+      branchRegionActive = false;
+    }
+  }
+}
+/* Wird aufgerufen, wenn ein Tooltip verlassen wird(mouseleave) Wird benötigt im Sonderfall, wenn Tooltip groesser als Region */
+function hideTooltip(e){
+  // Falls eine Region active is
+  if(branchRegionActive) {
+    // Verstecke diese
+    $('Img#'+currentBranchID).hide();
+    $('div#tooltip').removeClass('tooltip_branchfinder_'+currentBranchID).hide();
+    branchRegionActive = false;
+  }
+}
+/* Function for the Career-Map */
+// Variablen
+var careerRegionActive = false;
+var currentCareerID;
+// Zeigt eine Region, incl. Tooltip an; wird bei mouseenter einer region aufgerufen
+function showCareerRegion(area, id, tooltip, e){
+  // Falls eine andere region noch aktiv ist
+  if(careerRegionActive == true) {
+    // Verstecke diese zunächst
+    hideCareerRegion(currentCareerID);
+  }
+  // Zeige Region
+  $('img#'+id).show();
+  // Url
+  url = $(area).attr("href");
+  // Binde und Zeige Tooltip
+  $('div#tooltip td.content').html(tooltip);
+  $('div#tooltip').addClass('tooltip_careermap_'+id).show();
+  $('div#tooltip').click(function(){
+    window.location.href = url;
+  });
+  // Setze noch Variablen
+  currentCareerID = id;
+  careerRegionActive = true;
+}
+// Blendet eine Region mitsamt Tooltip wieder auf; wird bei mouseleave einer region aufgerufen
+function hideCareerRegion(id, e){
+  // MovedFrom
+  if(isset(e)) {
+    var movedFrom = (window.event) ? e.srcElement : e.target;
+    var movedTo = (window.event) ? e.toElement : e.relatedTarget;
+    /* 
+      Nur in bestimmten Fällen ausblenden
+      1. Wenn Ziel nicht Tooltip ist
+      2. Wenn Ziel nicht mapimage ist(for IE)
+      3. Wenn Ziel nicht ein anderes Img ist
+      4. Wenn Ziel nicht leer ist 
+    */
+    if( (movedTo.id != 'tooltip') && (movedTo.id != 'mapimage') && (movedTo.id != 'Img#'+id) && (movedTo.id != '') ) {
+      // Verstecke
+      $('Img#'+id).hide();
+      $('div#tooltip').removeClass('tooltip_careermap_'+id).hide();
+      $('div#tooltip').removeAttr("onClick");
+      careerRegionActive = false;
+    }
+  }
+}
+/* Wird aufgerufen, wenn ein Tooltip verlassen wird(mouseleave) Wird benötigt im Sonderfall, wenn Tooltip groesser als Region */
+function hideCareerTooltip(e){
+  // Falls eine Region active is
+  if(careerRegionActive) {
+    // Verstecke diese
+    $('Img#'+currentCareerID).hide();
+    $('div#tooltip').removeClass('tooltip_careermap_'+currentCareerID).hide();
+    careerRegionActive = false;
+  }
+}
+function hideLayer(){
+  $('.linklayer').fadeOut('fast'); // Layer wird samt Inhalt ausgeblendet
+  $('#blocklayer').toggle();
+  $('.overlayimg').css('display','none');
+}
+// Prüft, ob eine Variable gesetzt ist
+function isset(variable_name){
+  try {
+    if (typeof(eval(variable_name)) != 'undefined')
+    if (eval(variable_name) != null)
+    return true;
+  } catch(e) { }
+  return false;
+}
+function selectYear(sYear) {
+  doSelection(sYear);
+  <!-- 
+    /* 
+      doSelection($('#dd1').val()+";"+$('#dd2').val()+";"+$('#dd3').val()+";"+sYear); 
+    */
+  --> 
+}
+function toggleYear(id) {
+  $('div[name]').css('display','none');
+  $('.newsarchivbox div a').attr('class','show');
+  if($('a#'+id).attr('class') == 'hide') {
+    $('a#'+id).removeClass('hide').addClass('show');
+    $('div[name='+id+']').toggle('slow');
+  } else {
+    $('a#'+id).removeClass('show').addClass('hide');
+    $('div[name='+id+']').toggle('slow');
+  }
+}
+ 
+/*
+ * jQuery resize event - v1.1 - 3/14/2010
+ * http://benalman.com/projects/jquery-resize-plugin/
+ * 
+ * Copyright (c) 2010 "Cowboy" Ben Alman
+ * Dual licensed under the MIT and GPL licenses.
+ * http://benalman.com/about/license/
+ */
+/** SET HEIGHT BUGFIX FÜR IE7 **/
+(function($,h,c){var a=$([]),e=$.resize=$.extend($.resize,{}),i,k="setTimeout",j="resize",d=j+"-special-event",b="delay",f="throttleWindow";e[b]=250;e[f]=true;$.event.special[j]={setup:function(){if(!e[f]&&this[k]){return false}var l=$(this);a=a.add(l);$.data(this,d,{w:l.width(),h:l.height()});if(a.length===1){g()}},teardown:function(){if(!e[f]&&this[k]){return false}var l=$(this);a=a.not(l);l.removeData(d);if(!a.length){clearTimeout(i)}},add:function(l){if(!e[f]&&this[k]){return false}var n;function m(s,o,p){var q=$(this),r=$.data(this,d);r.w=o!==c?o:q.width();r.h=p!==c?p:q.height();n.apply(this,arguments)}if($.isFunction(l)){n=l;return m}else{n=l.handler;l.handler=m}}};function g(){i=h[k](function(){a.each(function(){var n=$(this),m=n.width(),l=n.height(),o=$.data(this,d);if(m!==o.w||l!==o.h){n.trigger(j,[o.w=m,o.h=l])}});g()},e[b])}})(jQuery,this);
+$(document).ready(
+  function() {
+    // IE7
+    if ($.browser.msie && $.browser.version == 7){
+      $('#mainchain #content>div.colspan1').css('float','left');
+      $('#mainchain #content>div.colspan2').css('float','left');
+      $('#mainchain #content>div.colspan3').css('float','left');
+      $('#mainchain #content>div#parsinglane').css('float','left');
+        
+      // BERECHNEN UND SETZEN DER HÖHE
+      $("#content div").resize(function(e){
+        $('#content>div:not(.clearfix)').css('height', 'auto');
+        var maxHeight = 0;
+        $.each($('#content>div:not(.clearfix)'), function(index, value) {
+          var currentHeight = parseInt($(this).css('height').replace('px', ''));
+          if(currentHeight>maxHeight){
+            maxHeight = currentHeight;
+          }
+        });
+        $('#content>div:not(.clearfix)').css('height', maxHeight+'px');
+      });
+    }
+    // b/o product preview
+    var iOriginalHeight = $('.setheight').height();
+    // kalmes, 20150213
+    $('.close-widget-box, .sub-headline').toggle();
+      $('.widget-header').hover(
+        function () {
+          $(this).addClass('hover');
+        },
+        function () {
+          $(this).removeClass('hover');
+        }
+    );    
+    // kalmes, 20150213
+    
+    $('.widget-header').click(
+      function() {
+        $('.arrow-more, .close-widget-box, .widget-thumb, .sub-headline', this).toggle();
+        $(this).toggleClass('active');
+        
+        /* kalmes, 20150213
+        if ($(this).hasClass('active')) {
+            $(this).animate({height: 0}, 500, function() {});
+        } else {
+            $(this).animate({height: 45}, 500, function() {});
+        }
+        kalmes, 20150213 */
+        
+        var iWidgetHeight = $(this).parent('.widget').height();
+        $(this).parent('.widget').contents('.box').slideToggle(500,
+          function(){
+            var iContentHeight = $('.setheight').height();
+            var iPreviewHeight = $(this).parent('.widget').height();
+            var sBoxDisplay = $(this).css('display');
+            if ( sBoxDisplay=='none' ) {
+              var iNewHeight = eval( iContentHeight - iWidgetHeight + 76 );
+            } else { 
+              var iNewHeight = eval( iContentHeight + iPreviewHeight - 76 );
+            }
+            // 76 = offset height of preview when closed; see previewbox.css
+            var sNewHeight = iNewHeight + "px";
+          }
+        );
+      }
+    );
+    // b/o remove p-tag
+    $('p.removeparagraph').contents().unwrap();
+    // e/o remove p-tag
+    // e/o product preview
+    // b/o media lightbox
+    var height_lightbox = $(".media-widget-lightbox").height();
+    var height_lightbox_aboutbuhler = $(".media-widget-lightbox-aboutbuhler").height();
+    if ( $("div#stage div.productinfo").length != 0 ) {
+      var height_stage = $("div#stage div.productinfo").height();
+      $('.open-media-widget').click(
+        function() {
+          $("div#stage div.productinfo").css("visibility","hidden");
+          $("div#stage div.productinfo").animate({height: height_lightbox});
+          $(".media-widget-lightbox").fadeIn(250);
+        }
+      );
+      $('.close-media-widget').click(
+        function() {
+          $(".media-widget-lightbox").fadeOut(250);
+          $("div#stage div.productinfo").animate({height: height_stage},75);
+          $("div#stage div.productinfo").css("visibility","visible");
+        }
+      );
+    }
+    else if ( $("div#stage div.messe-banner").length != 0 ) 
+    {
+      var height_stage = $("div#stage div.messe-banner").height();
+      $('.open-media-widget').click(
+        function() {
+          $("div#stage div.messe-banner").css("visibility","hidden");
+          $("div#stage div.messe-banner").animate({height: height_lightbox});
+          $(".media-widget-lightbox").fadeIn(250);
+        }
+      );
+      $('.close-media-widget').click(
+        function() {
+          $(".media-widget-lightbox").fadeOut(250);
+          $("div#stage div.messe-banner").animate({height: height_stage},75);
+          $("div#stage div.messe-banner").css("visibility","visible");
+        }
+      );
+    }
+    if ( $("div#stage div.slideshow").length != 0 ) {
+      var height_stage = $("div#stage div.slideshow").height();
+      $('.open-media-widget').click(
+        function() {
+          $("div#stage div.slideshow").css("visibility","hidden");
+          $("div#stage div.slideshow").animate({height: height_lightbox});
+          $(".media-widget-lightbox").fadeIn(250);
+        }
+      );
+      $('.close-media-widget').click(
+        function() {
+          $(".media-widget-lightbox").fadeOut(250);
+          $("div#stage div.slideshow").animate({height: height_stage},75);
+          $("div#stage div.slideshow").css("visibility","visible");
+        }
+      );
+    }
+    if ( $("div#stage div.careerstage").length != 0 ) {
+      var height_stage = $("div#stage div.careerstage").height();
+      $('.open-media-widget').click(
+        function() {
+          $("div#stage div.careerstage").css("visibility","hidden");
+          $("div#stage div.careerstage").animate({height: height_lightbox});
+          $(".media-widget-lightbox").fadeIn(250);
+        }
+      );
+      $('.close-media-widget').click(
+        function() {
+          $(".media-widget-lightbox").fadeOut(250);
+          $("div#stage div.careerstage").animate({height: height_stage},75);
+          $("div#stage div.careerstage").css("visibility","visible");
+        }
+      );
+    }
+    if ( $("div#stage div.banner").length != 0 ) {
+      var height_stage = $("div#stage div.banner").height();
+      $('.open-media-widget').click(
+        function() {
+          $("div#stage div.banner").css("visibility","hidden");
+          $("div#stage div.banner").animate({height: height_lightbox});
+          $(".media-widget-lightbox").fadeIn(250);
+        }
+      );
+      $('.open-media-widget-aboutbuhler').click(
+        function() {
+          $("div#stage div.banner").css("visibility","hidden");
+          $("div#stage div.banner").animate({height: height_lightbox_aboutbuhler});
+          $(".media-widget-lightbox-aboutbuhler").fadeIn(250);
+        }
+      );
+      $('.close-media-widget').click(
+        function() {
+          $(".media-widget-lightbox").fadeOut(250);
+          $("div#stage div.banner").animate({height: height_stage},75);
+          $("div#stage div.banner").css("visibility","visible");
+        }
+      );
+      $('.close-media-widget-aboutbuhler').click(
+        function() {
+          $(".media-widget-lightbox-aboutbuhler").fadeOut(250);
+          $("div#stage div.banner").animate({height: height_stage},75);
+          $("div#stage div.banner").css("visibility","visible");
+        }
+      );
+    }
+    // e/o media lightbox
+    // b/o fancybox
+    $(".fancybox").fancybox();
+    // e/o fancybox
+    if ( $(".messe-banner").length != 0 ) {
+      $('.messe-banner').cycle({
+        fx: 'fade',
+        timeout: 4000,
+        pause: 1
+      });
+    }
+  }
+);
+ 
+/*    b/o getRequestParameterByName     
+    kalmes: get requestparam by name
+    credits: http://stackoverflow.com/questions/3636813/how-can-i-get-url-parameter-in-a-jquery-ready-function 
+*/
+function getRequestParameterByName(name)
+{
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)", 
+      regex = new RegExp( regexS ),
+      results = regex.exec( window.location.href );
+  if( results == null )
+  {
+    return "";
+  } 
+  else
+  {
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+}
+/*    e/o getRequestParameterByName */
+/*    b/o startVideoByID, startVideoDirect    
+    kalmes: start simplex video by requestparam via videoid
+    ex: ?startvideo=simplexplayer12368
+*/
+function startVideoByID( reqParam )
+{
+    var svID = null;
+    if( (svID = getRequestParameterByName(reqParam)) != "" )
+    {
+        svID = svID.trim();
+        if(svID.indexOf("simplex") < 0 )
+        {
+            svID = "simplexplayer" + svID;
+        }
+        var elID = "#" + svID;
+        
+        if ($(elID).length > 0)
+        {
+            $(elID).click();
+        }
+    }
+}
+function startVideoDirect(svID)
+{
+    svID = "simplexplayer" + svID.trim();
+    var elID = "#" + svID;
+    if ($(elID).length > 0)
+    {
+        $(elID).click();
+    }
+}
+/* e/o startVideoByID, startVideoDirect */
+$(document).ready(function()
+{
+    /* b/o toggle PDF info in search result page */
+    /* credits: http://blog.kulturbanause.de/2011/11/elemente-mit-jquery-auf-und-zufahren-lassen-slide-toggle-und-parallel-das-icon-austauschen/*/
+    $(".media-headline").click(function(event)
+    {    // trigger
+        $(this).next(".media-container").slideToggle("fast"); // blendet beim Klick auf "dt" die nächste "dd" ein.
+        $(this).children("a").toggleClass("closed open"); // wechselt beim Klick auf "dt" die Klasse des enthaltenen a-Tags von "closed" zu "open".
+    });
+    /* e/o toggle PDF info in search result page */
+    
+    /* b/o change both search input fields when typing in each other */
+    var gSearchInputId = "#search .query";
+    
+    $(gSearchInputId).on('input', function() 
+    {
+        //var value = $(this).val().trim();
+        var value = $(this).val();
+        
+        console.log(value);
+        if(value != "")
+        {
+            $(gSearchInputId).val(value);
+            $(gSearchInputId).removeClass('warning');                        
+        }
+        else
+        {
+            $(gSearchInputId).val("");
+        }
+    });
+    /* e/o change both search input fields when typing in each other */
+    
+    /* e/o prevent empty search string before submit form */
+    $('.internalsearch').submit(function() 
+    {
+        errLabel = "Type a search term...";
+        var errors = true;
+        $(gSearchInputId).map(function()
+        {
+            var inputVal = $(this).val().trim();
+            console.log(inputVal);        
+            if( !inputVal || inputVal == errLabel) 
+            {
+                $(this).addClass('warning');
+                if(inputVal == errLabel)
+                {
+                    $(this).val("");
+                    $(gSearchInputId).removeClass('warning');            
+                }
+                else
+                {
+                    $(this).val(errLabel);
+                    $(this).select();
+                }
+                $(this).focus();
+            } 
+            else if (inputVal) 
+            {
+                $(gSearchInputId).val(inputVal);
+                $(gSearchInputId).removeClass('warning');
+                errors = false;
+            }   
+        });
+        if(errors == true)
+        {
+            console.log("PREVENT SUBMIT");
+            return false; /* do not submit form unless user fill input field */
+        }
+        else
+        {
+            console.log("SUBMIT OK!");
+            return true; /* do not submit form unless user fill input field */
+        }
+    });
+    /* e/o prevent empty search string before submit form */
+});
+/* e/o toggle PDF info in search result page */
+ 

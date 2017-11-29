@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+}
+#history {
+    background-color: #22bbea;
+    color: #fff;
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    height: 600px;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 959px;
+}
+.slide {
+    background-color: #22bbea;
+    height: 600px;
+    left: -9999px;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    white-space: pre-line;
+    width: 959px;
+}
+.slide h1 {
+    font-size: 48px;
+    left: 38px;
+    line-height: 36px;
+    margin: 0;
+    position: absolute;
+    text-transform: uppercase;
+    top: 58px;
+    width: 883px;
+}
+.slide p {
+    font-size: 20px;
+    left: 41px;
+    letter-spacing: 0.01em;
+    line-height: 26px;
+    margin: 0;
+    position: absolute;
+    top: 140px;
+    width: 700px;
+}
+.slide-with-image p {
+    width: 425px;
+}
+.slide img {
+    left: 495px;
+    position: absolute;
+    top: 140px;
+}
+#timeline {
+    /*display: none; causes error in ie9! */
+    height: 30px;
+    left: 21px;
+    position: absolute;
+    bottom: 25px;
+    width: 917px;
+    z-index: 102;
+}
+#timeline-clickzone {
+    cursor: pointer;
+    height: 30px;
+    left: 22px;
+    position: absolute;
+    top: 0;
+    width: 873px;
+}
+#timeline-slider {
+    background-color: #fff;
+    color: #22bbea;
+    cursor: pointer;
+    font-size: 14px;
+    height: 30px;
+    left: 0;
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 44px;
+}
+#timeline-slider.inactive {
+    color: #ccc;
+}
+.timeline-label {
+    color: #fff;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 44px;
+}
+#timeline-start-label {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+#timeline-end-label {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#navigation-left {
+    height: 600px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 160px;
+    z-index: 100;
+}
+#navigation-left img {
+    cursor: pointer;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+#navigation-right {
+    height: 600px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 160px;
+    z-index: 101;
+}
+#navigation-right img {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+/* Slide-specific styles */
+.slide.first {
+    color: #22bbea;
+}
+.slide.first p {
+    top: 120px;
+    width: 423px;
+}
+
+/*********************** Änderungen für das CMS ******************************/
+
+/*Navigation Butttons: Start */
+/* /static/global/en/media/History_nav-left.png */
+/* /static/global/en/media/History_nav-right.png */
+/*Navigation Butttons: End */
+ 
+ 
+
+/*Slide Items CMS Editing: Start */
+#history-preview {
+    background-color:#22BBEA;
+    color:#FFFFFF;
+    width:959px;
+    height:600px;
+    border:1px solid red;
+    margin:0;
+    padding:0px;
+    font-family: 'helvetica neue',helvetica,arial,sans-serif;
+}
+
+.slide-preview.first {
+    color: #22BBEA !important;
+}
+
+.slide-preview h1 {
+    font-size:48px;
+    left:38px;
+    line-height:36px;
+    margin:0;
+    text-transform:uppercase;
+    position: relative;
+    top: 58px;
+    width:883px;
+}
+
+.slide-preview p {
+    font-size:20px;
+    left:41px;
+    letter-spacing:0.01em;
+    line-height:26px;
+    margin:0;
+    position:relative;
+    top:140px;
+    width:700px;
+}
+
+.slide-preview-with-image p {
+    width:425px !important;
+    float:left;
+}
+
+.slide-preview img {
+    /* left:495px; */
+    left:60px;
+    position:relative;
+    top:140px;
+}
+/*Slide Items CMS Editing:  End */

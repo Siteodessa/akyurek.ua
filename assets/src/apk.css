@@ -1,0 +1,45 @@
+div#wrapper, body.boxed_layout #footer, .container {
+    max-width: 1600px !important;
+    width:100%;
+    
+}
+.regi.krim,.regi.vinnica,.regi.volin,.regi.dnepro,.regi.donetsk,.regi.zhitomir,.regi.zakarpat,.regi.zaporozh,.regi.ivan,.regi.kyiv,.regi.kirov,.regi.lugansk,.regi.lvov,.regi.nikolayev,.regi.odessa,.regi.poltava,.regi.rovno,.regi.sumi,.regi.ternopol,.regi.harkov,.regi.herson,.regi.hmelnic,.regi.cherkass,.regi.chernigov,.regi.chernovickaya,.regi.ivan-frank
+{
+  display: none
+} 
+.regi {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+}i.apk-icon {
+    float: left;
+    padding: 0 11px;
+    margin-left: -19px;
+}
+
+.renderer .obl {
+    padding: 3px 20px 0;
+}
+
+svg#svg2 {
+    cursor: pointer;
+    transform: scale(1.5) translate(27%);
+    margin: 60px 0;
+}.renderer li {
+    width: 31.3%;
+    float: left;
+    margin: 16px 1%;
+    background: #dddddd;
+}
+
+.renderer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.renderer .org {
+    height: auto;
+}.impored {
+    fill: red !important;
+}

@@ -1,0 +1,79 @@
+.video-widget {
+margin: 0 0 10px 0;
+padding: 0 0 10px 0;
+clear: both;
+overflow: hidden;
+}
+.video-widget-aboutbuhler {
+margin: 0;
+padding: 0;
+clear: both;
+overflow: hidden;
+}
+.video-widget-block {
+padding-bottom: 10px;
+}
+.media-widget-lightbox {
+background: #505050;
+position: absolute;
+top: 136px;
+left: 50%;
+width: 959px;
+z-index: 9999;
+text-align: center;
+display: none;
+margin: 0 auto 0 -479.5px;
+}
+.media-widget-lightbox-aboutbuhler {
+background: #505050;
+position: absolute;
+top: 136px;
+left: 50%;
+width: 959px;
+z-index: 9999;
+text-align: center;
+display: none;
+margin: 0 auto 0 -479.5px;
+}
+.media-widget-lightbox .media-widget-lightbox-block {
+padding: 50px 0;
+}
+.media-widget-lightbox-aboutbuhler .media-widget-lightbox-block {
+padding-top: 50px;
+}
+.media-widget-lightbox-video {
+display: block;
+width: 600px;
+height: 400px;
+margin: auto;
+}
+.media-widget-lightbox-video-aboutbuhler {
+display: block;
+width: 959px;
+height: 370px;
+margin: auto;
+}
+a.close-media-widget, a.close-media-widget-aboutbuhler {
+position:absolute;
+right:10px;
+top:10px;
+z-index:999;
+color: #969696;
+text-decoration: none;
+font-size: 11px;
+padding: 10px 22px 10px 0;
+background: url(/static/global/en/media/close_button_17.png) no-repeat scroll 100% 50% transparent;
+}
+/* Bitte hier den Pfeil von Bühler verwenden. Der Selector kann auch direkt im buhler-main.css gesetzt werden */
+div.video-widget a.boxlink {
+margin-top: 10px;
+padding: 0 0 0 17px;
+display: block;
+background: transparent url(/static/global/en/media/Pfeil_blau.gif) 0 50% no-repeat;
+color: rgb(168,167,167);
+text-decoration: none;
+}
+div.video-widget a.boxlink:hover {
+color: RGB(255,155,50);
+background: transparent url(/static/global/en/media/arrowWebsite_orange.png) 0 50% no-repeat;
+}

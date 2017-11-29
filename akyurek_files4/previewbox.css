@@ -1,0 +1,164 @@
+body, div#mainchain  {
+    100% !important
+};
+.wrapper {
+    width: 960px;
+    /* height: 800px; */
+    margin: 0 auto;
+    padding: 0px;
+}
+.product-group h2 {
+    padding-top: 5px;
+}
+.widget {
+    width: 445px;
+    margin: 0;
+    background-color: #e5e5e5;
+}
+.bottom-line {
+    background: url(/static/global/en/media/bg_line_horizontal.gif) repeat-x bottom left transparent;
+    padding-bottom: 1px; /* erforderlich für Sichtbarkeit der Bottomline unterhalb des Elements; mehr als 1px erzeugt grauen Artefakt wg. Hintergrundfarbe des Widgets */
+    margin-bottom: 0; /* Abstand zum nächsten Element unterhalb der Bottomline */
+}
+/* b/o Widget-Header */
+.widget-header,
+.widget-header-redux {
+    margin: 0;
+    position: relative;
+    height: 45px; /* Pls. adjust option 'height' in buhlergroup_custom.js (line 221), if necessary! */
+    background-color: #fff;
+    cursor: pointer;
+    padding: 15px 15px 15px 15px;
+}
+.widget-header-redux {
+    height: 50px;
+}
+.widget-header:hover, 
+.widget-header-redux:hover
+{
+    background-color: #e5e5e5;
+}
+.widget-header.active,
+.widget-header.active-redux {
+    background-color: #e5e5e5 !important;
+    /* height: 0; */
+}
+/* Widget-Thumb */
+.widget-header img,
+.widget-header-redux img {
+    /* float: right; */
+    position: absolute;
+    top: 0;
+    right: 5px;
+    z-index: 2;
+}
+.widget-header-redux img {
+    padding: 5px 0;
+}
+.widget-header div,
+.widget-header-redux div {
+    float:left;
+    height: 52px; /* 45px: ProSweet */
+   width:320px;
+    position: relative;
+}
+/* ProSweet 
+.widget-header.active div.preview-box {
+    height: auto !important;
+} */
+.widget-header h4,
+.widget-header-redux h4 {
+    margin: 0;
+    font-size: 12px;
+}
+.widget-header div a,
+.widget-header div p,
+.widget-header-redux div a,
+.widget-header-redux div p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    white-space: nowrap;
+    line-height: 30px;
+}
+a.arrow-more {
+    padding: 0 0 0 17px;
+    background: transparent url(/static/global/en/media/arrowWebsite_grey.png) 0 50% no-repeat;
+    display: block;
+    color: rgb(168,167,167);
+    text-decoration: none;
+} 
+a.arrow-more:hover {
+    color: rgb(255,155,50);
+    background: transparent url(/static/global/en/media/arrowWebsite_orange.png) 0 50% no-repeat;
+} 
+a.close-widget-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    height: 20px;
+    width: 20px;
+    background: transparent url(/static/global/en/media/close_button_17.png) no-repeat;
+    /* display: none; ProSweet  */
+}
+p.sub-headline {
+    font-size: 12px;
+    margin: 0;
+    white-space: normal !important;
+    line-height: 12px !important;
+}
+/* e/o Widget-Header */
+/* b/o Preview-Box */
+.box {
+    display: none;
+    width: 445px;
+    padding: 0;
+    margin: 0;
+    background-color: #e5e5e5;
+}
+.box img{
+/*
+    padding-right:15px;
+    padding-left:15px;
+*/        
+}
+.block {
+    padding: 15px 15px 15px 15px;
+}
+.block a {
+    line-height: 30px;
+}
+.block div {
+    text-align: center;
+}
+.preview-box{
+}
+div.preview-box-title-category {
+    display:inline-block;
+    height:12px;
+}
+div.preview-box-title {
+    width: 338px;/* 248 */
+}
+div.preview-box-category-image{
+    width:12px;
+    height:12px;
+    float:right;
+}
+div.preview-box-category-image img{
+}
+div.preview-category-table-categories ul li{
+    list-style-type:none;
+    font-weight: bold;
+    background-image: none !important;
+    padding-top:5px;
+    padding-bottom:-5px;
+}
+div.preview-category-table_title {
+}
+div.preview-category-table-text {
+}
+/* e/o Preview-Box */
+ 

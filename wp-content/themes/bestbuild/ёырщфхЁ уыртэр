@@ -1,0 +1,96 @@
+<div class="lama-container">
+<div class="lama-wrapper">
+<div class="lama-slide sway1">
+<div class="ls-contain">
+<div class="ls-scene">
+<div class="ls-centered">
+<div class="ls-lineone">Мы производим решения для очистки,</div>
+<div class="ls-linetwo">обработки и хранения зерновых культур.</div>
+<div class="ls-linethree">AKYUREK</div>
+<div class="ls-linefour">Technology</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lama-slide sway2">
+<div class="ls-contain">
+<div class="ls-scene">
+<div class="ls-banner">
+<h2 class="ls-heading"><mark>Автоматизация </mark>
+обработки зерна -</h2>
+<div class="ls-paragraph">Наш основной вклад в технический
+прогресс мирового сообщества!</div>
+</div>
+<div class="ls-button">Товары</div>
+</div>
+</div>
+</div>
+<div class="lama-slide sway3">
+<div class="ls-contain">
+<div class="ls-scene">
+<div class="ls-banner">
+<h2 class="ls-heading">Создаем
+<mark>инновационные</mark>
+технологии</h2>
+<div class="ls-paragraph">На площади свыше 40 000 м2
+Ознакомьтесь с оборудованием,
+которое мы предлагаем</div>
+<div class="ls-button">Товары</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lama-slide sway5">
+<div class="ls-contain">
+<div class="ls-scene">
+<div class="ls-banner">
+<h2 class="ls-heading">Транспортные системы
+<mark>для зерновых </mark>
+заводов</h2>
+<div class="ls-paragraph">Нории, цепные и ленточные конвейеры и др.</div><a class="vc_btn " href="http://akyurek.ua/contact-us/" title="" target="_self">Перейти</a></div>
+</div>
+</div>
+</div>
+  <div class="lama-slide sway6">
+<div class="ls-contain">
+<div class="ls-scene">
+<div class="ls-banner">
+<h2 class="ls-heading">Производительные
+<mark>Фотосепараторы</mark>
+</h2>
+<div class="ls-paragraph">Оптическая сортировка следующего поколения</div><a class="vc_btn " href="http://akyurek.ua/contact-us/" title="" target="_self">Перейти</a><div class="ls-button">Товары</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Add Pagination -->
+<div class="lama-pagination"></div>
+<!-- Add Arrows -->
+<div class="lama-button-next"></div>
+<div class="lama-button-prev ls-nav-prev"></div>
+</div>
+<script>
+    var lama = new lama('.lama-container', {
+        pagination: '.lama-pagination',
+        nextButton: '.lama-button-next',
+        prevButton: '.lama-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,autoplayDisableOnInteraction: false,
+autoplay: 6000,
+loop: true,
+height: 550,
+        'onInit': function(){
+setTimeout(function(){jQuery('.lama-container').addClass('round2');}, 150); 
+setTimeout(function(){
+jQuery('.lama-container').removeClass('round2');  
+ }, 15300);         
+    }
+    });
+lama.on('slideChangeStart', function () {
+setTimeout(function(){jQuery('.lama-container').addClass('round2'); }, 750);  
+setTimeout(function(){
+jQuery('.lama-container').removeClass('round2'); 
+ }, 5500);          });
+</script>

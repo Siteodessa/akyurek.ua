@@ -1,0 +1,43 @@
+.entry-header .entry-title-right .button {
+  border: 3px solid #ffffff;
+}
+.entry-header .entry-title-right .button:hover,
+.entry-header .entry-title-right .button:active,
+.entry-header .entry-title-right .button:focus {
+  background: #ffffff;
+}
+.entry-header .entry-title-right .button {
+  color: #333333;
+}
+.entry-header .entry-title-right .button:hover,
+.entry-header .entry-title-right .button:active,
+.entry-header .entry-title-right .button:focus,
+.entry-header .entry-title-right .button:hover .fa,
+.entry-header .entry-title-right .button:active .fa,
+.entry-header .entry-title-right .button:focus .fa {
+  color: #333333;
+}
+.entry-header .entry-title-right .button .fa {
+  color: #ffffff;
+}
+.prev_next_post a {
+  border-color: #ffffff !important;
+  color: #ffffff;
+}
+.prev_next_post a:hover {
+  background-color: #ffffff;
+}
+.prev_next_post a:hover {
+  color: #ad2a27;
+}
+
+.project_description {
+    margin: 20px 0 50px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-bottom: 1px solid  #dedede;
+    padding: 0px 0 20px;
+}
+.prote .left_column {
+    border-right: 1px solid #dedede;
+}

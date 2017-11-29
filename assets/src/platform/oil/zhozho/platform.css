@@ -1,0 +1,146 @@
+.clipboard, .shadowboard  {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: #d3d0c9;
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/05/platbege.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+div#box.box {
+    height: 425px;
+    position: relative;
+    margin-bottom: 80px;
+}
+.shadowboard {
+    opacity: 0.4;
+}
+.prazdnik {position: relative;background: #8a8a8a;width: 1230px;display: flex;justify-content: space-between;margin-left: -60px;padding: 20px 10px;}
+.zhozho-separ-clip1 {
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(7.6% at 21.7% 79%);  opacity: 0;
+}
+.zhozho-separ-clip2{
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(7.6% at 33.4% 79%);  opacity: 0;
+}
+.zhozho-separ-clip3{
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(7.6% at 44.8% 79%);  opacity: 0;
+}
+.zhozho-separ-clip4{
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(7.6% at 60.6% 79%);  opacity: 0;
+}
+.zhozho-separ-clip5{
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(7.6% at 75.6% 79%);
+    opacity: 0;
+}
+.zhozho-polir-clip1 {
+    -webkit-clip-path: inset(22% 53% 51% 30%);
+    clip-path: inset(22% 53% 51% 30%);opacity: 0;
+}
+.zhozho-polir-clip2{
+      -webkit-clip-path: inset(22% 33% 51% 54%);
+    clip-path: inset(22% 33% 51% 54%); opacity: 0;
+}
+.zhozho-polir-clip3{
+    -webkit-clip-path: inset(22% 20% 51% 70%);
+    clip-path: inset(22% 20% 51% 70%);
+    opacity: 0;
+}
+.zhozho-polir-clip4{
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(0% at 60.6% 79%);  opacity: 0;
+}
+.zhozho-polir-clip5{
+    -webkit-clip-path: circle(0% at 21% 79%);
+    clip-path: circle(0% at 75.6% 79%);
+    opacity: 0;
+}
+.zhozho-trans-clip1 {
+
+opacity: 0;
+
+-webkit-clip-path: inset(22% 84% 8% 13%);
+
+clip-path: inset(22% 84% 8% 13%);
+}
+.zhozho-trans-clip2{
+
+opacity: 0;
+
+-webkit-clip-path: inset(14% 71% 42% 27%);
+
+clip-path: inset(14% 71% 42% 27%);
+}
+.zhozho-trans-clip3{
+  opacity: 0;
+  -webkit-clip-path: inset(11% 48% 14% 49%);
+  clip-path: inset(11% 48% 14% 49%);
+}
+.zhozho-trans-clip4{
+  opacity: 0;
+  -webkit-clip-path: inset(11% 35% 35% 62%);
+  clip-path: inset(11% 35% 35% 62%);
+}
+.zhozho-trans-clip5{
+
+opacity: 0;
+
+-webkit-clip-path: inset(11% 13% 64% 81%);
+
+clip-path: inset(11% 13% 64% 81%);
+}
+.zhozho-defence-clip1 {
+-webkit-clip-path: inset(55% 85% 0 10%);
+clip-path: inset(55% 85% 0 10%);  opacity: 0;
+}
+.zhozho-defence-clip2{
+  -webkit-clip-path: inset(30% 74% 38% 19%);
+  clip-path: inset(30% 74.3% 38% 19%);
+  opacity: 0;
+}
+.zhozho-defence-clip3{
+
+-webkit-clip-path: inset(55% 69% 0 26%);
+
+clip-path: inset(52% 69% 0 26.2%);
+
+opacity: 0;
+}
+.zhozho-defence-clip4{-webkit-clip-path: inset(56% 69% 0 26%);clip-path: inset(100%);opacity: 0;}
+.zhozho-defence-clip5{
+-webkit-clip-path: inset(52% 0 0 94%);
+clip-path: inset(52% 0 0 94%);
+    opacity: 0;
+}
+.zhozho-hranenie-clip1 {
+    -webkit-clip-path: polygon(5% 92%, 5% 37%, 6% 30%, 13% 31%, 14% 56%, 10% 58%, 11% 92%);
+    clip-path: polygon(5% 90%, 5% 37%, 6% 30%, 13% 31%, 13.1% 55%, 10.6% 55.1%, 11% 90%);
+    opacity: 0;
+}
+.zhozho-hranenie-clip2{
+    -webkit-clip-path: inset(28% 80% 43% 15%);
+    clip-path: inset(28% 80% 43% 15%);
+    opacity: 0;
+}
+.zhozho-hranenie-clip3{
+    -webkit-clip-path: inset(51% 20% 35% 30%);
+    clip-path: inset(51% 20% 35% 30%);
+    opacity: 0;
+}
+.zhozho-hranenie-clip4{
+    opacity: 0;
+    clip-path: inset(69% 28% 12% 64%);
+}
+.zhozho-hranenie-clip5{
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(7.6% at 75.6% 79%);
+    webkit-clip-path: polygon(81% 36%, 94% 37%, 94% 94%, 81% 93%);
+    clip-path: polygon(81% 36%, 94% 37%, 94% 94%, 81% 93%);
+    opacity: 0;
+}

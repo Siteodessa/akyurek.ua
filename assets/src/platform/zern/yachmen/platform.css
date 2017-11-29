@@ -1,0 +1,349 @@
+.clipboard, .shadowboard {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: #d3d0c9;
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/05/platbege.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+div#box.box {
+    height: 425px;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.shadowboard {
+    opacity: 0.4;
+}
+
+.prazdnik {
+    position: relative;
+    background: #8a8a8a;
+    width: 1230px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -60px;
+    padding: 20px 10px;
+}
+
+.yachmen-separ-clip1 {
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(7.6% at 21.7% 79%);
+    opacity: 0;
+}
+
+.yachmen-separ-clip2 {
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(7.6% at 33.4% 79%);
+    opacity: 0;
+}
+
+.yachmen-separ-clip3 {
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(7.6% at 44.8% 79%);
+    opacity: 0;
+}
+
+.yachmen-separ-clip4 {
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(7.6% at 60.6% 79%);
+    opacity: 0;
+}
+
+.yachmen-separ-clip5 {
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(7.6% at 75.6% 79%);
+    opacity: 0;
+}
+
+.yachmen-polir-clip1 {
+    -webkit-clip-path: inset(22% 53% 51% 30%);
+    clip-path: inset(22% 53% 51% 30%);
+    opacity: 0;
+}
+
+.yachmen-polir-clip2 {
+    -webkit-clip-path: inset(22% 33% 51% 54%);
+    clip-path: inset(22% 33% 51% 54%);
+    opacity: 0;
+}
+
+.yachmen-polir-clip3 {
+    -webkit-clip-path: inset(22% 20% 51% 70%);
+    clip-path: inset(22% 20% 51% 70%);
+    opacity: 0;
+}
+
+.yachmen-polir-clip4 {
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(0% at 60.6% 79%);
+    opacity: 0;
+}
+
+.yachmen-polir-clip5 {
+    -webkit-clip-path: circle(0% at 21% 79%);
+    clip-path: circle(0% at 75.6% 79%);
+    opacity: 0;
+}
+
+.yachmen-trans-clip1 {
+    opacity: 0;
+    -webkit-clip-path: inset(22% 84% 8% 13%);
+    clip-path: inset(22% 84% 8% 13%);
+}
+
+.yachmen-trans-clip2 {
+    opacity: 0;
+    -webkit-clip-path: inset(14% 71% 42% 27%);
+    clip-path: inset(14% 71% 42% 27%);
+}
+
+.yachmen-trans-clip3 {
+    opacity: 0;
+    -webkit-clip-path: inset(11% 48% 14% 49%);
+    clip-path: inset(11% 48% 14% 49%);
+}
+
+.yachmen-trans-clip4 {
+    opacity: 0;
+    -webkit-clip-path: inset(11% 35% 35% 62%);
+    clip-path: inset(11% 35% 35% 62%);
+}
+
+.yachmen-trans-clip5 {
+    opacity: 0;
+    -webkit-clip-path: inset(11% 13% 64% 81%);
+    clip-path: inset(11% 13% 64% 81%);
+}
+
+.yachmen-defence-clip1 {
+    -webkit-clip-path: inset(55% 85% 0 10%);
+    clip-path: inset(55% 85% 0 10%);
+    opacity: 0;
+}
+
+.yachmen-defence-clip2 {
+    -webkit-clip-path: inset(30% 74% 38% 19%);
+    clip-path: inset(30% 74.3% 38% 19%);
+    opacity: 0;
+}
+
+.yachmen-defence-clip3 {
+    -webkit-clip-path: inset(55% 69% 0 26%);
+    clip-path: inset(52% 69% 0 26.2%);
+    opacity: 0;
+}
+
+.yachmen-defence-clip4 {
+    -webkit-clip-path: inset(56% 69% 0 26%);
+    clip-path: inset(100%);
+    opacity: 0;
+}
+
+.yachmen-defence-clip5 {
+    -webkit-clip-path: inset(52% 0 0 94%);
+    clip-path: inset(52% 0 0 94%);
+    opacity: 0;
+}
+
+.yachmen-hranenie-clip1 {
+    -webkit-clip-path: polygon(5% 92%, 5% 37%, 6% 30%, 13% 31%, 14% 56%, 10% 58%, 11% 92%);
+    clip-path: polygon(5% 90%, 5% 37%, 6% 30%, 13% 31%, 13.1% 55%, 10.6% 55.1%, 11% 90%);
+    opacity: 0;
+}
+
+.yachmen-hranenie-clip2 {
+    -webkit-clip-path: inset(28% 80% 43% 15%);
+    clip-path: inset(28% 80% 43% 15%);
+    opacity: 0;
+}
+
+.yachmen-hranenie-clip3 {
+    -webkit-clip-path: inset(51% 20% 35% 30%);
+    clip-path: inset(51% 20% 35% 30%);
+    opacity: 0;
+}
+
+.yachmen-hranenie-clip4 {
+    opacity: 0;
+    clip-path: inset(69% 28% 12% 64%);
+}
+
+.yachmen-hranenie-clip5 {
+    -webkit-clip-path: circle(7.6% at 21% 79%);
+    clip-path: circle(7.6% at 75.6% 79%);
+    webkit-clip-path: polygon(81% 36%, 94% 37%, 94% 94%, 81% 93%);
+    clip-path: polygon(81% 36%, 94% 37%, 94% 94%, 81% 93%);
+    opacity: 0;
+}
+
+.page-id-4177 .clipboard, .page-id-4177 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4090 .clipboard, .page-id-4090 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/05/platbege.jpg);
+}
+
+.page-id-4089 .clipboard, .page-id-4089 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/05/platbege.jpg);
+}
+
+.page-id-4093 .clipboard, .page-id-4093 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/05/platbege.jpg);
+
+}
+
+.page-id-4092 .clipboard, .page-id-4092 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/05/platbege.jpg);
+}
+
+.page-id-4094 .clipboard, .page-id-4094 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/05/platbege.jpg);
+}
+
+.page-id-4096 .clipboard, .page-id-4096 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/05/platbege.jpg);
+}
+
+.page-id-4095 .clipboard, .page-id-4095 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/05/platbege.jpg);
+}
+
+.page-id-4091 .clipboard, .page-id-4091 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/05/platbege.jpg);
+}
+
+.page-id-4097 .clipboard, .page-id-4097 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4099 .clipboard, .page-id-4099 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4098 .clipboard, .page-id-4098 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4102 .clipboard, .page-id-4102 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4103 .clipboard, .page-id-4103 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4104 .clipboard, .page-id-4104 .shadowboard {
+    77background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4105 .clipboard, .page-id-4105 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4106 .clipboard, .page-id-4106 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2eW4STd.png);
+}
+
+.page-id-4107 .clipboard, .page-id-4107 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4108 .clipboard, .page-id-4108 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4109 .clipboard, .page-id-4109 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4110 .clipboard, .page-id-4110 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2ggIC71.png);
+}
+
+.page-id-4111 .clipboard, .page-id-4111 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4165 .clipboard, .page-id-4165 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/spl1.jpg);
+}
+
+.page-id-4166 .clipboard, .page-id-4166 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2m6tTBi.png);
+}
+
+.page-id-4167 .clipboard, .page-id-4167 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mvRxVO.png);
+}
+
+.page-id-4168 .clipboard, .page-id-4168 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2g08fvg.png);
+    background-size: 80%;
+}
+
+.page-id-4169 .clipboard, .page-id-4169 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4170 .clipboard, .page-id-4170 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2guqRUQ.png);
+}
+
+.page-id-4171 .clipboard, .page-id-4171 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4172 .clipboard, .page-id-4172 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4173 .clipboard, .page-id-4173 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4176 .clipboard, .page-id-4176 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/spl3.jpg);
+}
+
+.page-id-4174 .clipboard, .page-id-4174 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4183 .clipboard, .page-id-4183 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4128 .clipboard, .page-id-4128 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4184 .clipboard, .page-id-4184 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4180 .clipboard, .page-id-4180 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4181 .clipboard, .page-id-4181 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4178 .clipboard, .page-id-4178 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-4175 .clipboard, .page-id-4175 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2mDMnak.png);
+}
+
+.page-id-5423 .clipboard, .page-id-5423 .shadowboard {
+    background-image: url(http://akyurek.ua/wp-content/uploads/2017/06/2g08fvg.png);
+    background-size: 80%;
+}

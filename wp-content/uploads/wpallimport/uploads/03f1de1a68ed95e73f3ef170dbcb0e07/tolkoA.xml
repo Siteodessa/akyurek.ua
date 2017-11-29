@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<name><![CDATA[Continuous Seed Treating Machine]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Cylindrical Needle Sorter CNS 100]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Easy Dump Elevator]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Continuous Cup Z Elevators]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Continous Polishers]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Chain Conveyor]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Bucket Elevators]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Big Bag Scale - Above Ground Weighing]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Big Bag Scale-On Ground Weighing]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Batch Type Seed Coating Machine]]></name>
+	</node>
+	<node>
+		<name><![CDATA[AKYUREKEXCELL 33 Screen Cleaner Grader]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Шнековые конвейеры]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Шлюзовой клапан ALV-52]]></name>
+	</node>
+	<node>
+		<name><![CDATA[ШЕЛУШИТЕЛЬ АРАХИСА]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Циклоны]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Цилиндрические просеивающие машины CSL 90x500]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Центробежный вентилятор]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Фильтры типа Jet AKJF]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Фасовочно-упаковочная машина с четырьмя весовыми дозаторами С.KTR-017-PLC - 5 до 50 кг.]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Фасовочно-упаковочная машина с одним весовым дозатором С.KTR-017-PLC - 5 до 50 кг.]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Фасовочно-Упаковочная Машина]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Универсальные предварительные очистители Excell]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Сушилки]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Телескопическая лента Teles. Belt 180]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Супер интенсивный очиститель Excell серии 200]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Супер интенсивные очистители Excell 230]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Супер интенсивный очиститель Excell 240]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Сортировщик чая]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Сортировщик по цвету с ременным принципом работы]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Супер интенсивные очистители Excell 210]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Ситовой вибрационный сепаратор 50 x 80 C.SAS 013]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Сепаратор арахиса по плотности]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Семеннорушительная машина ударного типа DE-HULL-038]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Семенной очиститель сита 380 Jog Screen Cleaner]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Протравливатель]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Предварительный Очиститель Барабанного Типа]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Порционный робот]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Предварительный интенсивный очиститель с шестью решетными станками C.O.TEM-004]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Полуавтоматические весы Double Scale Net Weigher Bagger-5 to 50 kg]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Полировальная машина]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Остеоломатель K.KRAN-054]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Оптический сортировщик SORTURK C-7]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Остеоломатель EXCELL 150]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Оптический сортировщик SORTURK C-4]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Оптический сортировщик SORTURK C-3]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Оптический сортировщик SORTURK C-1]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Оптический сортировщик C-2]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Нагнетатель]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Оптический сортировщик SORTURK C-5]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Маятниковый ковшовый элеватор]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Лущилка арахиса]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Линейные весы для мультизадачности]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Конвеер ленточный наклонный Y.BELT-0014]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Конвеерная лента]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Комбинированный очиститель с шестью решетными станками O.MAC-001]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Калибровочные очистители Excell серии 220]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Камнеотделитель T.MAC-009]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Калибровочная машина с шестью решетными станками B.MAC-007-6]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Калибровочная машина с одним решетным станком B.MAC-007-1]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Калибровочная машина с тремя решетными станками B.MAC-007-3]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Калибровочная машина с двумя решетными станками B.MAC-007-2]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Калибровочная Машина B.MAC-007-5]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Калибровачная машина с четырьмя решетными станками B.MAC-007-4]]></name>
+	</node>
+	<node>
+		<name><![CDATA[ИНТЕНСИВНОЙ ОЧИСТИТЕЛЬ С ТРЕМЯ РЕШЕТНЫМИ СТАНАМИ O.TEM-005-3]]></name>
+	</node>
+	<node>
+		<name><![CDATA[ИНТЕНСИВНОЙ ОЧИСТИТЕЛЬ С ОДНИМ РЕШЕТНЫМ СТАНОМ O.TEM-005-1]]></name>
+	</node>
+	<node>
+		<name><![CDATA[ИНТЕНСИВНОЙ ОЧИСТИТЕЛЬ С ДВУМЯ РЕШЕТНЫМИ СТАНАМИ O.TEM-005-2]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Инспекционный конвеерный стол S.BELT-0011]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Гравитационный сепаратор G-MAC-010]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Горизонтальный Шелушитель SPLT 400]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Вибрационный Сепаратор C.SAS -013]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Воздушный Сепаратор Zig Zag]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Весы Производительности RDKTR-017]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Вертикальный Шелушитель SPLT 340]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Аспирационная Камера]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Бункеры Для Хранения Продукции]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Аспиратор с Замкнутым Циклом Воздуха ARA]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Velvet Roller]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Wire Mesh Pre Cleaner]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Spiral Separator]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Puls Hull Split]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Sesame Peeler – SP-4000]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Rotary Drum Seed Cleaner]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Plant Automation]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Peanut Sheller]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Outdoor Storage Silos]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Modular Pipework Systems]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Magnet Separators]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Mechanic Scale In-Bag Gross Weigher-25 to 50 kg]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Jog Conveyor]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Hand Screen Set]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Impact Dehuller ID-900]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Hammer Mills]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Excell 60 Series Fine Screen Cleaners]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Electronic Scale –In-Bag- Net Weigher - 5 to 50 kg]]></name>
+	</node>
+	<node>
+		<name><![CDATA[Excell 50 Series Super Fine Screen Cleaners]]></name>
+	</node>
+</data>

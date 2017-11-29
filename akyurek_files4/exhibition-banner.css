@@ -1,0 +1,124 @@
+.messe-banner{
+    width: 959px;
+    height: 276px;
+    padding: 0;
+}
+.messe-slide-item {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.messe-messagebox{
+    width: 256px;
+    height: 256px;
+    float: left;
+    font-size: 12px;
+    padding: 10px;
+    border-bottom-left-radius: 25px;
+    margin-right: 10px;
+}
+.messe-image{
+    width: 633px;
+    height: 276px;
+    float: left;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.messe-image img{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.messe-claim {
+    font-size: 27px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    white-space: normal;
+}
+.messe-name {
+    font-size: 15px;
+    line-height: 20px;
+    display: block;
+}
+.messe-info{
+    font-size: 15px;
+    line-height: 20px;
+    display: block;
+}
+.messe-claimbox{
+    height: 178px;
+}
+.bg-cyan {background-color: #009B91;}
+.bg-white {background-color: #FFFFFF;border: 1px solid #000000;width: 256px;height: 256px; padding: 8px;}
+.bg-anthracite-dark {background-color: #505050;}
+.bg-anthracite-light {background-color: #B4B4B4;}
+.bg-anthracite-medium {background-color: #999999;}
+.bg-black {background-color: #000000;}
+.bg-orange-light {background-color: #FF9933;}
+.bg-orange-dark {background-color: #CC9933;}
+.bg-green-light {background-color: #E6E100;}
+.bg-green-dark {background-color: #B4AA00;}
+.bg-blue-light {background-color: #87C8F0;}
+.bg-blue-dark {background-color: #6496B6;}
+.col-cyan {color: #009B91;}
+.col-white {color: #FFFFFF;}
+.col-anthracite-dark {color: #505050;}
+.col-anthracite-light {color: #B4B4B4;}
+.col-anthracite-medium {color: #999999;}
+.col-black {color: #000000;}
+.col-orange-light {color: #FF9933;}
+.col-orange-dark {color: #CC9933;}
+.col-green-light {color: #E6E100;}
+.col-green-dark {color: #B4AA00;}
+.col-blue-light {color: #87C8F0;}
+.col-blue-dark {color: #6496B6;}
+
+/******** KleinmesseBaner (sta_Banner_Exhibition) ***********/
+.kleinmesse-banner{
+    width: 959px;
+    height: 190px;
+    padding: 0;
+    position: relative;
+    }
+.kleinmesse_bg_green{
+    background-image:url(/static/global/en/media/smallfair_green.jpg);
+    }
+.kleinmesse_bg_blue{
+    background-image:url(/static/global/en/media/smallfair_blue.jpg);
+    }
+.kleinmesse_bg_orange{
+    background-image:url(/static/global/en/media/smallfair_orange.jpg);
+    }
+.kleinmesse_bg_grey{
+      background-image:url(/static/global/en/media/smallfair_grey.jpg);
+    }
+.kleinmesse-banner_name_green,
+.kleinmesse-banner_name_blue,
+.kleinmesse-banner_name_orange{
+    padding:13px 20px 0px 20px; 
+    display:block;
+    font-size: 57px;
+    line-height: 59px;
+    color:#FFF;       
+ }
+.kleinmesse-banner_name_grey{
+    padding:13px 20px 0px 20px; 
+    display:block;
+    font-size: 57px;
+    line-height: 59px;
+    color:#e6ff00;
+  
+}
+.kleinmesse-banner_info{
+    position: absolute; 
+    bottom:0; 
+    padding:0px 20px 17px 20px;
+    font-size: 20px;
+    color:#FFF;
+    }
+ 
