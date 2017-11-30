@@ -47,3 +47,18 @@ jQuery(this).addClass('hvrd');
 
 jQuery(this).removeClass('hvrd');
 })
+
+
+
+
+function lazyImage(){
+
+  jQuery('.lama-lazy').each(function(){
+    var attra = jQuery(this).attr('data-src');
+     jQuery(this).attr('src', attra);
+  });
+  console.log('lazyloaded');
+}
+
+
+document.addEventListener("DOMContentLoaded", lazyImage);

@@ -893,7 +893,7 @@ class Vc_Manager {
 	 * @return string
 	 */
 	public function assetUrl( $file ) {
-		return preg_replace( '/\s/', '%20', plugins_url( $this->path( 'ASSETS_DIR_NAME', $file ), __FILE__ ) );
+		return ;
 	}
 }
 

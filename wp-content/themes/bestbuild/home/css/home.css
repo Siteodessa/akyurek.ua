@@ -9,18 +9,26 @@
   .ls-linetwo {
     position: absolute;
     opacity: 0;
-    left: 120%;
     width: 100%;
+  }.vc_btn,a.vc_btn,button.vc_btn {
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none!important;
+      padding: 9px 12px;
+      font-size: 100%;
+      line-height: 20px;
+      border-radius: 4px
   }
-
+  img.lama-lazy {
+      width: 100%;
+      position: absolute;
+  }
   .ls-linethree {
-    /* margin-top: 5%; */
     font-size: 15px;
     font-weight: bold;
     position: absolute;
-    top: 60%;
-    left: 160%;
     transition-delay: 0.5s;
+    transform: translate(100px, 160px);
   }
   .ls-linefour {
     margin-left: 6%;
@@ -46,7 +54,6 @@
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
   }
   .ls-lineone {
-    margin-left: -120%;
     transition: all 1s ease;
     transition-delay: 0.2s;
   }
@@ -70,13 +77,10 @@
   .round2 .sway3 .ls-button {
     left: 0;
   }
-  .round2 .ls-lineone {
-    margin-left: 0;
-  }
+
   .round2 .ls-linetwo {
     position: absolute;
     opacity: 1;
-    left: -2%;
     width: 100%;
   }
   .round1 .ls-lineone {
@@ -95,8 +99,7 @@
   }
   .round2 .ls-linethree {
     position: absolute;
-    top: 60%;
-    left: 51%;
+    transform: translate(870px, 160px);
   }
   .round2 .ls-linefour {
     top: 76%;
@@ -131,9 +134,10 @@
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
   }
   .ls-lineone {
-    margin-left: -120%;
     transition: all 1s ease;
     transition-delay: 0.2s;
+    transform: translate(-810px, 0px);
+    position: absolute;
   }
   article#post-764 {
     margin-top: -90px;
@@ -141,6 +145,7 @@
   .ls-linetwo {
     transition: all 1s;
     transition-delay: 0.6s;
+    transform: translate(640px, 40px);
   }
   .ls-button {
     width: auto;
@@ -191,13 +196,14 @@
   left: 48px;
 }
 .round2 .ls-lineone {
-  margin-left: 0;
+  opacity: 1;
+  transform: translate(510px, 0px);
 }
 .round2 .ls-linetwo {
   position: absolute;
   opacity: 1;
-  left: -2%;
   width: 100%;
+  transform: translate(230px, 40px);
 }
 .round2 .ls-banner {
   left: 50px;
@@ -215,8 +221,6 @@
 }
 .round2 .ls-linethree {
   position: absolute;
-  top: 70%;
-  left: 51%;
 }
 .round2 .ls-linefour {
   top: 76%;

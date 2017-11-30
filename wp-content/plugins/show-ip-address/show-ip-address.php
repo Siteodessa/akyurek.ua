@@ -10,15 +10,15 @@
  */
 /* Copyright 2015 Keith Griffiths (email : info@keith-griffiths.com)
    This program is free software; you can redistribute it and/or modify
-   it under the terms of the GNU General Public License, version 2,  
+   it under the terms of the GNU General Public License, version 2,
    as published by the Free Software Foundation.
    This program is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
    See the GNU General Public License for more details.
 */
 // Style sheet
-wp_enqueue_style('custom-style', plugins_url( 'css/style-show-ip-address.css', __FILE__ ), array(),'all');
+// wp_enqueue_style('custom-style', plugins_url( 'css/style-show-ip-address.css', __FILE__ ), array(),'all');
 
 // Settings
 add_action('admin_menu', 'ip_plugin_settings');

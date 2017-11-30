@@ -64,7 +64,7 @@ if ( $parallax_image ) {
             ';
 }
 ?>
-<?php echo $style; ?>><?php
+<?php  ?>><?php
 echo wpb_js_remove_wpautop( $content );
 ?></div><?php echo $this->endBlockComment( 'row' );
 if ( ! empty( $full_width ) ) {

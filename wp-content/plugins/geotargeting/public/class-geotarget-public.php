@@ -83,7 +83,7 @@ class GeoTarget_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->GeoTarget, plugin_dir_url( __FILE__ ) . 'css/geotarget-public.css', array(), $this->version, 'all' );
+		// wp_enqueue_style( $this->GeoTarget, plugin_dir_url( __FILE__ ) . 'css/geotarget-public.css', array(), $this->version, 'all' );
 
 	}
 

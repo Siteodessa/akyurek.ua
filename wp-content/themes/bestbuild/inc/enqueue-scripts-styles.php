@@ -11,19 +11,16 @@ function stm_load_theme_scripts_and_styles() {
 	if ( ! is_admin() ) {
 
 		/* Register Styles */
-		wp_register_style( 'theme-style', get_stylesheet_uri(), null, STM_THEME_VERSION, 'all' );
-		wp_register_style( 'bootstrap.min.css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', null, STM_THEME_VERSION, 'all' );
-		// wp_register_style( 'select2.css', get_template_directory_uri() . '/assets/css/select2.css', null, STM_THEME_VERSION, 'all' );
-		wp_register_style( 'vc.css',  get_template_directory_uri() . '/assets/css/vc.css', null, STM_THEME_VERSION, 'all' );
-		wp_register_style( 'mobile.css', get_template_directory_uri() . '/assets/css/mobile.css', null, STM_THEME_VERSION, 'all' );
-		wp_register_style( 'frontend_customizer', get_template_directory_uri() . '/assets/css/frontend_customizer.css', null, STM_THEME_VERSION, 'all' );
-		wp_register_style( 'woocommerce.css', get_template_directory_uri() . '/assets/css/woocommerce.css', null, STM_THEME_VERSION, 'all' );
-		wp_register_style( 'slick.css', get_template_directory_uri() . '/assets/css/slick.css', null, STM_THEME_VERSION, 'all' );
-		wp_register_style( 'skin_red', get_template_directory_uri() . '/assets/css/skin_red.css', null, STM_THEME_VERSION, 'all' );
-		wp_register_style( 'skin_yellow', get_template_directory_uri() . '/assets/css/skin_yellow.css', null, STM_THEME_VERSION, 'all' );
-		wp_register_style( 'skin_orange', get_template_directory_uri() . '/assets/css/skin_orange.css', null, STM_THEME_VERSION, 'all' );
-		wp_register_style( 'skin_green', get_template_directory_uri() . '/assets/css/skin_green.css', null, STM_THEME_VERSION, 'all' );
-		wp_register_style( 'skin_custom_color', get_template_directory_uri() . '/assets/css/skin_custom_color.css', null, STM_THEME_VERSION, 'all' );
+		// wp_register_style( 'theme-style', get_stylesheet_uri(), null, STM_THEME_VERSION, 'all' );
+		// wp_register_style( 'bootstrap.min.css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', null, STM_THEME_VERSION, 'all' );
+		// wp_register_style( 'vc.css',  get_template_directory_uri() . '/assets/css/vc.css', null, STM_THEME_VERSION, 'all' );
+		// wp_register_style( 'frontend_customizer', get_template_directory_uri() . '/assets/css/frontend_customizer.css', null, STM_THEME_VERSION, 'all' );
+		// wp_register_style( 'slick.css', get_template_directory_uri() . '/assets/css/slick.css', null, STM_THEME_VERSION, 'all' );
+		// wp_register_style( 'skin_red', get_template_directory_uri() . '/assets/css/skin_red.css', null, STM_THEME_VERSION, 'all' );
+		// wp_register_style( 'skin_yellow', get_template_directory_uri() . '/assets/css/skin_yellow.css', null, STM_THEME_VERSION, 'all' );
+		// wp_register_style( 'skin_orange', get_template_directory_uri() . '/assets/css/skin_orange.css', null, STM_THEME_VERSION, 'all' );
+		// wp_register_style( 'skin_green', get_template_directory_uri() . '/assets/css/skin_green.css', null, STM_THEME_VERSION, 'all' );
+		// wp_register_style( 'skin_custom_color', get_template_directory_uri() . '/assets/css/skin_custom_color.css', null, STM_THEME_VERSION, 'all' );
 
 		/* Register Scripts */
 		wp_register_script( 'bootstrap.min.js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), STM_THEME_VERSION, true );
@@ -37,14 +34,14 @@ function stm_load_theme_scripts_and_styles() {
         wp_register_script( 'custom.js', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), STM_THEME_VERSION, true );
 
 		/* Enqueue Styles */
-		wp_enqueue_style( 'normalize.css' );
-		wp_enqueue_style( 'bootstrap.min.css' );
-		wp_enqueue_style( 'icomoon.css' );
-		wp_enqueue_style( 'font-awesome.min.css' );
-		wp_enqueue_style( 'theme-style' );
-		wp_enqueue_style( 'select2.css' );
-		wp_enqueue_style( 'vc.css' );
-		wp_enqueue_style( 'mobile.css' );
+
+		// wp_enqueue_style( 'bootstrap.min.css' );
+
+
+		// wp_enqueue_style( 'theme-style' );
+
+		// wp_enqueue_style( 'vc.css' );
+
 
 		if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 			wp_enqueue_style( 'woocommerce.css' );

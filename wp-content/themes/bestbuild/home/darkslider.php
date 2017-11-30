@@ -64,7 +64,7 @@ while(have_posts()): the_post(); ?>
 
           </span>
         </span>
-<img src="<?php echo the_post_thumbnail_url();?>" /></div>
+<img data-src="<?php echo the_post_thumbnail_url();?>" class="lama-lazy" /></div>
         <?php endwhile; ?>
     </div>
     <!-- Add Pagination -->
@@ -86,6 +86,7 @@ while(have_posts()): the_post(); ?>
               centeredSlides: true,
               autoplayDisableOnInteraction: false,
               autoplay: 6000,
+              lazy: true,
               loop: true,
               height: 1550,
               'onInit': function() {
@@ -111,6 +112,7 @@ while(have_posts()): the_post(); ?>
               slidesPerColumn: 2,
               spaceBetween: 30,
               autoplay: 4000,
+                  lazy: true,
               pagination: {
                 el: '.lama-pagination',
                 clickable: true,

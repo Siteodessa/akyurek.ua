@@ -147,10 +147,6 @@ function wpcf7_do_enqueue_scripts() {
 	if ( wpcf7_load_js() ) {
 		wpcf7_enqueue_scripts();
 	}
-
-	if ( wpcf7_load_css() ) {
-		wpcf7_enqueue_styles();
-	}
 }
 
 function wpcf7_enqueue_scripts() {
@@ -197,19 +193,7 @@ function wpcf7_script_is() {
 	return wp_script_is( 'contact-form-7' );
 }
 
-function wpcf7_enqueue_styles() {
-	wp_enqueue_style( 'contact-form-7',
-		wpcf7_plugin_url( 'includes/css/styles.css' ),
-		array(), WPCF7_VERSION, 'all' );
 
-	if ( wpcf7_is_rtl() ) {
-		wp_enqueue_style( 'contact-form-7-rtl',
-			wpcf7_plugin_url( 'includes/css/styles-rtl.css' ),
-			array(), WPCF7_VERSION, 'all' );
-	}
-
-	do_action( 'wpcf7_enqueue_styles' );
-}
 
 function wpcf7_style_is() {
 	return wp_style_is( 'contact-form-7' );

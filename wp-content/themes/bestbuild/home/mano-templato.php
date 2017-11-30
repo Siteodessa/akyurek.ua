@@ -29,6 +29,7 @@
               <div class="lama-container s1">
                 <div class="lama-wrapper">
                   <div class="lama-slide sway1">
+                      <img data-src="http://akyurek.ua/wp-content/uploads/2017/05/sl1-min.jpg" class="lama-lazy">
                     <div class="ls-contain">
                       <div class="ls-scene">
                         <div class="ls-centered">
@@ -41,6 +42,7 @@
                     </div>
                   </div>
                   <div class="lama-slide sway2">
+                      <img data-src="http://akyurek.ua/wp-content/uploads/2017/06/sl2-min-4-1.jpg" class="lama-lazy">
                     <div class="ls-contain">
                       <div class="ls-scene">
                         <div class="ls-banner">
@@ -51,13 +53,27 @@
                       </div>
                     </div>
                   </div>
-                  <div class="lama-slide sway3">
+                  <div class="lama-slide sway3" >
+                      <img data-src="http://akyurek.ua/wp-content/uploads/2017/05/sl3-min.jpg" class="lama-lazy">
                     <div class="ls-contain">
                       <div class="ls-scene">
                         <div class="ls-banner">
                           <h2 class="ls-heading">Создаем <br><mark>инновационные</mark><br> технологии</h2>
                           <div class="ls-paragraph">На площади свыше 40 000 м2<br> Ознакомьтесь с оборудованием, <br> которое мы предлагаем</div>
                           <div class="ls-button"><a href="http://akyurek.ua/tovary/">Товары</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lama-slide sway6">
+                      <img data-src="http://akyurek.ua/wp-content/uploads/2017/08/sl4-min-tea-m.jpg" class="lama-lazy">
+                    <div class="ls-contain">
+                      <div class="ls-scene">
+                        <div class="ls-banner">
+                          <h2 class="ls-heading">Производительные <br><mark>Фотосепараторы</mark> <br> </h2>
+                          <div class="ls-paragraph">Оптическая сортировка следующего поколения</div>
+                          <p><a class="vc_btn " href="http://akyurek.ua/contact-us/" title="" target="_self">Перейти</a></p>
+
                         </div>
                       </div>
                     </div>
@@ -73,23 +89,12 @@
                       </div>
                     </div>
                   </div> -->
-                  <div class="lama-slide sway6">
-                    <div class="ls-contain">
-                      <div class="ls-scene">
-                        <div class="ls-banner">
-                          <h2 class="ls-heading">Производительные <br><mark>Фотосепараторы</mark> <br> </h2>
-                          <div class="ls-paragraph">Оптическая сортировка следующего поколения</div>
-                          <p><a class="vc_btn " href="http://akyurek.ua/contact-us/" title="" target="_self">Перейти</a></p>
-                      
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <div class="lama-pagination"></div>
                 <div class="lama-button-next"></div>
                 <div class="lama-button-prev ls-nav-prev"></div>
               </div>
+
 <div class="a1">
               <div class="vc_call_to_action wpb_content_element vc_cta_btn_pos_right vc_cta_square clearfix iv">
                 <div class="vc_button-2-wrapper"><a class="vc_btn vc_cta_btn iv" href="http://akyurek.ua/contact-us/" title="" target="_self">Задать вопрос</a>
@@ -510,19 +515,6 @@
     }
   </script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/home/js/home.js"></script>
-<!--  <script type='text/javascript' src='//akyurek.ua/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js'></script>-->
-<!--  <script type='text/javascript' src='http://akyurek.ua/wp-includes/js/comment-reply.min.js'></script>-->
-<!--  <script type='text/javascript' src='http://akyurek.ua/wp-content/themes/bestbuild/assets/js/bootstrap.min.js'></script>-->
-<!--  <script type='text/javascript' src='http://akyurek.ua/wp-content/themes/bestbuild/assets/js/select2.min.js'></script>-->
-<!--  <script type='text/javascript' src='http://akyurek.ua/wp-includes/js/imagesloaded.min.js'></script>-->
-<!--  <script type="text/javascript" src="http://akyurek.ua/wp-content/plugins/lightgallery/library/js/lightgallery.js?ver=1.3.8"></script>-->
-<!--  <script type='text/javascript' src='http://akyurek.ua/wp-content/themes/bestbuild/assets/js/custom.js'></script>-->
-<!--  <script type='text/javascript' src='http://akyurek.ua/wp-includes/js/wp-embed.min.js'></script>-->
-<!--  <script type='text/javascript' src='http://akyurek.ua/wp-content/themes/bestbuild/assets/js/slick.min.js'></script>-->
-<!--  <script type='text/javascript' src='http://akyurek.ua/wp-content/plugins/js_composer/assets/lib/bower/skrollr/dist/skrollr.min.js'></script>-->
-
-
-
   <script type='text/javascript' src='http://akyurek.ua/wp-content/themes/bestbuild/assets/js/smoothscroll.js'></script>
   <script type='text/javascript' src='http://akyurek.ua/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js'></script>
 <script type='text/javascript' src='http://akyurek.ua/wp-content/themes/bestbuild/assets/js/countUp.min.js'></script>

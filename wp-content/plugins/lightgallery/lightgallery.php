@@ -734,7 +734,7 @@
 			{
 				global $wp_version;
 
-				wp_register_style( "$this->SettingsName-Style", $this->PluginURL . 'library/css/lightgallery.css', null, $this->LibraryVersion );
+				// wp_register_style( "$this->SettingsName-Style", $this->PluginURL . 'library/css/lightgallery.css', null, $this->LibraryVersion );
 				wp_register_script( "$this->SettingsName-Script", $this->PluginURL . 'library/js/lightgallery.js', array( 'jquery' ), $this->LibraryVersion, false );
 
 
