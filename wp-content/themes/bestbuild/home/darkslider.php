@@ -64,7 +64,7 @@ while(have_posts()): the_post(); ?>
 
           </span>
         </span>
-<img data-src="<?php echo the_post_thumbnail_url();?>" class="lama-lazy" /></div>
+<img alt="<?php the_title();?>" data-src="<?php echo the_post_thumbnail_url();?>" class="lama-lazy" /></div>
         <?php endwhile; ?>
     </div>
     <!-- Add Pagination -->
@@ -77,7 +77,6 @@ while(have_posts()): the_post(); ?>
 
             <script>
 
-
             var lama1 = new lama('.s1', {
               nextButton: '.lama-button-next',
               prevButton: '.lama-button-prev',
@@ -85,27 +84,22 @@ while(have_posts()): the_post(); ?>
               spaceBetween: 30,
               centeredSlides: true,
               autoplayDisableOnInteraction: false,
-              autoplay: 6000,
               lazy: true,
               loop: true,
-              height: 1550,
-              'onInit': function() {
-                setTimeout(function() {
-                  jQuery('.s1').addClass('round2');
-                }, 150);
-                setTimeout(function() {
-                  jQuery('.s1').removeClass('round2');
-                }, 5500);
-              }
+              height: 1550
             });
-            lama1.on('slideChangeStart', function() {
-              setTimeout(function() {
-                jQuery('.s1').addClass('round2');
-              }, 750);
-              setTimeout(function() {
-                jQuery('.s1').removeClass('round2');
-              }, 5500);
-            });
+                          jQuery('.s1').addClass('round2');
+            setInterval(function(){
+            setTimeout(function() {
+              jQuery('.s1').addClass('round2');
+            }, 150);
+            setTimeout(function() {
+              jQuery('.s1').removeClass('round2');
+            }, 48000);
+            setTimeout(function() {
+            lama1.slideNext();
+          }, 60000);
+        }, 60000);
 
             var lama2 = new lama('.s2', {
               slidesPerView: 3,
@@ -118,6 +112,7 @@ while(have_posts()): the_post(); ?>
                 clickable: true,
               },
             });
+            setInterval(function() {
+            lama2.slideNext();
+          }, 4000);
             </script>
-<div class="container">
-<div class="vc_row wpb_row">

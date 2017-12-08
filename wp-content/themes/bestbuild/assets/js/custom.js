@@ -59,7 +59,7 @@ function custom() {
       }, 100);
     });
     setTimeout(function () {
-      iteRationArr(menumass, 400, 40, " visible"), iteRation(jQuery(".accordion-toggle"), 400, 40, " visible")
+      iteRationArr(menumass, 200, 40, " visible"), iteRation(jQuery(".accordion-toggle"), 200, 40, " visible")
     }, 600);
     iteRation(jQuery("ul.products li"), 13, 100, " visible"),
       iteRation(jQuery(".company_history > ul p"), 100, 50, " visible"), iteRation(jQuery(".wpb_text_column.wpb_content_element p"), 1e3, 100, " visible")
@@ -109,13 +109,13 @@ function custom() {
     twoWay(jQuery('.pin'), jQuery('.pin .iv'));
     if (jQuery(document).find('ul#menu-tempo-menu').isInViewport()) {
       var menumass = ['.top_nav_wrapper', 'li#menu-item-6266', 'li#menu-item-8345',  'li#menu-item-8491', 'li#menu-item-8559', 'li#menu-item-8715', 'li#menu-item-6270', 'li#menu-item-6268', 'li#menu-item-6269', 'li#menu-item-6271', '.text strong.iv:nth-child(1), .text span strong.iv'];
-      iteRationArr(menumass, 400, 40, " visible");
+      iteRationArr(menumass, 200, 40, " visible");
     } else {
       jQuery(document).find('ul#menu-tempo-menu li').removeClass('visible');
     }
     if (jQuery(document).find('.logo').isInViewport()) {
-      iteRation(jQuery('.header_top .iv'), 400, 100, " visible");
-      iteRationArr(headerSocials, 400, 40, " visible");
+      iteRation(jQuery('.header_top .iv'), 200, 100, " visible");
+      iteRationArr(headerSocials, 200, 40, " visible");
     } else {
       jQuery(document).find('.header_top .iv').removeClass('visible');
       jQuery('.header_socials a').removeClass('visible');
@@ -129,15 +129,15 @@ function custom() {
         jQuery(document).find('figure.effect-ming').removeClass('visible');
       };
       if (jQuery(document).find('.logo').isInViewport()) {
-        iteRation(jQuery('.header_top .iv'), 400, 100, " visible");
-        iteRationArr(headerSocials, 400, 40, " visible");
+        iteRation(jQuery('.header_top .iv'), 200, 100, " visible");
+        iteRationArr(headerSocials, 200, 40, " visible");
       } else {
         jQuery(document).find('.header_top .iv').removeClass('visible');
         jQuery('.header_socials a').removeClass('visible');
       }
       if (jQuery(document).find('ul#menu-tempo-menu').isInViewport()) {
         var menumass = ['.top_nav_wrapper', 'li#menu-item-6266', 'li#menu-item-8345', 'li#menu-item-8559', 'li#menu-item-8491', 'li#menu-item-8491', 'li#menu-item-8715', 'li#menu-item-6270', 'li#menu-item-6268', 'li#menu-item-6269', 'li#menu-item-6271', '.text strong.iv:nth-child(1), .text span strong.iv'];
-        iteRationArr(menumass, 400, 40, " visible");
+        iteRationArr(menumass, 200, 40, " visible");
       } else {
         jQuery(document).find('ul#menu-tempo-menu li').removeClass('visible');
       }
@@ -159,9 +159,9 @@ function custom() {
           };
   }
   setTimeout(function () {
-    iteRation(jQuery('.header_top .iv'), 400, 200, " visible");
-    iteRationArr(headerSocials, 400, 40, " visible");
-    iteRationArr(headerIcons, 400, 40, " visible");
+    iteRation(jQuery('.header_top .iv'), 200, 200, " visible");
+    iteRationArr(headerSocials, 200, 40, " visible");
+    iteRationArr(headerIcons, 200, 40, " visible");
     setTimeout(function () {
       jQuery('.lama-container').addClass('visible');
     }, 1500);
@@ -221,7 +221,7 @@ function custom() {
         width: "0",
         opacity: "0.02",
         left: "50%"
-      }, 400);
+      }, 200);
       jQuery("html").append('<div class="sli-contain"><div class="sli-inner"><div class="sli-body"></div><div class="l-closer closers"></div><div class="r-closer closers"><div class="close c-button"><i class="fa fa-close"></i></div></div></div></div>'), jQuery(".sli-contain").animate({
         opacity: "1"
       }, 600), setTimeout(function () {
@@ -229,7 +229,7 @@ function custom() {
           width: "80vmin",
           opacity: "1",
           top: "10vmin"
-        }, 400), e.addClass("centrizer")
+        }, 200), e.addClass("centrizer")
       }, 600), jQuery(".close.c-button").animate({
         right: "50"
       }, 600), jQuery(".sli-contain").on("click", ".closers", function () {
@@ -243,8 +243,8 @@ function custom() {
         }, 1300), setTimeout(function () {
           jQuery(".sli-contain").animate({
             opacity: "0"
-          }, 400)
-        }, 400), jQuery(".capsule").append(e), jQuery(".inprocess").animate({
+          }, 200)
+        }, 200), jQuery(".capsule").append(e), jQuery(".inprocess").animate({
           width: "100%"
         }, 200), jQuery(".inprocess").animate({
           opacity: "1"
@@ -275,7 +275,7 @@ function custom() {
           var t = e;
           jQuery("html,body").animate({
             scrollTop: t + 1
-          }, 400)
+          }, 200)
         }, 20)
       } else {
         e = jQuery("div#scrolltome").offset().top;
@@ -283,7 +283,7 @@ function custom() {
           var t = e;
           jQuery("html,body").animate({
             scrollTop: t + 1
-          }, 400)
+          }, 200)
         }, 20)
       }
     else if (isMobile.any()) {
@@ -292,7 +292,7 @@ function custom() {
         var t = e;
         jQuery("html,body").animate({
           scrollTop: t
-        }, 400)
+        }, 200)
       }, 20)
     } else {
       var e = jQuery("div#main").offset().top;
@@ -300,7 +300,7 @@ function custom() {
         var t = e;
         jQuery("html,body").animate({
           scrollTop: t + 1
-        }, 400)
+        }, 200)
       }, 20)
     }
   }
@@ -405,7 +405,7 @@ function custom() {
                 var e = jQuery(this).attr("href");
                 jQuery(this).removeAttr("href"), jQuery(this).attr("ssil", e)
               }), spinner(), aniPro()
-            }, 400), aniPro()
+            }, 200), aniPro()
           }
         }), setTimeout(function () {
           jQuery(".product_images img").addClass("unfixed"), goSwap(), iteRation(jQuery("ul.products li"), 1e3, 100, " visible")
@@ -523,7 +523,7 @@ function custom() {
       top: 0
     }, 500), setTimeout(function () {
       anidada()
-    }, 400)
+    }, 200)
   }), jQuery(".sort-choose-cont").on("click", ".shopper button", function () {
     jQuery(".htour").css("height", "0").css("display", "none").animate({
       left: 0,

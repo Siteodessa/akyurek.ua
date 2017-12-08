@@ -1,0 +1,39 @@
+{
+    "lang": "ru",
+    "dir": "ltr",
+    "name": "Оборудование для зернопереработки от производителя Akyurek",
+    "description": "Широкий ассортимент оборудования для вашего производства",
+    "short_name": "Akyurek",
+    "icons": [{
+        "src": "icon/lowres.webp",
+        "sizes": "64x64",
+        "type": "image/webp"
+    },{
+        "src": "icon/lowres.png",
+        "sizes": "64x64"
+    }, {
+        "src": "icon/hd_hi.png",
+        "sizes": "128x128"
+    }, {
+        "src": "icon/512.png",
+        "sizes": "192x192"
+    }, {
+        "src": "icon/192.png",
+        "sizes": "512x512"
+    }],
+    "scope": "/",
+    "start_url": "/index.html",
+    "display": "fullscreen",
+    "orientation": "browser",
+    "theme_color": "#ae100e",
+    "background_color": "white",
+    "screenshots": [{
+        "src": "screenshots/in-game-1x.jpg",
+        "sizes": "640x480",
+        "type": "image/jpeg"
+    },{
+        "src": "screenshots/in-game-2x.jpg",
+        "sizes": "1280x920",
+        "type": "image/jpeg"
+    }]
+}

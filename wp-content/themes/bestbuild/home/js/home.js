@@ -52,12 +52,14 @@ jQuery(this).removeClass('hvrd');
 
 
 function lazyImage(){
+setTimeout(function(){
 
   jQuery('.lama-lazy').each(function(){
     var attra = jQuery(this).attr('data-src');
-     jQuery(this).attr('src', attra);
+     jQuery(this).attr('src', attra);     jQuery(this).removeAttr('data-src');
   });
   console.log('lazyloaded');
+}, 10)
 }
 
 
