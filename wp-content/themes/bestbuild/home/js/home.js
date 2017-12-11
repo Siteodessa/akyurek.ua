@@ -64,3 +64,41 @@ setTimeout(function(){
 
 
 document.addEventListener("DOMContentLoaded", lazyImage);
+
+
+
+
+
+
+
+
+jQuery('ul#menu-tempo-menu').ready(function(){
+  jQuery('li#menu-item-6266, li#menu-item-8491, li#menu-item-8559, li#menu-item-8715, li#menu-item-6268, li#menu-item-6269, li#menu-item-6271').addClass('iv');
+  setTimeout(function(){
+   // new Watcher('ul#menu-tempo-menu', 'iv', 'vi');
+  },8)
+});
+
+new Watcher('.grid', 'effect-ming', 'vi');
+new Watcher('.header_top.clearfix', 'iv', 'vi');
+new Watcher('div#main .wpb_wrapper .sl-top', 'iv', 'vi');
+new Watcher('.a1', 'iv', 'vi');
+new Watcher('header', 'iv', 'vi');
+new Watcher('.darky', 'ivl', 'vi');
+new Watcher('.valueable.frst.vc_row.wpb_row.vc_inner.vc_row-fluid', 'ivl', 'vi');
+new Watcher('.valueable.vc_row.wpb_row.vc_inner.vc_row-fluid.scond', 'ivl', 'vi');
+new Watcher('.col-md-12.w3agile_blog_left.parnt', 'ivl', 'vi');
+
+
+setTimeout(function(){
+// new Watcher('.footer_widgets_wrapper', 'menu-item', 'vi');
+new Watcher('.prefoo', 'menu-item', 'vi');
+new Watcher('.okom', 'iv', 'vi');
+},1000)
+
+
+
+// ПРОБЛЕМА тут - ul.products не существует на главной
+
+// Вторая проблема - какая то хрень считает в футере делай от 8 секунд
+// new Watcher('ul.products', 'iv', 'vi');

@@ -8,7 +8,7 @@
     <div class="vc_column-inner ">
       <div class="wpb_wrapper">
         <div class="wpb_text_column wpb_content_element ">
-          <div class="wpb_wrapper">
+          <div class="wpb_wrapper sl-top">
             <div class="lama-container s1 iv">
               <div class="lama-wrapper">
                 <div class="lama-slide sway1"> <img alt="обработки зерновых" data-src="http://akyurek.ua/wp-content/uploads/2017/05/sl1-min.jpg" class="lama-lazy">
@@ -62,6 +62,8 @@
               <div class="lama-button-next"></div>
               <div class="lama-button-prev ls-nav-prev"></div>
             </div>
+                </div>
+                <div class="wpb_wrapper">
             <div class="a1">
               <div class="vc_call_to_action naf wpb_content_element vc_cta_btn_pos_right vc_cta_square clearfix iv">
                 <div class="vc_button-2-wrapper"><a class="vc_btn vc_cta_btn iv" href="http://akyurek.ua/contact-us/" title="" target="_self">Задать вопрос</a> </div>
@@ -305,7 +307,7 @@
             <h2 class="razd w">Наши достижения в отрасли</h2>
           </div>
           <div class="vc_row wpb_row vc_inner vc_row-fluid">
-            <div class="wpb_column vc_column_container col-sm-3 col-lg-3 iv">
+            <div class="wpb_column vc_column_container col-sm-3 col-lg-3">
               <div class="vc_column-inner ">
                 <div class="wpb_wrapper">
                   <div class="stats_counter">
@@ -331,7 +333,7 @@
                 </div>
               </div>
             </div>
-            <div class="wpb_column vc_column_container col-sm-3 col-lg-3 iv">
+            <div class="wpb_column vc_column_container col-sm-3 col-lg-3">
               <div class="vc_column-inner ">
                 <div class="wpb_wrapper">
                   <div class="stats_counter">
@@ -357,7 +359,7 @@
                 </div>
               </div>
             </div>
-            <div class="wpb_column vc_column_container col-sm-3 col-lg-3 iv">
+            <div class="wpb_column vc_column_container col-sm-3 col-lg-3">
               <div class="vc_column-inner ">
                 <div class="wpb_wrapper">
                   <div class="stats_counter">
@@ -465,6 +467,7 @@
     "updated": "31.08"
   }
 </script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/home/js/home.js"></script>
 <script>
   jQuery('span.over').mouseover(function() {
     jQuery(this).addClass('hvr');
