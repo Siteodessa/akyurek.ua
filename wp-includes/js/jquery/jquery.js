@@ -15565,8 +15565,18 @@ function videoloader(){
 
   jQuery('.videlem').each(function(){
     var dis = jQuery(this);
-dis.after('<img class="playbutton" src="http://akyurek.ua/wp-content/uploads/2017/12/play-button.png" />')
+      var disHeight = jQuery(this).height;
+        var disWidth = jQuery(this).width;
+dis.append('<div class="playcontainer"><div class="playovr"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div></div>');
+setTimeout(function(){
+  jQuery('.playovr').height(disHeight);
+    jQuery('.playovr').width(disWidth);
+}, 14);
+
+
     dis.click(function(){
+      setTimeout(function(){
+dis.find('.playcontainer').css('z-index', '-1');}, 14)
     var sors = dis.attr('data-video');
     console.log('Loading '+sors+'');
     dis.find('img').after('<iframe src="'+ sors +'"></iframe>');
