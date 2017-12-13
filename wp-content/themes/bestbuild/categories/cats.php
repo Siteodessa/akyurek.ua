@@ -1,4 +1,4 @@
-<?php 
+<?php
 $nefastshop = file_get_contents('./wp-content/themes/bestbuild/nefastshop.php');
 $galler = do_shortcode('[lightgallery images="3811,508,3837,423,3583,3982,538,476"]');
 $gallerfotosep = do_shortcode('[lightgallery images="6381,6382,6383,6384,6385,6386,6387,6388,6389,6390,6391,6392,6393,6394,6395,6396,6397,6398,6400,6401,6402,6403,6404,6405,6406,6407,6409,6410"]');
@@ -15,23 +15,20 @@ $ideshka_silos = file_get_contents('./wp-content/themes/bestbuild/silos.php');
 $kalibra = file_get_contents('./wp-content/themes/bestbuild/kalibra.php');
 $ideshka = $post->ID;
 $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-
-
-
 //if (stripos($url,'separatory-semyan/predvaritelnye-zernoochistiteli') !== false) {} 
-//if (stripos($url,'separatory-semyan/ochistitelnye-mashiny/kalibrovochnye-ochistiteli/') !== false) {} 
-//  elseif (stripos($url,'fotoseparatory') !== false) {echo $fotosep;} 
-//  elseif (stripos($url,'kalibrovochnye') !== false) {echo $kalibra;} 
+//if (stripos($url,'separatory-semyan/ochistitelnye-mashiny/kalibrovochnye-ochistiteli/') !== false) {}
+//  elseif (stripos($url,'fotoseparatory') !== false) {echo $fotosep;}
+//  elseif (stripos($url,'kalibrovochnye') !== false) {echo $kalibra;}
   if (stripos($url,'separatory-semyan') !== false) {
     if (stripos($url,'separatory-semyan/page') !== false){}
-    else{ include('wp-content/themes/bestbuild/categories/cat-texts/zernoochistiteli-b.php');}  
-  } 
-  elseif (strrpos($url,'protravlivateli') !== false) {echo $ideshka_travim;} 
-//  elseif (strpos($url,'shelushiteli-semyan-vse-tovary') !== false) {echo $ideshka_sheluha;} 
-//  elseif (strpos($url,'polirovalnye') !== false) {echo $ideshka_polir;} 
-//  elseif (strpos($url,'transportnaya-sistema') !== false) {echo $ideshka_transport;} 
-//  elseif (strpos($url,'vesy-upakovka') !== false) {echo $ideshka_wesi;} 
+    else{ include('wp-content/themes/bestbuild/categories/cat-texts/zernoochistiteli-b.php');}
+  }
+  elseif (strrpos($url,'protravlivateli') !== false) {echo $ideshka_travim;}
+//  elseif (strpos($url,'shelushiteli-semyan-vse-tovary') !== false) {echo $ideshka_sheluha;}
+//  elseif (strpos($url,'polirovalnye') !== false) {echo $ideshka_polir;}
+//  elseif (strpos($url,'transportnaya-sistema') !== false) {echo $ideshka_transport;}
+//  elseif (strpos($url,'vesy-upakovka') !== false) {echo $ideshka_wesi;}
 //  elseif (strpos($url,'zashhita-ot-pyli') !== false) {echo $ideshka_dust;}
-//  elseif (strpos($url,'hranenie-zerna') !== false) {echo $ideshka_silos;}  
-//  elseif (stripos($url,'/product-category/vse-tovary/') !== false) {echo '$nefastshop';}  
+//  elseif (strpos($url,'hranenie-zerna') !== false) {echo $ideshka_silos;}
+//  elseif (stripos($url,'/product-category/vse-tovary/') !== false) {echo '$nefastshop';}
 else { echo '';} ?>

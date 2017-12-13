@@ -9,9 +9,9 @@ img.akfasad {
     border: 1px solid #c3c3c3;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 180px 120px;
+    grid-template-rows: 180px 180px;
 }
-.prj .container.proj .col-md-12 {display: grid;grid-template-columns: 25% 25% 25% 25%;grid-template-rows: 320px;grid-gap: 12px;margin: 20px 0;}
+.prj .container.proj .col-md-12 {display: grid;grid-template-columns: 25% 25% 25% 25%;grid-template-rows: 365px;grid-gap: 12px;margin: 20px 0;}
 .prj .container.proj .col-md-12 .col-md-3 {
     width: 100%;
     margin: 0;

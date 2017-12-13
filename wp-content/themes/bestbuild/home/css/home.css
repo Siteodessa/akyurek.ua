@@ -240,6 +240,7 @@
   font-weight:900;
   font-style:normal;
   margin: -10px 0 0;
+  padding: 0 15px;
 }
 span.over {
     overflow: hidden;

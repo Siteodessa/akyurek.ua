@@ -3,11 +3,11 @@
 	$shop_sidebar_id = stm_option( 'shop_sidebar' );
 	$shop_sidebar_position = stm_option( 'shop_sidebar_position', 'none' );
 	$content_before = $content_after =  $sidebar_before = $sidebar_after = '';
-		
+
 	if( $shop_sidebar_id ) {
 		$shop_sidebar = get_post( $shop_sidebar_id );
 	}
-	
+
 	if( $shop_sidebar_position == 'right' && isset( $shop_sidebar ) ) {
 		$content_before .= '<div class="row">';
 		$content_before .= '<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">';
@@ -20,7 +20,7 @@
 		$sidebar_after .= '</div>'; // col
 		$sidebar_after .= '</div>'; // row
 	}
-	
+
 	if( $shop_sidebar_position == 'left' && isset( $shop_sidebar ) ) {
 		$content_before .= '<div class="row">';
 //		$content_before .= '<div class="col-lg-12 col-md-9 col-sm-12 col-xs-12">';
@@ -43,16 +43,16 @@
 				}
 			?>
 			<?php echo $content_after; ?>
-			
+
 			<?php echo $sidebar_before; ?>
 				<div class="sidebar-area">
 				<?php
 					if( isset( $shop_sidebar ) && $shop_sidebar_position != 'none' ) {
-						echo apply_filters( 'the_content' , $shop_sidebar->post_content);;
+					//	echo apply_filters( 'the_content' , $shop_sidebar->post_content);;
 					}
 				?>
 				</div>
 			<?php echo $sidebar_after; ?>
 		</div>
-	
+
 <?php get_footer(); ?>

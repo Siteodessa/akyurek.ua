@@ -200,8 +200,8 @@
 
     @font-face {
       font-family: 'FontAwesome';
-      src: url('../fonts/fontawesome-webfont.eot?v=4.6.2');
-      src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.2') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.2') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.2') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.2') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.2#fontawesomeregular') format('svg');
+      src: url('/fonts/fontawesome-webfont.eot?v=4.6.2');
+      src: url('/fonts/fontawesome-webfont.eot?#iefix&v=4.6.2') format('embedded-opentype'), url('/fonts/fontawesome-webfont.woff2?v=4.6.2') format('woff2'), url('/fonts/fontawesome-webfont.woff?v=4.6.2') format('woff'), url('/fonts/fontawesome-webfont.ttf?v=4.6.2') format('truetype'), url('/fonts/fontawesome-webfont.svg?v=4.6.2#fontawesomeregular') format('svg');
       font-weight: normal;
       font-style: normal
     }
@@ -401,8 +401,6 @@
       will-change: transform;
       transform: translate(0, 20px);
       opacity: 0 !important;
-      transition-delay: 1.5s;
-      transition: 1s !important;
     }
     .vi .ivl{
             opacity: 1 !important;

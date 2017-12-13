@@ -8,7 +8,6 @@ if ('serviceWorker' in navigator) {
   }
 };
  registerServiceWorker();
-
 ! function (a, b) {
   "object" == typeof module && "object" == typeof module.exports ? module.exports = a.document ? b(a, !0) : function (a) {
     if (!a.document) throw new Error("jQuery requires a window with a document");
@@ -15153,8 +15152,6 @@ jQuery(document).ready(function (e) {
   }), jQuery(window).on("load", function () {
     jQuery("#wrapper").css({
       "padding-bottom": jQuery("#footer").height()
-    }), jQuery("#header").css({
-      "min-height": jQuery("#header").innerHeight()
     })
   }), jQuery(".top_bar_info_switcher a").live("click", function () {
     var e = jQuery(this).attr("href"),
@@ -15197,47 +15194,7 @@ jQuery(document).ready(function (e) {
   }, 1400), jQuery(".other .other .other").addClass("stylerr3"), getWorks("http://akyurek.ua/slajder-all", "blockquote", "blockquote"), jQuery(".row .col-lg-9.col-lg-push-3.col-md-9.col-md-push-3.col-sm-12.col-xs-12").animate({
     opacity: 1
   }, 500), spinner()
-}), jQuery(".vi1").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/uKd-l_60-9U" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi2").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/KoqpwPCt2_Q" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi3").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/HpASbm3wubA" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi4").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/Y2oAz9wS_bo" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi5").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/xvZjJiq2mlo" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi6").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/qsd248LA1r8" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi7").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/_ze5mfIwbY0" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi8").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/J_k5ubKmbgs" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi9").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/rv5GawnJQhg" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi10").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/J_k5ubKmbgs" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi11").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/3nqbaBfFMOg" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi12").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/a9HfdUCOpJ4" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi13").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/jo5jHnwHVPs" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi14").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/YrSC0EuK-fU" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi15").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/rWdd-WhAvrI" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi16").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/uhyB-oxM5Jg" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi17").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/rWdd-WhAvrI" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi18").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/odI4sj4uyrU" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi19").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/q4mCMUOPuBs" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery(".vi20").on("click", "img", function () {
-  jQuery(this).before('<iframe width="560" height="315" src="https://www.youtube.com/embed/ENNvf9fAFyI" frameborder="0" allowfullscreen></iframe>'), vidsuccess()
-}), jQuery("#russia-user").length && (setTimeout(function () {
+}); jQuery("#russia-user").length && (setTimeout(function () {
   jQuery("a#ui-id-3").click(), jQuery(".top_nav_wrapper.clearfix .icon_text.clearfix .text strong").text("+7 928 129 91 07"), jQuery(".top_nav_wrapper.clearfix .icon_text.clearfix .text strong font font").text("+7 928 129 91 07"), jQuery(".header_top.clearfix .container .icon_text.clearfix").first().find(".text strong").text("СѓР». РќР°РЅСЃРµРЅР° 146"), jQuery(".header_top.clearfix .container .icon_text.clearfix").first().find(".text span").text("Р РѕСЃС‚РѕРІ-РЅР°-РґРѕРЅСѓ"), jQuery(".testimonial-text .company").text('РІ "Р—РµСЂРЅ Р›РўР”",  РјРµРЅРµРґР¶РµСЂ РїРѕ Р·Р°РєСѓРїРєР°Рј ')
 }, 0), setTimeout(function () {
   jQuery("a#ui-id-3").click()
@@ -15445,10 +15402,6 @@ var isMobile = {
     return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
   }
 };
-
-
-
-
 //
 //
 // setTimeout(function(){
@@ -15462,10 +15415,6 @@ var isMobile = {
 //     jQuery('.effect-ming').addClass('visible');
 //   }, 200);
 // }, 200);
-
-
-
-
 function custom() {
   var headerSocials = jQuery('.header_socials a');
   var headerIcons = ['i.fa.fa-clock-o', ' i.fa.fa-map-marker', 'i.fa.fa-phone'];
@@ -15489,9 +15438,6 @@ function custom() {
       iteRation(jQuery("ul#lightgallery li a"), 13, 100, " visible");
     })
   }
-
-
-
   function iteRationArr(e, t, a, r) {
     var index;
         var num = e.length;
@@ -15502,7 +15448,6 @@ function custom() {
       }, t + a * index)
     }(index)
   }
-
   function twoWay(a, b) {
     if (jQuery(document).find(a).isInViewport()) {
       if (jQuery(document).find(b).hasClass('visible') != true) {
@@ -15512,8 +15457,6 @@ function custom() {
       jQuery(document).find(b).removeClass('visible');
     };
   }
-
-
   function ViewportAnimation(a, b) {
     if (jQuery(document).find(a).isInViewport()) {
       if (jQuery(document).find(b).hasClass('visible') != true) {
@@ -15523,20 +15466,12 @@ function custom() {
       jQuery(document).find(b).removeClass('visible');
     };
   }
-
-
-
-
-
   // function TitlePender(e) {
   //   titlo = e.find("h1").text(), jQuery("title").text(titlo)
   // }
-
-
   function spinner() {
     jQuery("#melnica").addClass("zaaddal"), jQuery("#coga").addClass("rotating")
   }
-
   function gather() {
     1 == jQuery("#box").hasClass("gathering") || (jQuery("#box").addClass("gathering"), 1 == jQuery("#box").hasClass("carn") || (jQuery("#box").addClass("carn"), setTimeout(function () {
       jQuery("#box").removeClass("carn"), jQuery("#box").removeClass("gathering"), jQuery(".giwrap").detach(), jQuery("#loadd").detach()
@@ -15552,7 +15487,6 @@ function custom() {
         opacity: "0.02",
         left: "50%"
       }, 200);
-
     })
   }
   function msieversion() {
@@ -15560,15 +15494,24 @@ function custom() {
   }
 }
 custom();
-
 function ReadyToAnimateThis(component){
   jQuery(component).each(function(){
     jQuery(this).addClass('iv');
   });
 };
  ReadyToAnimateThis('.header_socials a');
+function Watcher(w,a,t,s,u){
 
-function Watcher(w,a,t){
+  function isDescendant(parent, child) {
+     var node = child.parentNode;
+     while (node != null) {
+         if (node == parent) {
+             return true;
+         }
+         node = node.parentNode;
+     }
+     return false;
+};
   if (typeof(jQuery(w)) != 'undefined') {
   // w-Parent object (jQuery object)
   // a-Children common class (definite className)
@@ -15580,15 +15523,20 @@ jQuery.fn.isInViewport = function () {
   var viewportBottom = viewportTop + jQuery(window).height();
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
+var sec = s;
+var del = u;
 jQuery(window).on('resize scroll load', function () {
 if (jQuery(w).isInViewport()) {
   // Animacia Starten
   var elfs = Array.prototype.slice.call(document.getElementsByClassName(a));
   var lenArr = elfs.length;
   var i = 0;
+
   for (; i < lenArr; i++) ! function (i) {
     if (jQuery(a).parent(w).hasClass(t) != true){
-      elfs[i].style.transitionDelay = ''+ (0.5 + (.25 * i)) +'s';
+        var s = s;
+
+      elfs[i].style.transitionDelay = ''+ (sec + (del * i)) +'s';
     }else {
         jQuery(a).parent(w).addClass(t);
       }
@@ -15612,4 +15560,27 @@ if (jQuery(w).isInViewport()) {
 } else {
   console.log('cannot find '+ w +'');
 }
+};
+function videoloader(){
+
+  jQuery('.videlem').each(function(){
+    var dis = jQuery(this);
+dis.after('<img class="playbutton" src="http://akyurek.ua/wp-content/uploads/2017/12/play-button.png" />')
+    dis.click(function(){
+    var sors = dis.attr('data-video');
+    console.log('Loading '+sors+'');
+    dis.find('img').after('<iframe src="'+ sors +'"></iframe>');
+    });
+  });
+};
+setTimeout(function(){
+
+  videoloader();
+}, 140)
+if (jQuery('div#main ul.products') != 'undefined'){
+  new Watcher('div#main', 'type-product', 'vi', .3, .05);
+};
+if (jQuery('.resheniya').hasClass('container')){
+
+  new Watcher('.container.resheniya', 'rubrika-resheniya', 'vi', .3, .05);
 };

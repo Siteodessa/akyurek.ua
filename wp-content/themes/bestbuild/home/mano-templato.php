@@ -1,8 +1,9 @@
 <?php get_header();?>
-<?php /** * Template Name: mano templato * * @package WordPress * @subpackage Twenty_Fourteen * @since Twenty Fourteen 1.0 */ ?>
+<?php /** * Template Name: mano templato *
+* @package WordPress
+* @subpackage Twenty_Fourteen
+* @since Twenty Fourteen 1.0 */ ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/home/css/home.css">
-
-
 <div class="vc_row wpb_row ">
   <div class="wpb_column vc_column_container col-sm-12">
     <div class="vc_column-inner ">
@@ -299,7 +300,11 @@
 
     <?php // include('/wp-content/themes/bestbuild/home/vn.php'); ?>
   <?php include('/wp-content/themes/bestbuild/home/solutions.php'); ?>
+
+</div></div>
+
   <div class="vc_row wpb_row  vc_custom_1491178009675 vc_parallax-content-moving">
+    <div class="container">
     <div class="wpb_column vc_column_container col-sm-12">
       <div class="vc_column-inner pin">
         <div class="wpb_wrapper">
@@ -314,21 +319,7 @@
                     <div class="icon" style="height: 53px;"><i style="font-size: 39px;" class="stm-house-4"></i></div>
                     <h2 id="counter_7554">0</h2>
                     <h6>Предприятий-клиентов</h6>
-                    <script type="text/javascript">
-                      jQuery(document).ready(function($) {
-                        var counter_7554 = new countUp("counter_7554", 0, 5677, 0, 2.5, {
-                          useEasing: true,
-                          useGrouping: false,
-                          prefix: '',
-                          suffix: ''
-                        });
-                        $(window).scroll(function() {
-                          if ($("#counter_7554").is_on_screen()) {
-                            counter_7554.start();
-                          }
-                        });
-                      });
-                    </script>
+
                   </div>
                 </div>
               </div>
@@ -340,21 +331,7 @@
                     <div class="icon" style="height: 53px;"><i style="font-size: 39px;" class="stm-builder-2"></i></div>
                     <h2 id="counter_1248">0</h2>
                     <h6>Сотрудников</h6>
-                    <script type="text/javascript">
-                      jQuery(document).ready(function($) {
-                        var counter_1248 = new countUp("counter_1248", 0, 1485, 0, 2.5, {
-                          useEasing: true,
-                          useGrouping: false,
-                          prefix: '',
-                          suffix: ''
-                        });
-                        $(window).scroll(function() {
-                          if ($("#counter_1248").is_on_screen()) {
-                            counter_1248.start();
-                          }
-                        });
-                      });
-                    </script>
+
                   </div>
                 </div>
               </div>
@@ -366,21 +343,6 @@
                     <div class="icon" style="height: 53px;"><i style="font-size: 39px;" class="stm-trophy-2"></i></div>
                     <h2 id="counter_6210">0</h2>
                     <h6>Наград</h6>
-                    <script type="text/javascript">
-                      jQuery(document).ready(function($) {
-                        var counter_6210 = new countUp("counter_6210", 0, 114, 0, 2.5, {
-                          useEasing: true,
-                          useGrouping: false,
-                          prefix: '',
-                          suffix: ''
-                        });
-                        $(window).scroll(function() {
-                          if ($("#counter_6210").is_on_screen()) {
-                            counter_6210.start();
-                          }
-                        });
-                      });
-                    </script>
                   </div>
                 </div>
               </div>
@@ -389,7 +351,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>  </div>
+  <div class="container">
+  <div class="vc_row wpb_row">
   <div class="vc_row-full-width"></div>
   <div class="vc_row wpb_row okom">
     <h2 class="razd s">О компании</h2>
@@ -467,61 +431,74 @@
     "updated": "31.08"
   }
 </script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/home/js/home.js"></script>
 <script>
-  jQuery('span.over').mouseover(function() {
-    jQuery(this).addClass('hvr');
+jQuery('span.over').mouseover(function () {
+  jQuery(this).addClass('hvr');
+});
+jQuery('span.over').mouseleave(function () {
+  jQuery(this).removeClass('hvr');
+});
+jQuery(document).ready(function ($) {
+  var counter_7554 = new countUp("counter_7554", 0, 5677, 0, 2.5, {
+    useEasing: true,
+    useGrouping: false,
+    prefix: '',
+    suffix: ''
   });
-  jQuery('span.over').mouseleave(function() {
-    jQuery(this).removeClass('hvr');
+  var counter_1248 = new countUp("counter_1248", 0, 1485, 0, 2.5, {
+    useEasing: true,
+    useGrouping: false,
+    prefix: '',
+    suffix: ''
   });
-  jQuery(document).ready(function($) {
-    var counter_7554 = new countUp("counter_7554", 0, 5677, 0, 2.5, {
-      useEasing: true,
-      useGrouping: false,
-      prefix: '',
-      suffix: ''
-    });
-    var counter_1248 = new countUp("counter_1248", 0, 1485, 0, 2.5, {
-      useEasing: true,
-      useGrouping: false,
-      prefix: '',
-      suffix: ''
-    });
-    var counter_6210 = new countUp("counter_6210", 0, 114, 0, 2.5, {
-      useEasing: true,
-      useGrouping: false,
-      prefix: '',
-      suffix: ''
-    });
-    $(window).scroll(function() {
-      if ($("#counter_6210").is_on_screen())
-      {
-        counter_6210.start();
-      }
-      if ($("#counter_7554").is_on_screen()) {
-        counter_7554.start();
-      }
-      if ($("#counter_1248").is_on_screen()) {
-        counter_1248.start();
-      }
-    });
+  var counter_6210 = new countUp("counter_6210", 0, 114, 0, 2.5, {
+    useEasing: true,
+    useGrouping: false,
+    prefix: '',
+    suffix: ''
   });
-  jQuery('.rubrika-proj').on('mouseover', function() {
-    jQuery(this).addClass('hvrd');
-  }).on('mouseleave', function() {
-    jQuery(this).removeClass('hvrd');
+  $(window).scroll(function () {
+    if ($("#counter_6210").is_on_screen()) {
+      counter_6210.start();
+    }
+    if ($("#counter_7554").is_on_screen()) {
+      counter_7554.start();
+    }
+    if ($("#counter_1248").is_on_screen()) {
+      counter_1248.start();
+    }
   });
-  function lazyImage() {
-    setTimeout(function() {
-      jQuery('.lama-lazy').each(function() {
-        var attra = jQuery(this).attr('data-src');
-        jQuery(this).attr('src', attra);
-        jQuery(this).removeAttr('data-src');
-      });
-      console.log('Image resources successfully loaded');
-    }, 10)
-  }
-  document.addEventListener("DOMContentLoaded", lazyImage);
+});
+jQuery('.rubrika-proj').on('mouseover', function () {
+  jQuery(this).addClass('hvrd');
+}).on('mouseleave', function () {
+  jQuery(this).removeClass('hvrd');
+});
+
+function lazyImage() {
+  setTimeout(function () {
+    jQuery('.lama-lazy').each(function () {
+      var attra = jQuery(this).attr('data-src');
+      jQuery(this).attr('src', attra);
+      jQuery(this).removeAttr('data-src');
+    });
+    console.log('lazyloaded');
+  }, 10)
+};
+document.addEventListener("DOMContentLoaded", lazyImage);
+jQuery('ul#menu-tempo-menu').ready(function () {
+  jQuery('li#menu-item-6266, li#menu-item-8491, li#menu-item-8559, li#menu-item-8715, li#menu-item-6268, li#menu-item-6269, li#menu-item-6271').addClass('iv');
+});
+new Watcher('.grid', 'effect-ming', 'vi', .5, .25);
+new Watcher('div#main .wpb_wrapper .sl-top', 'iv', 'vi', 3, .25);
+new Watcher('.a1', 'iv', 'vi', 3, .25);
+new Watcher('header', 'iv', 'vi', .3, .05);
+new Watcher('.darky', 'ivl', 'vi', 3, .25);
+new Watcher('.valueable.frst.vc_row.wpb_row.vc_inner.vc_row-fluid', 'ivl', 'vi', 3, .25);
+new Watcher('.valueable.vc_row.wpb_row.vc_inner.vc_row-fluid.scond', 'ivl', 'vi', 3, .25);
+new Watcher('.col-md-12.w3agile_blog_left.parnt', 'ivl', 'vi', 3, .25);
+setTimeout(function () {
+  new Watcher('.okom', 'col-sm-4', 'vi', 1, .16);
+}, 1000)
 </script>
 <?php get_footer();?>

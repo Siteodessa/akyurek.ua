@@ -9,10 +9,8 @@ img.obey {
     border: 6px solid #ae100e;
     background: #fff;
     overflow: hidden;
-    position: relative;
-    top: 20px;
-    left: 20px;
-    opacity: 0;
+    opacity: 1;
+    transform: translate(0, 20px);
 }
 
 .catcard .image {

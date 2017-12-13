@@ -20,7 +20,7 @@ Template Name: Товары
 </div>
 <div class="row produc naf">
  <div class="container">
-  <div class="col-md-3 catcard">
+  <div class="col-md-3 catcard iv">
    <div class="image">
        <div class="lama-container lama-container-horizontal"><div class="lama-wrapper">
 <?php
@@ -38,11 +38,12 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     </div>
 <?php endwhile; wp_reset_postdata(); ?>
   </div>
-  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
+  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span>
+    <span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
   <div class="lama-button-next"></div>
   <div class="lama-button-prev ls-nav-prev"></div>
 </div>
-<!--    <img class="obey" src="http://akyurek.ua/wp-content/uploads/2017/03/rotary-drum-seed-cleaner.png">-->
+
     </div>
    <div class="heading">
     <h4>Зерноочистительные машины</h4>
@@ -52,7 +53,7 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     <a href="http://akyurek.ua/goods/vse-tovary/separatory-semyan/" class="button product_type_simple tovbtn ">Подробнее</a>
    </div>
   </div>
-    <div class="col-md-3 catcard">
+    <div class="col-md-3 catcard iv">
    <div class="image">
        <div class="lama-container lama-container-horizontal"><div class="lama-wrapper">
 <?php
@@ -70,11 +71,12 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     </div>
 <?php endwhile; wp_reset_postdata(); ?>
   </div>
-  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
+  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span>
+    <span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
   <div class="lama-button-next"></div>
   <div class="lama-button-prev ls-nav-prev"></div>
 </div>
-<!--    <img class="obey" src="http://akyurek.ua/wp-content/uploads/2017/03/rotary-drum-seed-cleaner.png">-->
+
     </div>
    <div class="heading">
     <h4>Протравливатели</h4>
@@ -84,7 +86,7 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     <a href="http://akyurek.ua/goods/vse-tovary/protravlivateli/" class="button product_type_simple tovbtn ">Подробнее</a>
    </div>
   </div>
-     <div class="col-md-3 catcard">
+     <div class="col-md-3 catcard iv">
    <div class="image">
        <div class="lama-container lama-container-horizontal"><div class="lama-wrapper">
 <?php
@@ -102,11 +104,12 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     </div>
 <?php endwhile; wp_reset_postdata(); ?>
   </div>
-  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
+  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span>
+    <span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
   <div class="lama-button-next"></div>
   <div class="lama-button-prev ls-nav-prev"></div>
 </div>
-<!--    <img class="obey" src="http://akyurek.ua/wp-content/uploads/2017/03/rotary-drum-seed-cleaner.png">-->
+
     </div>
    <div class="heading">
     <h4>Шелушители</h4>
@@ -116,7 +119,7 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     <a href="http://akyurek.ua/goods/vse-tovary/shelushiteli-semyan-vse-tovary/" class="button product_type_simple tovbtn ">Подробнее</a>
    </div>
   </div>
-     <div class="col-md-3 catcard">
+     <div class="col-md-3 catcard iv">
    <div class="image">
        <div class="lama-container lama-container-horizontal"><div class="lama-wrapper">
 <?php
@@ -134,11 +137,12 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     </div>
 <?php endwhile; wp_reset_postdata(); ?>
   </div>
-  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
+  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span>
+    <span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
   <div class="lama-button-next"></div>
   <div class="lama-button-prev ls-nav-prev"></div>
 </div>
-<!--    <img class="obey" src="http://akyurek.ua/wp-content/uploads/2017/03/rotary-drum-seed-cleaner.png">-->
+
     </div>
    <div class="heading">
     <h4>Полировальные машины</h4>
@@ -148,7 +152,7 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     <a href="http://akyurek.ua/goods/vse-tovary/polirovalnye-mashiny/" class="button product_type_simple tovbtn ">Подробнее</a>
    </div>
   </div>
-     <div class="col-md-3 catcard">
+     <div class="col-md-3 catcard iv">
    <div class="image">
        <div class="lama-container lama-container-horizontal"><div class="lama-wrapper">
 <?php
@@ -166,11 +170,12 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     </div>
 <?php endwhile; wp_reset_postdata(); ?>
   </div>
-  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
+  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span>
+    <span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
   <div class="lama-button-next"></div>
   <div class="lama-button-prev ls-nav-prev"></div>
 </div>
-<!--    <img class="obey" src="http://akyurek.ua/wp-content/uploads/2017/03/rotary-drum-seed-cleaner.png">-->
+
     </div>
    <div class="heading">
     <h4>Транспортная система</h4>
@@ -180,7 +185,7 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     <a href="http://akyurek.ua/goods/transportnaya-sistema/" class="button product_type_simple tovbtn ">Подробнее</a>
    </div>
   </div>
-     <div class="col-md-3 catcard">
+     <div class="col-md-3 catcard iv">
    <div class="image">
        <div class="lama-container lama-container-horizontal"><div class="lama-wrapper">
 <?php
@@ -198,11 +203,12 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     </div>
 <?php endwhile; wp_reset_postdata(); ?>
   </div>
-  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
+  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span>
+    <span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
   <div class="lama-button-next"></div>
   <div class="lama-button-prev ls-nav-prev"></div>
 </div>
-<!--    <img class="obey" src="http://akyurek.ua/wp-content/uploads/2017/03/rotary-drum-seed-cleaner.png">-->
+
     </div>
    <div class="heading">
     <h4>Весы и упаковка</h4>
@@ -212,7 +218,7 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     <a href="http://akyurek.ua/goods/vse-tovary/vesy-upakovka/" class="button product_type_simple tovbtn ">Подробнее</a>
    </div>
   </div>
-     <div class="col-md-3 catcard">
+     <div class="col-md-3 catcard iv">
    <div class="image">
        <div class="lama-container lama-container-horizontal"><div class="lama-wrapper">
 <?php
@@ -230,11 +236,12 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     </div>
 <?php endwhile; wp_reset_postdata(); ?>
   </div>
-  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
+  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span>
+    <span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
   <div class="lama-button-next"></div>
   <div class="lama-button-prev ls-nav-prev"></div>
 </div>
-<!--    <img class="obey" src="http://akyurek.ua/wp-content/uploads/2017/03/rotary-drum-seed-cleaner.png">-->
+
     </div>
    <div class="heading">
     <h4>Защита от пыли</h4>
@@ -244,7 +251,7 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     <a href="http://akyurek.ua/goods/vse-tovary/zashhita-ot-pyli/" class="button product_type_simple tovbtn ">Подробнее</a>
    </div>
   </div>
-     <div class="col-md-3 catcard">
+     <div class="col-md-3 catcard iv">
    <div class="image">
        <div class="lama-container lama-container-horizontal"><div class="lama-wrapper">
 <?php
@@ -262,11 +269,12 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     </div>
 <?php endwhile; wp_reset_postdata(); ?>
   </div>
-  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
+  <div class="lama-pagination lama-pagination-clickable lama-pagination-bullets"><span class="lama-pagination-bullet lama-pagination-bullet-active"></span>
+    <span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span><span class="lama-pagination-bullet"></span></div>
   <div class="lama-button-next"></div>
   <div class="lama-button-prev ls-nav-prev"></div>
 </div>
-<!--    <img class="obey" src="http://akyurek.ua/wp-content/uploads/2017/03/rotary-drum-seed-cleaner.png">-->
+
     </div>
    <div class="heading">
     <h4>Бункеры</h4>
@@ -278,13 +286,7 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
   </div>
  </div>
 </div>
-
-
 <script>
-
-</script>
-<script>
-
   var lama = new lama('.lama-container', {
     pagination: '.lama-pagination',
     nextButton: '.lama-button-next',
@@ -298,8 +300,6 @@ while ( $loop->have_posts() ): $loop->the_post(); ?>
     height: 1550,
     speed: 3600
   });
-
-
 </script>
-
+<script src="<?php echo get_template_directory_uri();?>/tovari/js/tovari.js"></script>
 <?php get_footer();?>

@@ -13241,7 +13241,7 @@ This e-mail was sent from a contact form on Construct Theme (http://bestbuild.st
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://bestbuild.stylemixthemes.com/demo/?post_type=sidebar&#038;p=891</guid>
 		<description></description>
-		<content:encoded><![CDATA[[vc_row full_width="" parallax="" parallax_image=""][vc_column width="1/1"][vc_widget_sidebar sidebar_id="shop"][/vc_column][/vc_row]]]></content:encoded>
+		<content:encoded><![CDATA[[vc_row full_width="" parallax="" parallax_image=""][vc_column width="1/1"][vc_widget_sidebar sidebar_id='shop'][/vc_column][/vc_row]]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>891</wp:post_id>
 		<wp:post_date>2015-05-09 07:30:45</wp:post_date>
