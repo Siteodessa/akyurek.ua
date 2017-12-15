@@ -8,59 +8,45 @@
  * @since Twenty Fourteen 1.0
  */
 ?>
-
-
 <style>ul li ul {
     margin: 5px 30px;
     list-style-type: none;
+}.s_m {margin: 60px auto;}
+.s_m li {
+    list-style-type: none;
 }</style>
-
-
 <div class="s_m">
-
-
-
-
-
-
-
-
-
-
 
 
 <ul>
   <li><a href="http://akyurek.ua/">Главная</a></li>
   <li><a href="http://akyurek.ua/tovary/">Оборудование</a>
     <ul class="sub-menu">
-      <li> <a href="http://akyurek.ua/goods/vse-tovary/separatory-semyan/">Сепараторы семян</a><ul class="sepo">
-        <?php 
+
+      <li> <a href="http://akyurek.ua/goods/vse-tovary/separatory-semyan/">Сепараторы семян</a><ul class="sepo"> <button class="cnt">Не трогать</button>
+        <?php
         $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $params = array(
         'product_cat' => 'separatory-semyan',
           			'post_type' => 'product',
           'posts_per_page' => 100,  // ???-??
-          'paged'           => $current_page 
+          'paged'           => $current_page
         );
         query_posts($params);
         $wp_query->is_archive = true;
         $wp_query->is_home = false;
         while(have_posts()): the_post(); ?>
-
-
   <li><a href="<?php the_permalink() ?>"> <img width="25" class="news-image" src="<?php the_post_thumbnail_url(); ?>" /><?php the_title() ?></a></li>
-
         <?php endwhile; ?>
-  
 </ul></li>
-      <li> <a href="http://akyurek.ua/goods/vse-tovary/protravlivateli/">Протравливатели семян</a><ul class="protravi">
-        <?php 
+      <li> <a href="http://akyurek.ua/goods/vse-tovary/protravlivateli/">Протравливатели семян</a><ul class="protravi"> <button class="cnt">Не трогать</button>
+        <?php
         $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $params = array(
         'product_cat' => 'protravlivateli',
           			'post_type' => 'product',
           'posts_per_page' => 100,  // ???-??
-          'paged'           => $current_page 
+          'paged'           => $current_page
         );
         query_posts($params);
         $wp_query->is_archive = true;
@@ -69,14 +55,14 @@
  <li><a href="<?php the_permalink() ?>"> <img width="25" class="news-image" src="<?php the_post_thumbnail_url(); ?>" /><?php the_title() ?></a></li>
         <?php endwhile; ?>
 </ul></li>
-      <li> <a href="http://akyurek.ua/goods/vse-tovary/shelushiteli-semyan-vse-tovary/">Шелушители семян</a><ul class="shelushi">
-        <?php 
+      <li> <a href="http://akyurek.ua/goods/vse-tovary/shelushiteli-semyan-vse-tovary/">Шелушители семян</a><ul class="shelushi"> <button class="cnt">Не трогать</button>
+        <?php
         $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $params = array(
         'product_cat' => 'shelushiteli-semyan-vse-tovary',
           			'post_type' => 'product',
           'posts_per_page' => 100,  // ???-??
-          'paged'           => $current_page 
+          'paged'           => $current_page
         );
         query_posts($params);
         $wp_query->is_archive = true;
@@ -85,14 +71,14 @@
  <li><a href="<?php the_permalink() ?>"> <img width="25" class="news-image" src="<?php the_post_thumbnail_url(); ?>" /><?php the_title() ?></a></li>
         <?php endwhile; ?>
 </ul></li>
-      <li> <a href="http://akyurek.ua/goods/vse-tovary/polirovalnye-mashiny/">Полировальные машины</a><ul class="poliri">
-        <?php 
+      <li> <a href="http://akyurek.ua/goods/vse-tovary/polirovalnye-mashiny/">Полировальные машины</a><ul class="poliri"> <button class="cnt">Не трогать</button>
+        <?php
         $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $params = array(
         'product_cat' => 'polirovalnye-mashiny',
           			'post_type' => 'product',
           'posts_per_page' => 100,  // ???-??
-          'paged'           => $current_page 
+          'paged'           => $current_page
         );
         query_posts($params);
         $wp_query->is_archive = true;
@@ -101,14 +87,14 @@
  <li><a href="<?php the_permalink() ?>"> <img width="25" class="news-image" src="<?php the_post_thumbnail_url(); ?>" /><?php the_title() ?></a></li>
         <?php endwhile; ?>
 </ul></li>
-      <li> <a href="http://akyurek.ua/goods/transportnaya-sistema/">Транспортная система</a><ul class="transpo">
-        <?php 
+      <li> <a href="http://akyurek.ua/goods/transportnaya-sistema/">Транспортная система</a><ul class="transpo"> <button class="cnt">Не трогать</button>
+        <?php
         $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $params = array(
         'product_cat' => 'transportnaya-sistema',
           			'post_type' => 'product',
           'posts_per_page' => 100,  // ???-??
-          'paged'           => $current_page 
+          'paged'           => $current_page
         );
         query_posts($params);
         $wp_query->is_archive = true;
@@ -117,14 +103,14 @@
  <li><a href="<?php the_permalink() ?>"> <img width="25" class="news-image" src="<?php the_post_thumbnail_url(); ?>" /><?php the_title() ?></a></li>
         <?php endwhile; ?>
 </ul></li>
-      <li> <a href="http://akyurek.ua/goods/vse-tovary/vesy-upakovka/">Весы и упаковка</a><ul class="veso">
-        <?php 
+      <li> <a href="http://akyurek.ua/goods/vse-tovary/vesy-upakovka/">Весы и упаковка</a><ul class="veso"> <button class="cnt">Не трогать</button>
+        <?php
         $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $params = array(
         'product_cat' => 'vesy-upakovka',
           			'post_type' => 'product',
           'posts_per_page' => 100,  // ???-??
-          'paged'           => $current_page 
+          'paged'           => $current_page
         );
         query_posts($params);
         $wp_query->is_archive = true;
@@ -133,14 +119,14 @@
  <li><a href="<?php the_permalink() ?>"> <img width="25" class="news-image" src="<?php the_post_thumbnail_url(); ?>" /><?php the_title() ?></a></li>
         <?php endwhile; ?>
 </ul></li>
-      <li> <a href="http://akyurek.ua/goods/vse-tovary/zashhita-ot-pyli/">Защита от пыли</a><ul class="dusto">
-        <?php 
+      <li> <a href="http://akyurek.ua/goods/vse-tovary/zashhita-ot-pyli/">Защита от пыли</a><ul class="dusto"> <button class="cnt">Не трогать</button>
+        <?php
         $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $params = array(
         'product_cat' => 'zashhita-ot-pyli',
           			'post_type' => 'product',
           'posts_per_page' => 100,  // ???-??
-          'paged'           => $current_page 
+          'paged'           => $current_page
         );
         query_posts($params);
         $wp_query->is_archive = true;
@@ -149,14 +135,14 @@
  <li><a href="<?php the_permalink() ?>"> <img width="25" class="news-image" src="<?php the_post_thumbnail_url(); ?>" /><?php the_title() ?></a></li>
         <?php endwhile; ?>
 </ul></li>
-      <li> <a href="http://akyurek.ua/goods/vse-tovary/hranenie-zerna/">Бункеры для хранения</a><ul class="siloo">
-        <?php 
+      <li> <a href="http://akyurek.ua/goods/vse-tovary/hranenie-zerna/">Бункеры для хранения</a><ul class="siloo"> <button class="cnt">Не трогать</button>
+        <?php
         $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $params = array(
         'product_cat' => 'hranenie-zerna',
           			'post_type' => 'product',
           'posts_per_page' => 100,  // ???-??
-          'paged'           => $current_page 
+          'paged'           => $current_page
         );
         query_posts($params);
         $wp_query->is_archive = true;
@@ -168,12 +154,12 @@
     </ul>
   </li>
   <li><a href="http://akyurek.ua/akyurek-gotovye-resheniya/">Решения</a><ul class="resha">
-  <?php 
+  <?php
         $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $params = array(
-          'category_name'       => 'resheniya', 
-          'posts_per_page' => 100, 
-          'paged'           => $current_page 
+          'category_name'       => 'resheniya',
+          'posts_per_page' => 100,
+          'paged'           => $current_page
         );
         query_posts($params);
         $wp_query->is_archive = true;
@@ -181,7 +167,6 @@
         while(have_posts()): the_post(); ?>
 <li><a href="<?php the_permalink() ?>"> <img width="25" class="news-image" src="<?php the_post_thumbnail_url(); ?>" /><?php the_title() ?></a></li>
         <?php endwhile; ?>
-
 </ul></li>
   <li><a href="http://akyurek.ua/projects/">Проекты</a>  <ul><li><a href="http://akyurek.ua/project/zavod-po-ochistke-bobovyh/">Завод по очистке бобовых</a></li>
 <li><a href="http://akyurek.ua/project/zernoochistitel-akyurekexcell-117/">Зерноочиститель AkyurekExcell 117</a></li>
@@ -297,16 +282,23 @@
 </ul>
 </div>
 
+<script>
+function testli(a){
 
+jQuery(a).each(function(){
+  jQuery(this).click(function(){
+  setTimeout(function(){
+    var uli = jQuery(a).parent();
+    uli.css('background', 'red');
+    uli.find('li').each(function(){
+    sors = jQuery(this).children('a').attr('href');
+    window.open(sors);
 
+    });
+  },250);});
+})
+}
+testli('.cnt');
 
-
-
-
-
-
-
-
-
-
+</script>
 <?php get_footer();?>

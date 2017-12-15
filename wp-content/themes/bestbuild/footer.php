@@ -142,6 +142,15 @@
 jQuery('ul#menu-tempo-menu').ready(function () {
   jQuery('li#menu-item-6266, li#menu-item-8491, li#menu-item-8559, li#menu-item-8715, li#menu-item-6268, li#menu-item-6269, li#menu-item-6271').addClass('iv');
 });
+var tmbs = jQuery('.thumbnails.columns-3 a');
+if(tmbs.length >= 6 )
+{
+tmbs.addClass('large-lg')
+};
+jQuery('.breadcrumbs a').first().detach();
+jQuery('.breadcrumbs a').first().detach();
+jQuery('.breadcrumbs .separator').first().detach();
+jQuery('.breadcrumbs .separator').first().detach();
 new Watcher('header', 'iv', 'vi', .3, .05);
   new Watcher('.prefoo', 'fmenu', 'vi', .1, .1);
 </script>

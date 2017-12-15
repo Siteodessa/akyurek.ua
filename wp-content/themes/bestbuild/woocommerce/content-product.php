@@ -15,59 +15,15 @@
  * @package WooCommerce/Templates
  * @version 2.6.1
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
-
+if ( ! defined( 'ABSPATH' ) ) {exit; }
 global $product;
-
-// Ensure visibility
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
-}
-?>
-
-<!--onclick="catax('<?php
-//the_permalink();
-?>')"-->
-<li <?php post_class(); ?>  href="<?php the_permalink(); ?>">
-
-	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
-
-	<div class="product_thumbnail">
-		<a href="<?php the_permalink(); ?>">
-			<?php
-			/**
-			 * woocommerce_before_shop_loop_item_title hook
-			 *
-			 * @hooked woocommerce_show_product_loop_sale_flash - 10
-			 * @hooked woocommerce_template_loop_product_thumbnail - 10
-			 */
-			do_action( 'woocommerce_before_shop_loop_item_title' );
-			?>
-		</a>
-	</div>
-	<h5><?php the_title(); ?></h5>
-	<div class="product_info clearfix">
-		<?php
-			/**
-			 * woocommerce_after_shop_loop_item_title hook
-			 *
-			 * @hooked woocommerce_template_loop_rating - 5
-			 * @hooked woocommerce_template_loop_price - 10
-			 */
-			do_action( 'woocommerce_after_shop_loop_item_title' );
-		?>
-	</div>
-
-	<?php
-
-		/**
-		 * woocommerce_after_shop_loop_item hook
-		 *
-		 * @hooked woocommerce_template_loop_add_to_cart - 10
-		 */
-		do_action( 'woocommerce_after_shop_loop_item' );
-	?>
+}?>
+<li <?php post_class(); ?>>
+	<?php //do_action( 'woocommerce_before_shop_loop_item' ); ?>
+	<a href="<?php the_permalink(); ?>"><div class="product_thumbnail"><?php	do_action( 'woocommerce_before_shop_loop_item_title' );?></div></a>
+	<a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
+<?php do_action( 'woocommerce_after_shop_loop_item_title' );?>
+	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
 </li>
