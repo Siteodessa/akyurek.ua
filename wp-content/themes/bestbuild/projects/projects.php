@@ -1,6 +1,5 @@
 <?php get_header();?>
 <?php/** * Template Name: Проекты - рубрика * * @package WordPress * @subpackage Twenty_Fourteen * @since Twenty Fourteen 1.0 */?>
- <?php function metapolename($detali, $pid) { $metko = get_post_meta($pid, $detali, true); if (empty($metko)) { } else { return $metko; }; } ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/apc.css">
   <div class="banner_bottom_w3ls_agile stroy prj">
 <div class="entry-header clearfix" style="">

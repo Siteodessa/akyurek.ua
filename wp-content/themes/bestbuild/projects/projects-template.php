@@ -8,7 +8,6 @@
  * @since Twenty Fourteen 1.0
  */
 ?>
- <?php function metapolename($detali, $pid) { $metko = get_post_meta($pid, $detali, true); if (empty($metko)) { } else { return $metko; }; } ?>
 
 <?php edit_post_link(); ?>
 

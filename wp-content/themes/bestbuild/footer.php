@@ -151,7 +151,19 @@ jQuery('.breadcrumbs a').first().detach();
 jQuery('.breadcrumbs a').first().detach();
 jQuery('.breadcrumbs .separator').first().detach();
 jQuery('.breadcrumbs .separator').first().detach();
-new Watcher('header', 'iv', 'vi', .3, .05);
+
+
+if(isMobile.any()){
+//действие, которое нужно сделать, если браузер мобильный
+  new Watcher('.footer_widgets_wrapper', 'fmenu', 'vi', .1, .1);
+}
+else{
   new Watcher('.prefoo', 'fmenu', 'vi', .1, .1);
+};
+
+
+
+
+
 </script>
   </html>

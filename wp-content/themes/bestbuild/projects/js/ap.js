@@ -103,3 +103,49 @@ jQuery('span.over').mouseleave(function(){
 
 jQuery('button.liveedit').click();jQuery('.live-editor.one4').toggle();
 },1200);
+
+
+
+var lama1 = new lama('.projectile', {
+  nextButton: '.lama-button-next',
+  prevButton: '.lama-button-prev',
+  paginationClickable: true,
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplayDisableOnInteraction: false,
+  lazy: true,
+  loop: true,
+  height: 1550
+});
+
+
+
+var lama1 = new lama('.gallery-thumbs', {
+  nextButton: '.lama-button-next',
+  prevButton: '.lama-button-prev',
+  paginationClickable: true,
+  spaceBetween: 30,
+  slidesPerView: 3,
+  centeredSlides: true,
+  autoplayDisableOnInteraction: false,
+  breakpoints: {
+  // when window width is <= 320px
+  320: {
+    slidesPerView: 1,
+    spaceBetween: 10
+  },
+  // when window width is <= 480px
+  480: {
+    slidesPerView: 2,
+    spaceBetween: 20
+  },
+  // when window width is <= 640px
+  640: {
+    slidesPerView: 3,
+    spaceBetween: 30
+  }
+},
+  lazy: true,
+  loop: true,
+  height: 1550
+});

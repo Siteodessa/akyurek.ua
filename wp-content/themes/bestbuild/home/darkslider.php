@@ -1,8 +1,4 @@
 
-
- <?php function metapolename($detali, $pid) { $metko = get_post_meta($pid, $detali, true); if (empty($metko)) { } else { return $metko; }; } ?>
-
-
  <style>
     .darky {
       background: #3d3d3d url(/pattern_1.png) !important;
@@ -64,7 +60,7 @@ while(have_posts()): the_post(); ?>
 
           </span>
         </span>
-<img alt="<?php the_title();?>" data-src="<?php echo the_post_thumbnail_url();?>" class="lama-lazy" /></div>
+<img alt="<?php the_title();?>" imgsrc="<?php echo the_post_thumbnail_url();?>" class="lama-lazy" /></div>
         <?php endwhile; ?>
     </div>
     <!-- Add Pagination -->
@@ -106,6 +102,23 @@ while(have_posts()): the_post(); ?>
               slidesPerColumn: 2,
               spaceBetween: 30,
               autoplay: 4000,
+              breakpoints: {
+  // when window width is <= 320px
+  320: {
+    slidesPerView: 1,
+    spaceBetween: 10
+  },
+  // when window width is <= 480px
+  480: {
+    slidesPerView: 1,
+    spaceBetween: 20
+  },
+  // when window width is <= 640px
+  640: {
+    slidesPerView: 3,
+    spaceBetween: 30
+  }
+},
                   lazy: true,
               pagination: {
                 el: '.lama-pagination',

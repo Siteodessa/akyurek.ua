@@ -1614,12 +1614,6 @@ hr {
 .multilang-google {
     position: relative;
 }
-i.fa.fa-clock-o,i.fa.fa-map-marker,i.fa.fa-phone {
-    opacity: 0;
-    transition: 1s;
-    /* transition-delay: .4s; */
-    transform: translate(0,20px);
-}
 div#langa {
     position: relative;
     background: #c5c5c5;
@@ -2732,24 +2726,6 @@ table.bordered .alignnone {
     padding: 4px;
     background-size: 8px 4px;
     padding: 30px 34px;
-}
-.project_info .project_info_wr:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url("assets/images/pattern_4.png") no-repeat 0 0;
-}
-.project_info .project_info_wr:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: url("assets/images/pattern_4.png") no-repeat 100% 100%;
 }
 .project_info .project_info_wr table {
     width: 100%;
@@ -4355,6 +4331,19 @@ p.catitle.houver {
     float: left;
 }
 @media only screen and (max-width: 576px) and (min-width: 100px) {
+    .okom .button.product_type_simple
+    {
+        margin:  0;
+    }
+    .vals .icon_box .icon
+    {
+        display:flex;
+        justify-content:center;
+        margin:50px 0 0
+    }
+    .lama-slide img{
+    /* height: auto !important; */
+    }
 .exdemo .texblock{
     width: 100%;
 }
@@ -4399,10 +4388,11 @@ p.catitle.houver {
         margin-left: 0 !important;
     }
     .round2 .lama-slide.sway6.sway6 .ls-banner {
-        width: 90%;
+        width: 100%;
         left: 5%;
         top: 270px;
         max-height: 200px;
+        transform: translate(-7%, -15%);
     }
     .round2 .sway6 .ls-banner h2 {
         font-size: 25px;
@@ -4481,6 +4471,10 @@ a.goog-logo-link {
     margin: 20px 0;
 }
 @media only screen and (min-width: 100px) and (max-width:576px) {
+
+    .lama-slide.sway6 img.lama-lazy {
+    margin-top: 0;
+}
     .mk {
         margin: 0 10%;
     }
@@ -4668,7 +4662,8 @@ body .vc_call_to_action.vc_cta_btn_pos_right .vc_cta_btn,body .vc_call_to_action
 .vc_row.wpb_row p {
     opacity: 1;
     position: relative;
-    top: 30px;
+    top: 5px;
+    padding-top:  0;
 }
 .vc_row.wpb_row p.visible {
     opacity: 1;
@@ -6297,6 +6292,9 @@ li.modax.activated .catitle a {
         width: 90% !important;
         float: left;
     }
+    .valueable.scond.vc_row.wpb_row.vc_inner.vc_row-fluid{
+        margin-top: 0 !important;
+    }
     body .wpb_tour .wpb_tour_tabs_wrapper .wpb_tab {
         border-right: 1px solid #cccccc;
         padding: 0 0 0 10px;
@@ -6345,6 +6343,7 @@ li.modax.activated .catitle a {
         top: 60%;
         left: calc(50% - 80px);
         width: 160px;
+        transform: translate(0, 24px) !important;
     }
     .ls-linethree {
         font-size: 15px;
@@ -6386,13 +6385,14 @@ li.modax.activated .catitle a {
     }
     .round2 .ls-lineone {
         width: 290px !important;
+        transform: translate(0px, 40px) !important;
     }
     .ls-linefour {
-        top: 65% !important;
+        top: 68% !important;
         left: -160% !important;
     }
     .round2 .ls-linefour {
-        top: 65% !important;
+        top: 68% !important;
         left: calc(50% - 80px) !important;
         width: 160px;
         margin-left: 0;
@@ -6414,6 +6414,7 @@ li.modax.activated .catitle a {
         left: calc(50% - 120px);
         width: 240px;
         top: 40%;
+        transform: translate(-57px, 40px) !important;
     }
     .ls-linetwo {
         transition: all 1s;
@@ -6426,8 +6427,11 @@ li.modax.activated .catitle a {
     .round2 .ls-banner {
         left: 6px;
         opacity: 1;
-        top: 191px;
+        top: 100px;
         left: 25px !important;
+    }
+      .ls-banner {
+        top: 100px;
     }
     .ls-banner {
         top: 191px;
@@ -6457,8 +6461,8 @@ li.modax.activated .catitle a {
     }
     .round2 .sway2 .ls-button {
         left: 6px;
-        top: 417px;
-        left: 22px !important;
+        top: 337px;
+        left: 100px !important;
     }
     .lama-slide.sway2 {
         background: url(http://akyurek.ua/wp-content/uploads/2017/06/sl2-min-4-1.jpg) #ececec;
@@ -7565,6 +7569,9 @@ li.admclose.min.min1 {
     border-radius: 0 20px 0 0;
 }
 @media only screen and (min-width: 100px) and (max-width:576px) {
+    .round2 .sway3 .ls-button{
+        left: 70px !important;
+    }
     div#vn {
         width: 100%;
         height: auto;
@@ -8522,6 +8529,7 @@ figure.effect-ming p {
     transform: scale(1.5);
     font-size: 0.4em;
     line-height: 1.6;
+    transform: translate(0,0);
 }
 figure.effect-ming:hover h2 {
     -webkit-transform: scale(0.9);
@@ -8949,7 +8957,7 @@ figure.effect-ming p span {
     color: #fff;
     display: grid;
     width: 50%;
-    margin: 10px auto;
+    margin: 2px auto;
 }
 .vc_row.wpb_row figure.effect-ming:hover p.visible {
     opacity: 1;
@@ -10423,7 +10431,7 @@ ul.nav.nav-tabs {
     border: 1px solid;
     padding-bottom: 90px;
 }
-.vi figure.effect-ming, .vi + footer .fmenu {
+.vi figure.effect-ming, .vi + footer .fmenu,  .footer_widgets_wrapper.vi .fmenu {
     opacity: 1;
     transform: translate(0px, 0px);
 }
@@ -10455,6 +10463,11 @@ div#main {
     opacity: 1;
     transform: translate(0,0px);
 }
+.footer_widgets_wrapper.vi .menu-item {
+    opacity: 1 !important;
+    transform: translate(0,0px) !important;
+}
+
 .prefoo + footer .footer_widgets_wrapper .menu-item {
     opacity: 0;
     transform: translate(0,20px);
@@ -10469,16 +10482,16 @@ div#main {
     transform: translate(0, 0px);
 }
 .top_nav_wrapper li.menu-item.iv {
-    opacity: 0 !important;
-    transform: translate(0, -50px) !important;
+    opacity: 1 !important;
+    transform: translate(0, 0px) !important;
 }
 .vi .top_nav_wrapper li.menu-item.iv {
     opacity: 1 !important;
     transform: translate(0, 0px) !important;
 }
 .top_nav_wrapper li.menu-item {
-    opacity: 0;
-    transform: translate(0,20px);
+    /* opacity: 0; */
+    /* transform: translate(0,20px); */
 }
 .vi .top_nav_wrapper li.menu-item {
     opacity: 1;
@@ -10848,3 +10861,4 @@ ul.thumbnails {display:  flex;flex-wrap:  wrap;margin:  0;}ul.thumbnails a.item 
 i.fa.document.fa-file-text:before {
     content: "\f0f6";
 }
+

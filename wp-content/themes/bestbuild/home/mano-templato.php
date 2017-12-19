@@ -10,9 +10,11 @@
       <div class="wpb_wrapper">
         <div class="wpb_text_column wpb_content_element ">
           <div class="wpb_wrapper sl-top">
-            <div class="lama-container s1 iv">
+            <div class="lama-container s1">
               <div class="lama-wrapper">
-                <div class="lama-slide sway1"> <img alt="обработки зерновых" data-src="http://akyurek.ua/wp-content/uploads/2017/05/sl1-min.jpg" class="lama-lazy">
+                <div class="lama-slide sway1">
+                   <img alt="обработки зерновых" <?php if($is_mobile_device){ echo 'src="http://akyurek.ua/wp-content/uploads/2017/12/m1.jpg"' ;  } else {
+                     echo 'src="http://akyurek.ua/wp-content/uploads/2017/05/sl1-min.jpg"';} ?> class="lama-lazy">
                   <div class="ls-contain">
                     <div class="ls-scene">
                       <div class="ls-centered">
@@ -24,7 +26,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="lama-slide sway2"> <img alt="Автоматизация обработки зерна" data-src="http://akyurek.ua/wp-content/uploads/2017/06/sl2-min-4-1.jpg" class="lama-lazy">
+                <div class="lama-slide sway2">
+<img alt="Автоматизация обработки зерна" <?php if($is_mobile_device){ echo 'src="http://akyurek.ua/wp-content/uploads/2017/12/m2.png"' ;  }else{ echo 'src="http://akyurek.ua/wp-content/uploads/2017/06/sl2-min-4-1.jpg"';} ?> class="lama-lazy">
                   <div class="ls-contain">
                     <div class="ls-scene">
                       <div class="ls-banner">
@@ -36,7 +39,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="lama-slide sway3"> <img alt="инновационные технологии" data-src="http://akyurek.ua/wp-content/uploads/2017/05/sl3-min.jpg" class="lama-lazy">
+                <div class="lama-slide sway3">
+                  <img alt="инновационные технологии"  <?php if($is_mobile_device){ echo 'src="http://akyurek.ua/wp-content/uploads/2017/12/m3.png"' ;  }else{ echo 'src="http://akyurek.ua/wp-content/uploads/2017/05/sl3-min.jpg"';} ?> class="lama-lazy">
                   <div class="ls-contain">
                     <div class="ls-scene">
                       <div class="ls-banner">
@@ -47,7 +51,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="lama-slide sway6"> <img alt="Фотосепараторы" data-src="http://akyurek.ua/wp-content/uploads/2017/08/sl4-min-tea-m.jpg" class="lama-lazy">
+                <div class="lama-slide sway6">
+                   <img alt="Фотосепараторы" <?php if($is_mobile_device){ echo 'src="http://akyurek.ua/wp-content/uploads/2017/12/m4.png"' ;  }else{ echo 'src="http://akyurek.ua/wp-content/uploads/2017/08/sl4-min-tea-m.jpg"';} ?> class="lama-lazy">
                   <div class="ls-contain">
                     <div class="ls-scene">
                       <div class="ls-banner">
@@ -476,29 +481,50 @@ jQuery('.rubrika-proj').on('mouseover', function () {
 });
 
 function lazyImage() {
-  setTimeout(function () {
-    jQuery('.lama-lazy').each(function () {
-      var attra = jQuery(this).attr('data-src');
-      jQuery(this).attr('src', attra);
-      jQuery(this).removeAttr('data-src');
-    });
-    console.log('lazyloaded');
-  }, 10)
+  if (isMobile.any()) {
+    setTimeout(function () {
+      jQuery('.lama-lazy').each(function () {
+        var attra = jQuery(this).attr('min-img');
+        jQuery(this).attr('src', attra);
+        jQuery(this).removeAttr('min-img');
+      });
+    }, 10)
+  } else {
+      setTimeout(function () {
+        jQuery('.lama-lazy').each(function () {
+          var attra = jQuery(this).attr('big-img');
+          jQuery(this).attr('src', attra);
+          jQuery(this).removeAttr('big-img');
+        });
+      }, 10)
+  };
 };
 document.addEventListener("DOMContentLoaded", lazyImage);
-jQuery('ul#menu-tempo-menu').ready(function () {
-  jQuery('li#menu-item-6266, li#menu-item-8491, li#menu-item-8559, li#menu-item-8715, li#menu-item-6268, li#menu-item-6269, li#menu-item-6271').addClass('iv');
-});
 new Watcher('.grid', 'effect-ming', 'vi', .5, .25);
-new Watcher('div#main .wpb_wrapper .sl-top', 'iv', 'vi', 3, .25);
-new Watcher('.a1', 'iv', 'vi', 3, .25);
-new Watcher('header', 'iv', 'vi', .3, .05);
+// new Watcher('.a1', 'iv', 'vi', .3, .25);
 new Watcher('.darky', 'ivl', 'vi', 3, .25);
 new Watcher('.valueable.frst.vc_row.wpb_row.vc_inner.vc_row-fluid', 'ivl', 'vi', 3, .25);
 new Watcher('.valueable.vc_row.wpb_row.vc_inner.vc_row-fluid.scond', 'ivl', 'vi', 3, .25);
 new Watcher('.col-md-12.w3agile_blog_left.parnt', 'ivl', 'vi', 3, .25);
 setTimeout(function () {
-  new Watcher('.okom', 'col-sm-4', 'vi', 1, .16);
-}, 1000)
+  new Watcher('.okom', 'col-sm-4', 'vi', .1, .16);
+}, 1000);
+
+
+
+
+jQuery(window).on('resize scroll load', function () {
+  if (jQuery(document).find('.darky').isInViewport()) {
+jQuery('.darky img').each(function(){
+  var imgsrc = jQuery(this).attr('imgsrc');
+  jQuery(this).attr('src', imgsrc);
+  jQuery(this).removeAttr('imgsrc');
+});
+
+  }
+});
+
+
+
 </script>
 <?php get_footer();?>

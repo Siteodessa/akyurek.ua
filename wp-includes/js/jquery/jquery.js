@@ -15081,14 +15081,7 @@ function isAppear(e) {
   else var o = 100 - i;
   return jQuery(e).offset().top - r <= t - t * (o / 100)
 }
-function getWorks(e, r, t) {
-  jQuery("blockquote h2").after('<img id="loadd" src="/wp-content/uploads/2017/04/preloader_10.gif">'), idea = jQuery(this).find("button").attr("id"), menu = jQuery(".projects_tabs_header").html(), jQuery.ajax({
-    url: e,
-    success: function (e) {
-      e = jQuery(e).find(r), jQuery(t).replaceWith(e), jQuery(".tabs a").removeAttr("href"), jQuery("#" + idea).addClass("active")
-    }
-  }), jQuery("blockquote").on("click", "div img", function () {})
-}
+
 function spinner() {
   jQuery("#melnica").addClass("zaaddal"), jQuery("#coga").addClass("rotating")
 }
@@ -15191,9 +15184,7 @@ jQuery(document).ready(function (e) {
     top: -170
   }, 1500), setTimeout(function () {
     jQuery("ul.nester.yach").addClass("rdy")
-  }, 1400), jQuery(".other .other .other").addClass("stylerr3"), getWorks("http://akyurek.ua/slajder-all", "blockquote", "blockquote"), jQuery(".row .col-lg-9.col-lg-push-3.col-md-9.col-md-push-3.col-sm-12.col-xs-12").animate({
-    opacity: 1
-  }, 500), spinner()
+  }, 1400), jQuery(".other .other .other").addClass("stylerr3"), spinner()
 }); jQuery("#russia-user").length && (setTimeout(function () {
   jQuery("a#ui-id-3").click(), jQuery(".top_nav_wrapper.clearfix .icon_text.clearfix .text strong").text("+7 928 129 91 07"), jQuery(".top_nav_wrapper.clearfix .icon_text.clearfix .text strong font font").text("+7 928 129 91 07"), jQuery(".header_top.clearfix .container .icon_text.clearfix").first().find(".text strong").text("СѓР». РќР°РЅСЃРµРЅР° 146"), jQuery(".header_top.clearfix .container .icon_text.clearfix").first().find(".text span").text("Р РѕСЃС‚РѕРІ-РЅР°-РґРѕРЅСѓ"), jQuery(".testimonial-text .company").text('РІ "Р—РµСЂРЅ Р›РўР”",  РјРµРЅРµРґР¶РµСЂ РїРѕ Р·Р°РєСѓРїРєР°Рј ')
 }, 0), setTimeout(function () {

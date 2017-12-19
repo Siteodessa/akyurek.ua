@@ -72,7 +72,7 @@
   width: 100%;
 }
 .gallery-thumbs {
-  height: 100px;
+  height: 150px;
   box-sizing: border-box;
   padding: 10px 0;
   margin: 0px 0;
@@ -115,6 +115,10 @@ aside ul li,
 ul.type_2 li {
   opacity: 0;
   top: 20px;
+}
+
+.vi + footer aside ul li{
+  opacity:1;
 }
 .project_info_wr tr {
   transition-delay: 2s
@@ -231,3 +235,8 @@ p.defs, p.conts, .spn button {
 
 .project_row hr {margin: 3px;opacity: 0;}
 
+
+
+.gallery-top.projectile .lama-slide {
+    max-height: 400px;
+}

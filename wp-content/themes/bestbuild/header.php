@@ -1,7 +1,7 @@
 <?php global $stm_option; ?>
 <!doctype html>
 <html ⚡ <?php language_attributes(); ?> class="no-js">
-
+<?php get_template_part('custom', 'functions');?>
 <head>
   <title>
     <?php include( 'title/title-generator.php' ); ?> </title>
@@ -25,7 +25,6 @@
   <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://akyurek.ua/wp-includes/wlwmanifest.xml" />
   <link rel='https://api.w.org/' href='http://akyurek.ua/wp-json/' />
   <link rel='stylesheet' href='http://akyurek.ua/wp-content/themes/bestbuild/assets/css/ss.css' type='text/css' media='all' />
-  <?php /* YOURWPHEAD*/ ?>
   <script type='text/javascript' src='http://akyurek.ua/wp-includes/js/jquery/jquery.js'></script>
   <script type='text/javascript'>
     /* <![CDATA[ */
@@ -48,7 +47,13 @@
       font-weight: normal;
       font-style: normal;
     }
-
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto'), local('Roboto-Regular'), url(http://fonts.gstatic.com/s/roboto/v18/ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
     [class^="stm-"],
     [class*=" stm-"] {
       font-family: 'stm-icomoon';
@@ -520,7 +525,7 @@
             <?php } ?>
             <?php if ( stm_option( 'top_bar_social' ) ) { ?>
             <div class="top_bar_socials">
-              <?php if( stm_option( 'top_bar_use_social' ) ){foreach ( $stm_option['top_bar_use_social'] as $key => $val ) {if ( ! empty( $stm_option[$key] ) && $val == 1 ) {echo "<a target='_blank' rel='noopener' class='iv' aria-label='social-network-{$key}'  href='{$stm_option[$key]}'><i class='fa fa-{$key}'></i></a>";}}}?></div>
+              <?php if( stm_option( 'top_bar_use_social' ) ){foreach ( $stm_option['top_bar_use_social'] as $key => $val ) {if ( ! empty( $stm_option[$key] ) && $val == 1 ) {echo "<a target='_blank' rel='noopener' aria-label='social-network-{$key}'  href='{$stm_option[$key]}'><i class='fa fa-{$key}'></i></a>";}}}?></div>
             <?php } ?> </div>
         </div>
         <?php } ?>
@@ -530,9 +535,9 @@
             <?php if( stm_option( 'header_wpml' ) ){stm_wpml_lang_switcher();}?>
             <?php if ( stm_option( 'header_social' ) ) { ?>
             <div class="header_socials">
-              <?php if( stm_option( 'header_use_social' ) ){foreach ( $stm_option['header_use_social'] as $key => $val ) {if ( ! empty( $stm_option[$key] ) && $val == 1 ) {echo "<a target='_blank'  rel='noopener' class='iv' aria-label='social-network-{$key}'  href='{$stm_option[$key]}'><i class='fa fa-{$key}'></i></a>";}}}?></div>
+              <?php if( stm_option( 'header_use_social' ) ){foreach ( $stm_option['header_use_social'] as $key => $val ) {if ( ! empty( $stm_option[$key] ) && $val == 1 ) {echo "<a target='_blank'  rel='noopener' aria-label='social-network-{$key}'  href='{$stm_option[$key]}'><i class='fa fa-{$key}'></i></a>";}}}?></div>
             <?php } ?>
-            <div class="logo iv">
+            <div class="logo">
               <?php if( get_header_style() == 'header_style_transparent' || get_header_style() == 'header_style_dark' ){$logo = stm_option( 'logo_transparent', false, 'url' );}else{$logo = stm_option( 'logo', false, 'url' );}if ( $logo ){ ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="/wp-content/uploads/2017/03/logo1.png" alt="<?php bloginfo( 'name' ); ?>" /></a>
               <?php }else{ ?>
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -581,7 +586,7 @@
             <?php stm_wpml_lang_switcher(); ?>
             <?php if ( stm_option( 'header_social' ) ) { ?>
             <div class="header_socials">
-              <?php if( stm_option( 'header_use_social' ) ){foreach ( $stm_option['header_use_social'] as $key => $val ) {if ( ! empty( $stm_option[$key] ) && $val == 1 ) {echo "<a target='_blank'  rel='noopener' class='iv' aria-label='social-network-{$key}' href='{$stm_option[$key]}'><i class='fa fa-{$key}'></i></a>";}}}?></div>
+              <?php if( stm_option( 'header_use_social' ) ){foreach ( $stm_option['header_use_social'] as $key => $val ) {if ( ! empty( $stm_option[$key] ) && $val == 1 ) {echo "<a target='_blank'  rel='noopener' aria-label='social-network-{$key}' href='{$stm_option[$key]}'><i class='fa fa-{$key}'></i></a>";}}}?></div>
             <?php } ;?> </div>
           <?php } ?>
           <div class="logo_wrapper clearfix">

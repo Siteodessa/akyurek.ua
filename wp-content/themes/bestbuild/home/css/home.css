@@ -511,4 +511,8 @@ h2.ls-heading:before {
 
 .ls-banner p {
     top: 0 !important;
-}
+}@media only screen and (max-width: 576px) and (min-width: 100px) {
+    .okom .button.product_type_simple
+    {
+        margin:  -10px 0 50px;
+    }}
