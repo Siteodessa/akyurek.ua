@@ -3,7 +3,7 @@
 * @package WordPress
 * @subpackage Twenty_Fourteen
 * @since Twenty Fourteen 1.0 */ ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/home/css/home.css">
+<link rel="stylesheet" href="<?php    $is_mobile_device = check_mobile_device(); echo get_template_directory_uri();?>/home/css/home.css">
 <div class="vc_row wpb_row ">
   <div class="wpb_column vc_column_container col-sm-12">
     <div class="vc_column-inner ">
@@ -18,7 +18,8 @@
                   <div class="ls-contain">
                     <div class="ls-scene">
                       <div class="ls-centered">
-                        <div class="ls-lineone">Мы производим решения для очистки,</div>
+                        <div class="ls-lineone">Мы производим решения   для очистки,</div>
+
                         <div class="ls-linetwo">обработки и хранения зерновых культур.</div>
                         <div class="ls-linethree">AKYUREK</div>
                         <div class="ls-linefour">Technology</div>
@@ -34,7 +35,6 @@
                         <h2 class="ls-heading"><mark>Автоматизация </mark><br> обработки зерна —</h2>
                         <div class="ls-paragraph">Наш основной вклад <br>в технический прогресс <br> мирового сообщества!</div>
                       </div>
-
                       <div class="ls-button"><a href="http://akyurek.ua/tovary/">Товары</a></div>
                     </div>
                   </div>
@@ -57,7 +57,7 @@
                     <div class="ls-scene">
                       <div class="ls-banner">
                         <h2 class="ls-heading">Производительные <br><mark>Фотосепараторы</mark> <br> </h2>
-                        <div class="ls-paragraph">Оптическая сортировка следующего поколения</div>
+                        <div class="ls-paragraph">Оптическая сортировка <br>следующего поколения</div>
                         <p><a class="vc_btn " href="http://akyurek.ua/contact-us/" title="" target="_self">Перейти</a></p>
                       </div>
                     </div>
@@ -73,19 +73,15 @@
             <div class="a1">
               <div class="vc_call_to_action naf wpb_content_element vc_cta_btn_pos_right vc_cta_square clearfix iv">
                 <div class="vc_button-2-wrapper"><a class="vc_btn vc_cta_btn iv" href="http://akyurek.ua/contact-us/" title="" target="_self">Задать вопрос</a> </div>
-                <h4 class="wpb_heading iv">Искали оборудование для вашего зернового бизнеса?</h4>
+                <h4 class="wpb_heading iv">Искали оборудование для вашего зернового бизнеса?
+               </h4>
               </div>
             </div>
-
-
-
-
             <div class="container categorias">
               <div class="content vc_column-inner">
                 <div class="wpb_wrapper">
                   <h2 class="razd">Оборудование для зернопереработки </h2>
                   <div class="grid">
-
                     <figure class="effect-ming"><img src="/img/3.jpg" alt="img09">
                       <a href="http://akyurek.ua/goods/vse-tovary/separatory-semyan/">
                         <figcaption>
@@ -179,7 +175,7 @@
       </div>
     </div>
   </div>
-  <?php include('/wp-content/themes/bestbuild/home/darkslider.php'); ?>
+  <?php we_are_dev() ? include('/wp-content/themes/bestbuild/home/darkslider.php') : include('wp-content/themes/bestbuild/home/darkslider.php'); ?>
   <div class="container vals">
   <div class="vc_row wpb_row">
   <div class="vc_row wpb_row  overflow_hidden vc_custom_1434360560849" data-vc-full-width="true" data-vc-full-width-init="false">
@@ -302,19 +298,15 @@
     </div>
   </div>
   <div class="vc_row-full-width"></div>
-
-    <?php // include('/wp-content/themes/bestbuild/home/vn.php'); ?>
   <?php include('/wp-content/themes/bestbuild/home/solutions.php'); ?>
-
 </div></div>
-
   <div class="vc_row wpb_row  vc_custom_1491178009675 vc_parallax-content-moving">
     <div class="container">
     <div class="wpb_column vc_column_container col-sm-12">
       <div class="vc_column-inner pin">
         <div class="wpb_wrapper">
           <div class="vc_custom_heading vc_custom_1491134199468">
-            <h2 class="razd w">Наши достижения в отрасли</h2>
+            <h2 class="razd w">Akyurek Technology это: </h2>
           </div>
           <div class="vc_row wpb_row vc_inner vc_row-fluid">
             <div class="wpb_column vc_column_container col-sm-3 col-lg-3">
@@ -324,7 +316,6 @@
                     <div class="icon" style="height: 53px;"><i style="font-size: 39px;" class="stm-house-4"></i></div>
                     <h2 id="counter_7554">0</h2>
                     <h6>Предприятий-клиентов</h6>
-
                   </div>
                 </div>
               </div>
@@ -336,7 +327,6 @@
                     <div class="icon" style="height: 53px;"><i style="font-size: 39px;" class="stm-builder-2"></i></div>
                     <h2 id="counter_1248">0</h2>
                     <h6>Сотрудников</h6>
-
                   </div>
                 </div>
               </div>
@@ -381,7 +371,7 @@
         <div class="wpb_wrapper">
           <div class="wpb_text_column wpb_content_element ">
             <div class="wpb_wrapper"> <img class="alignnone wp-image-1857 size-medium iv" alt="производитель зерноуборочного оборудования" src="http://akyurek.ua/wp-content/uploads/2017/11/gokmen-akyurek1.jpg">
-              <div class="info_box iv"> Akyurek TM — производитель зерноуборочного оборудования зерновых, масличных и любых других семян в пищевой промышленности. С полным перечнем поддерживаемых культур, вы можете ознакомиться, перейдя по <a href="http://akyurek.ua/solutions-resheniya/">ссылке</a><br></div>
+              <div class="info_box iv"> Akyurek TM — производитель уборочного оборудования зерновых, масличных и любых других семян в пищевой промышленности. С полным перечнем поддерживаемых культур, вы можете ознакомиться, перейдя по <a href="http://akyurek.ua/akyurek-gotovye-resheniya/">ссылке</a><br></div>
             </div>
           </div>
           <div class="wpb_text_column wpb_content_element ">
@@ -437,94 +427,6 @@
   }
 </script>
 <script>
-jQuery('span.over').mouseover(function () {
-  jQuery(this).addClass('hvr');
-});
-jQuery('span.over').mouseleave(function () {
-  jQuery(this).removeClass('hvr');
-});
-jQuery(document).ready(function ($) {
-  var counter_7554 = new countUp("counter_7554", 0, 5677, 0, 2.5, {
-    useEasing: true,
-    useGrouping: false,
-    prefix: '',
-    suffix: ''
-  });
-  var counter_1248 = new countUp("counter_1248", 0, 1485, 0, 2.5, {
-    useEasing: true,
-    useGrouping: false,
-    prefix: '',
-    suffix: ''
-  });
-  var counter_6210 = new countUp("counter_6210", 0, 114, 0, 2.5, {
-    useEasing: true,
-    useGrouping: false,
-    prefix: '',
-    suffix: ''
-  });
-  $(window).scroll(function () {
-    if ($("#counter_6210").is_on_screen()) {
-      counter_6210.start();
-    }
-    if ($("#counter_7554").is_on_screen()) {
-      counter_7554.start();
-    }
-    if ($("#counter_1248").is_on_screen()) {
-      counter_1248.start();
-    }
-  });
-});
-jQuery('.rubrika-proj').on('mouseover', function () {
-  jQuery(this).addClass('hvrd');
-}).on('mouseleave', function () {
-  jQuery(this).removeClass('hvrd');
-});
-
-function lazyImage() {
-  if (isMobile.any()) {
-    setTimeout(function () {
-      jQuery('.lama-lazy').each(function () {
-        var attra = jQuery(this).attr('min-img');
-        jQuery(this).attr('src', attra);
-        jQuery(this).removeAttr('min-img');
-      });
-    }, 10)
-  } else {
-      setTimeout(function () {
-        jQuery('.lama-lazy').each(function () {
-          var attra = jQuery(this).attr('big-img');
-          jQuery(this).attr('src', attra);
-          jQuery(this).removeAttr('big-img');
-        });
-      }, 10)
-  };
-};
-document.addEventListener("DOMContentLoaded", lazyImage);
-new Watcher('.grid', 'effect-ming', 'vi', .5, .25);
-// new Watcher('.a1', 'iv', 'vi', .3, .25);
-new Watcher('.darky', 'ivl', 'vi', 3, .25);
-new Watcher('.valueable.frst.vc_row.wpb_row.vc_inner.vc_row-fluid', 'ivl', 'vi', 3, .25);
-new Watcher('.valueable.vc_row.wpb_row.vc_inner.vc_row-fluid.scond', 'ivl', 'vi', 3, .25);
-new Watcher('.col-md-12.w3agile_blog_left.parnt', 'ivl', 'vi', 3, .25);
-setTimeout(function () {
-  new Watcher('.okom', 'col-sm-4', 'vi', .1, .16);
-}, 1000);
-
-
-
-
-jQuery(window).on('resize scroll load', function () {
-  if (jQuery(document).find('.darky').isInViewport()) {
-jQuery('.darky img').each(function(){
-  var imgsrc = jQuery(this).attr('imgsrc');
-  jQuery(this).attr('src', imgsrc);
-  jQuery(this).removeAttr('imgsrc');
-});
-
-  }
-});
-
-
-
+jQuery('span.over').mouseover(function () { jQuery(this).addClass('hvr'); }); jQuery('span.over').mouseleave(function () { jQuery(this).removeClass('hvr'); }); jQuery(document).ready(function ($) { var counter_7554 = new countUp("counter_7554", 0, 5677, 0, 2.5, { useEasing: true, useGrouping: false, prefix: '', suffix: '' }); var counter_1248 = new countUp("counter_1248", 0, 1485, 0, 2.5, { useEasing: true, useGrouping: false, prefix: '', suffix: '' }); var counter_6210 = new countUp("counter_6210", 0, 114, 0, 2.5, { useEasing: true, useGrouping: false, prefix: '', suffix: '' }); $(window).scroll(function () { if ($("#counter_6210").is_on_screen()) { counter_6210.start(); } if ($("#counter_7554").is_on_screen()) { counter_7554.start(); } if ($("#counter_1248").is_on_screen()) { counter_1248.start(); } }); }); jQuery('.rubrika-proj').on('mouseover', function () { jQuery(this).addClass('hvrd'); }).on('mouseleave', function () { jQuery(this).removeClass('hvrd'); }); function lazyImage() { if (isMobile.any()) { setTimeout(function () { jQuery('.lama-lazy').each(function () { var attra = jQuery(this).attr('min-img'); jQuery(this).attr('src', attra); jQuery(this).removeAttr('min-img'); }); }, 10) } else { setTimeout(function () { jQuery('.lama-lazy').each(function () { var attra = jQuery(this).attr('big-img'); jQuery(this).attr('src', attra); jQuery(this).removeAttr('big-img'); }); }, 10) }; }; document.addEventListener("DOMContentLoaded", lazyImage); new Watcher('.grid', 'effect-ming', 'vi', .5, .25); new Watcher('.darky', 'ivl', 'vi', 3, .25); new Watcher('.valueable.frst.vc_row.wpb_row.vc_inner.vc_row-fluid', 'ivl', 'vi', 3, .25); new Watcher('.valueable.vc_row.wpb_row.vc_inner.vc_row-fluid.scond', 'ivl', 'vi', 3, .25); new Watcher('.col-md-12.w3agile_blog_left.parnt', 'ivl', 'vi', 3, .25); setTimeout(function () { new Watcher('.okom', 'col-sm-4', 'vi', .1, .16); }, 1000); jQuery(window).on('resize scroll load', function () { if (jQuery(document).find('.darky').isInViewport()) { jQuery('.darky img').each(function(){ var imgsrc = jQuery(this).attr('imgsrc'); jQuery(this).attr('src', imgsrc); jQuery(this).removeAttr('imgsrc'); }); } });
 </script>
 <?php get_footer();?>

@@ -57,4 +57,12 @@
       </div>
     </div>
   </div>
+
+
+
+  <script>
+
+jQuery('.rubrika-resheniya').addClass('vi')
+
+   </script>
   <?php get_footer();?>

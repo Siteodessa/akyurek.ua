@@ -13,9 +13,13 @@
 
 <!--<link rel="stylesheet" href="/assets/src/expenses.css">-->
 <style>
-  .support-intro {
+.support-intro h1 {
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    margin: 0px 0 50px;
     background: #ae100e;
-    margin: -120px -60px 0;
+
 }
 .col-sm-4 div.wpcf7 {
     background: whitesmoke;

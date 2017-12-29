@@ -1,15 +1,18 @@
 <?php global $stm_option; ?>
 <!doctype html>
 <html ⚡ <?php language_attributes(); ?> class="no-js">
-<?php get_template_part('custom', 'functions');?>
+<?php get_template_part('custom', 'functions');
+?>
 <head>
   <title>
-    <?php include( 'title/title-generator.php' ); ?> </title>
+    <?php     $metameta = metapolename('seo-заголовок', $post->ID);    if (empty($metameta)) {    echo the_title();     }    else { echo $metameta;};    ?>
+  </title>
+  <meta name="keywords" content="><?php echo metapolename('seo-ключевые_слова', $post->ID);?>" />
+  <meta name="description" content="><?php echo metapolename('seo-описание', $post->ID);?>">
   <meta name="theme-color" content="#ae100e">
+  <meta name="robots" content="index,follow" />
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="keywords" content="Зерноочистительные машины, зерноочистное оборудование, зерноперерабатывающие заводы, очистка семян, очистка зерна, akyurek, нория зерновая, фильтр циклон, фотосепаратор, зерноочиститель, промышленная глубокая очистка семян, скальператор, аспиратор, нория для зерна, фотосепаратор для тимофеевки, шелушитель зерна, перфорация, воздушные сепараторы, камнеотделитель, нория ленточная ковшовая, конвейер, зерноочистительное оборудование, сепаратор циклон, проекты по очистке бобовых, фасовочно-упаковочная машина, шелушитель арахиса, конвейер ленточный наклонный, характеристика семян кукурузы, шелушитель овса, предваритльная очистка злаковых, редуктор цилиндрический горизонтальный, предприятия по очистке бобовых, триерный блок, конвейерная лента, шелушитель подсолнечника, центробежный вентилятор ">
-  <meta name="generator" content="зерноочиститель, зерноочистительные машины, зерноочистное оборудование, зерноперерабатывающие заводы, очистка семян, очистка зерна, akyurek, нория зерновая, фильтр циклон, фотосепаратор, промышленная глубокая очистка семян, скальператор, аспиратор" />
   <link rel="alternate" hreflang="Ru-ru" href="http://akyurek.ru/">
   <link rel="alternate" type="application/json+oembed" href="http://akyurek.ua/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fakyurek.ua%2F" />
   <link rel="alternate" type="text/xml+oembed" href="http://akyurek.ua/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fakyurek.ua%2F&#038;format=xml" />
@@ -17,9 +20,6 @@
   <link rel="canonical" href="http://akyurek.ua/" />
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  <link rel='dns-prefetch' href='//ajax.googleapis.com' />
-  <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-  <link rel='stylesheet' id='redux-google-fonts-stm_option-css' href='http://fonts.googleapis.com/css?family=Roboto%3A100%2C300%2C400%2C500%2C700%2C900%2C100italic%2C300italic%2C400italic%2C500italic%2C700italic%2C900italic' type='text/css' media='all' />
   <link rel="shortcut icon" type="image/x-icon" href="http://akyurek.ua/wp-content/themes/bestbuild/favicon.ico" />
   <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://akyurek.ua/xmlrpc.php?rsd" />
   <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://akyurek.ua/wp-includes/wlwmanifest.xml" />
@@ -40,6 +40,7 @@
   </script><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
   <?php /* YOURWPHEAD*/ ?>
   <style>
+
     @font-face {
       font-family: 'stm-icomoon';
       src: url('../fonts/stm-icomoon.eot?-edkqme');
@@ -47,13 +48,16 @@
       font-weight: normal;
       font-style: normal;
     }
+
     @font-face {
       font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 400;
-      src: local('Roboto'), local('Roboto-Regular'), url(http://fonts.gstatic.com/s/roboto/v18/ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
-      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+      src: url(/fonts/Roboto-Bold.ttf);
     }
+    @font-face {
+      font-family: 'Roboto, light';
+      src: url(/fonts/Roboto-Light.ttf);
+    }
+
     [class^="stm-"],
     [class*=" stm-"] {
       font-family: 'stm-icomoon';
@@ -79,10 +83,9 @@
     }
 
     .vc_custom_1434360560849 {
-      margin-bottom: 60px !important;
+      margin-bottom: 10px !important;
       padding-top: 0px !important;
-      padding-bottom: 38px !important;
-      background-image: url(http://bestbuild.stylemixthemes.com/demo/wp-content/uploads/2015/03/pattern_2.png?id=170) !important;
+      padding-bottom: 0px !important;
     }
 
     .vc_custom_1427714757825 {
@@ -463,8 +466,8 @@
 
 <body <?php body_class(); ?>>
   <!--  <div class="multilang-google"><div id="langa"><i class="fa fa-globe" style="color:red"></i></div><div class="global"><i class="fa fa-globe"></i></div><div id="google_translate_element"></div><script type="text/javascript">  function googleTranslateElementInit() {new google.translate.TranslateElement({  pageLanguage: 'ru',  includedLanguages: 'en,ru,uk'}, 'google_translate_element');  }  setTimeout(function() {jQuery('head').append('<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></', 'script>');  }, 1200);</script>  </div>-->
-  <script type="text/javascript" src="/assets/src/enhanced-translation-lama.js"></script>
-  <script type="text/javascript" src="/assets/src/englishfix.js"></script>
+  <!-- <script type="text/javascript" src="/assets/src/enhanced-translation-lama.js"></script>
+  <script type="text/javascript" src="/assets/src/englishfix.js"></script> -->
   <?php include('user-abilities/user-abilities.php');?>
   <script>
     var admin = {

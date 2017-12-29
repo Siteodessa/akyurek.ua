@@ -1,7 +1,7 @@
 
  <style>
     .darky {
-      background: #3d3d3d url(/pattern_1.png) !important;
+      background: url(/f-pattern.jpg) !important;
     padding: 40px 0;
     }    .darky .lama-container {
       width: 100%;
@@ -13,7 +13,7 @@
     .darky .lama-slide {
       text-align: center;
       font-size: 18px;
-      background: #fff;
+      background: transparent;
       height: 200px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -37,7 +37,9 @@
 <div class="botbord">
 
     <div class="container naf">
-     <h2><a>Выполненные работы</a></h2>       <a href="http://akyurek.ua/proekty-kompanii/">     <button class="btn red">Смотреть все</button></a> </div>  </div>
+     <h2><a>Выполненные работы</a></h2>
+      <a href="http://akyurek.ua/proekty-kompanii/">
+            <button class="btn red">Смотреть все</button></a> </div>  </div>
        <div class="container">
   <div class="lama-container s2 ivl">
     <div class="lama-wrapper">
@@ -103,10 +105,11 @@ while(have_posts()): the_post(); ?>
               spaceBetween: 30,
               autoplay: 4000,
               breakpoints: {
-  // when window width is <= 320px
+  // when window width is <= 320px0
   320: {
     slidesPerView: 1,
-    spaceBetween: 10
+    spaceBetween: 10,
+        slidesPerColumn: 1
   },
   // when window width is <= 480px
   480: {
@@ -119,10 +122,10 @@ while(have_posts()): the_post(); ?>
     spaceBetween: 30
   }
 },
-                  lazy: true,
-              pagination: {
-                el: '.lama-pagination',
-                clickable: true,
+      lazy: true,
+      pagination: {
+      el: '.lama-pagination',
+      clickable: true,
               },
             });
             setInterval(function() {

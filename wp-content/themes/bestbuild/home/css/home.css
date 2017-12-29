@@ -109,6 +109,7 @@
   }
   .round2 .ls-paragraph {
     opacity: 1;
+    text-align:  left;
   }
   .round1 .ls-lineone {
     margin-left: 0;
@@ -121,7 +122,7 @@
     opacity: 1;
   }
   .sway3 .ls-button {
-    top: 260px;
+    top: 239px;
     left: 0;
   }
   .sway3 .ls-paragraph {
@@ -137,6 +138,7 @@
     transition-delay: 0.2s;
     transform: translate(-810px, 0px);
     position: absolute;
+    font-weight: lighter;
   }
   article#post-764 {
     margin-top: -90px;
@@ -144,7 +146,7 @@
   .ls-linetwo {
     transition: all 1s;
     transition-delay: 0.6s;
-    transform: translate(640px, 40px);
+    transform: translate(50px, 40px);
   }
   .ls-button {
     width: auto;
@@ -164,7 +166,7 @@
     position: absolute;
     left: -400%;
     transform: translate(0, -400%);
-    width: 295px;
+    width: 315px;
     height: 225px;
     background: rgba(0, 0, 0, 0.55);
     white-space: nowrap;
@@ -215,7 +217,7 @@
   transform: translate(3%, 0%);
 }
 .round2 .sway3 .ls-banner {
-  top: 125px;
+  top: 100px;
   left: 77px;
 }
 .round2 .ls-linethree {
@@ -240,7 +242,7 @@
   font-weight:900;
   font-style:normal;
   margin: -10px 0 0;
-  padding: 0 15px;
+  padding: 0 30px;
 }
 span.over {
     overflow: hidden;
@@ -312,7 +314,7 @@ img.akfasad {
     grid-template-columns: 1fr;
     grid-template-rows: 180px 120px;
 }
-.prj .container.proj .col-md-12 {display: grid;grid-template-columns: 25% 25% 25% 25%;grid-template-rows: 350px;grid-gap: 12px;margin: 20px 0;padding: 0 35px 0 0;}
+.prj .container.proj .col-md-12 {display: grid;grid-template-columns: calc(25% - 12px) calc(25% - 12px) calc(25% - 12px) calc(25% - 12px);grid-template-rows: 350px;grid-gap: 10px;margin: 20px 0;padding: 30px;}
 .prj .container.proj .col-md-12 .col-md-3 {
     width: 100%;
     margin: 0;
@@ -455,7 +457,7 @@ padding-top:5px;
     background: #fff;
     transition:.7s ease;
 }
-.rubrika-proj.hvrd button.btn.classic{
+.rubrika-proj.hvrd button.btn.classic{  
     transform: translate(0px,-10px);
 z-index:9;
 }
@@ -516,3 +518,41 @@ h2.ls-heading:before {
     {
         margin:  -10px 0 50px;
     }}
+
+
+@media only screen and (max-width: 768px) and (min-width: 576px) {
+  .round2 .ls-linefour
+
+  {
+top: 58%;
+left: 38.3%;
+}
+  .round2 .ls-linetwo{
+    
+transform: translate(150px, 40px);
+  }
+  .round2 .ls-lineone{
+    
+transform: translate(210px, 0px);
+  }
+  .ls-centered {
+    font-weight: 300;
+    font-size: 30px;
+    color: rgb(51, 51, 51);
+    opacity: 1;
+    /* margin-top: 16%; */
+    /* margin-left: -20%; */
+    width:  100%;
+  }
+ .round2 .ls-linethree{
+   
+transform: translate(455px, 160px);
+ } 
+.prj .container.proj .col-md-12 {
+    display: grid;
+    grid-template-columns: calc(50% - 12px) calc(50% - 12px) ;
+    grid-template-rows: 350px;
+    grid-gap: 10px;
+    margin: 20px 0;
+    padding: 30px;
+}}
